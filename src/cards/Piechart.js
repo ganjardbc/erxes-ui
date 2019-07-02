@@ -44,7 +44,7 @@ class CardPieChart extends Component {
       <div className="card">
                     
         <div className="padding-10px background-white border-bottom">
-          <div className="txt-site txt-bold color-blue txt-11">Pie Chart</div>
+          <div className="txt-site txt-bold text-main txt-12">Inbox Date</div>
         </div>
 
         <div className="padding-bottom-10px txt-site txt-11">
@@ -91,7 +91,8 @@ class CardPieChart extends Component {
     for (let index = 0; index < val; index++) {
       dt.push(
         <div className="margin-5px">
-          <span className="fa fa-lw fa-circle" style={{color: COLORS[index]}} /> { data[index].name }
+          <span className="fa fa-lw fa-circle" style={{color: COLORS[index], marginRight: "7.5px"}} /> 
+          <span className="txt-site txt-main txt-thin txt-11">{ data[index].name }</span>
         </div>
       )
     }

@@ -37,12 +37,12 @@ class Pages extends Component {
           <div className="image image-40px background-blue"></div>
         </div>
         <div className="c-i-col-2">
-          <div className="txt-site txt-11">
+          <div className="txt-site txt-12">
             <span className="txt-site txt-bold txt-main">
               Name of Item
             </span>
           </div>
-          <div className="txt-site txt-11 txt-bold color-orange">
+          <div className="txt-site txt-description txt-bold color-orange">
             Rp. 25.000.000
           </div>
         </div>
@@ -76,7 +76,7 @@ class Pages extends Component {
                   <div className="grid grid-2x padding-5px">
                     <div className="col-1">
                       <div className="txt-site txt-top txt-16 txt-main txt-bold margin-left-5px">
-                        ITEMS
+                        Items
                       </div>
                     </div>
                     <div className="col-2 content-right">
@@ -84,7 +84,7 @@ class Pages extends Component {
                         <i className="fa fa-lg fa-search" />
                       </button>
                       <button className="btn btn-grey">
-                        <i className="fa fa-lw fa-filter" /> FILTER
+                        <i className="fa fa-lw fa-filter" /> Filter
                       </button>
                     </div>
                   </div>
@@ -120,16 +120,16 @@ class Pages extends Component {
                 </div>
                 <div className="a-s-p-mid a-s-p-pad">
                   <div className="image image-middle background-blue margin-bottom-15px"></div>
-                  <div className="txt-site txt-16 txt-main txt-bold">
+                  <div className="txt-site txt-title txt-line txt-main txt-bold">
                     Name Of Items
                   </div>
-                  <div className="txt-site txt-14 txt-bold color-orange">
+                  <div className="txt-site txt-12 txt-line txt-bold color-orange">
                     Rp. 25.000.000
                   </div>
-                  <div className="margin-15px txt-site txt-11 txt-main">
+                  <div className="margin-10px txt-site txt-description txt-primary">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   </div>
-                  <div className="margin-15px">
+                  <div className="margin-10px">
 
                     <div className="grid grid-2x">
                       <div className="col-1">

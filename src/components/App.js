@@ -151,13 +151,13 @@ class App extends Component {
 	                </div>
 
 	                <div className="col-2 content-right">
-	                  <div className="panel-button">
+	                  <div className="panel-button app-desktop">
 	                    <CreatePopup />
 	                  </div>
-	                  <div className="panel-button" style={{marginLeft: "10px"}}>
+	                  <div className="panel-button app-desktop" style={{marginLeft: "10px"}}>
 	                    <ChatPopup />
 	                  </div>
-	                  <div className="panel-button" style={{marginLeft: "10px"}}>
+	                  <div className="panel-button app-desktop" style={{marginLeft: "10px"}}>
 	                    <NotifPopup />
 	                  </div>
 	                  <div className="panel-button">

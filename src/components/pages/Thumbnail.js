@@ -29,10 +29,10 @@ class Pages extends Component {
                 } />
             </div>
             <div className="padding-15px">
-              <div className="txt-site txt-16 txt-bold color-green">
+              <div className="txt-site txt-title txt-bold txt-main margin-bottom-5px">
                 This is title
               </div>
-              <div className="txt-site txt-11 txt-thin txt-primary">
+              <div className="txt-site txt-description txt-thin txt-primary">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </div>
             </div>
@@ -47,11 +47,11 @@ class Pages extends Component {
 			<div className="main-content">
 
         <div>
-          
+
           <div className="grid grid-2x">
             <div className="col-1">
-              <div className="txt-site txt-18 txt-bold txt-main">
-                Thumbnail Images
+              <div className="txt-site txt-18 txt-bold txt-main margin-left-5px margin-top-5px">
+                Thumbnails
               </div>
             </div>
             <div className="col-2 content-right"></div>

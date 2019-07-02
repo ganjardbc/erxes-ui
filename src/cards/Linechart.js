@@ -46,7 +46,7 @@ class CardLineChart extends Component {
     return (
       <div className="card">
         <div className="padding-10px background-white border-bottom">
-          <div className="txt-site txt-bold color-blue txt-11">Line Chart</div>
+          <div className="txt-site txt-bold text-main txt-12">Line Chart</div>
         </div>
         <div>
           <div className="padding-10px txt-site txt-9">

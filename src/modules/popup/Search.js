@@ -53,12 +53,10 @@ class Pages extends Component {
           <div className="image image-40px background-blue"></div>
         </div>
         <div className="c-n-col-2">
-          <div className="txt-site txt-11">
-            <span className="txt-site txt-bold txt-main">
-              Name of Item
-            </span>
+          <div className="txt-site txt-description txt-bold txt-main">
+            Name of Item
           </div>
-          <div className="txt-site txt-11 txt-bold color-orange">
+          <div className="txt-site txt-description txt-bold color-orange">
             Rp. 25.000.000
           </div>
         </div>

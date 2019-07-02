@@ -16,7 +16,7 @@ class Pages extends Component {
     if (type === 'image') {
       var dt = <div>
           <div className="image image-middle image-radius background-dark-grey"></div>
-          <div className="margin-10px txt-site txt-12 txt-bold">{title}</div>
+          <div className="margin-10px txt-site txt-11 txt-bold">{title}</div>
         </div>
     }
 
@@ -36,7 +36,7 @@ class Pages extends Component {
           </button>
         </div>
         <div className="col-2 content-right">
-          <div className="txt-site txt-top">{status}</div>
+          <div className="txt-site txt-11 txt-top">{status}</div>
         </div>
       </div>
     </div>)
@@ -46,7 +46,7 @@ class Pages extends Component {
 		return (
 			<div className="main-content">
 
-        <div className="card no-hover">
+        <div className="card no-hover mobile-minimum">
           <div className="padding-15px">
 
             <div className="grid grid-2x margin-bottom-10px">

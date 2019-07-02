@@ -2,17 +2,22 @@
 @font-face {
 	font-family: "FontFirst";
     // src: url("../fonts/Montserrat/Montserrat-Regular.ttf");
-    src: url("../fonts/Nunito_Sans/NunitoSans-Regular.ttf");
+    // src: url("../fonts/Nunito_Sans/NunitoSans-Regular.ttf");
+    // src: url("../fonts/droid-sans/DroidSans.ttf");
+    src: url("../fonts/Ubuntu/Ubuntu-Light.ttf");
 }
 @font-face {
 	font-family: "FontFirstBold";
     // src: url("../fonts/Montserrat/Montserrat-Bold.ttf");
-    src: url("../fonts/Nunito_Sans/NunitoSans-Bold.ttf");
+    // src: url("../fonts/Nunito_Sans/NunitoSans-Bold.ttf");
+    // src: url("../fonts/droid-sans/DroidSans-Bold.ttf");
+    src: url("../fonts/Ubuntu/Ubuntu-Regular.ttf");
 }
 @font-face {
 	font-family: "FontFirstExtraBold";
     // src: url("../fonts/Montserrat/Montserrat-ExtraBold.ttf");
-    src: url("../fonts/Nunito_Sans/NunitoSans-ExtraBold.ttf");
+    // src: url("../fonts/Nunito_Sans/NunitoSans-ExtraBold.ttf");
+    src: url("../fonts/Ubuntu/Ubuntu-Bold.ttf");
 }
 @font-face {
 	font-family: "FontFirst2";
@@ -41,9 +46,9 @@ $pos-color : #529ecc;
 $del-color : #9a0000;
 $err-color : #ff0000;
 $pri-color : #f3f3f3;
-$txt-84-color: rgba(0,0,0,0.84);
-$txt-54-color: rgba(0,0,0,0.54);
-$txt-34-color: rgba(0,0,0,0.34);
+$txt-84-color: rgb(68, 68, 68);
+$txt-54-color: rgb(136, 136, 136);;
+$txt-34-color: rgb(170, 174, 179);;
 $txt-min-color: rgba(0,0,0,0.84);
 $txt-sek-color: rgba(0,0,0,0.54);
 $txt-size-title: 22px;

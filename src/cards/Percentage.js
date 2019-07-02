@@ -6,7 +6,7 @@ class Percentage extends Component {
       <div className="card df-card">
                     
         <div className="padding-10px background-white border-bottom">
-          <div className="txt-site txt-bold color-blue txt-11">Percentage</div>
+          <div className="txt-site txt-bold text-main txt-12">Percentage</div>
         </div>
 
         <div className="card-mid">

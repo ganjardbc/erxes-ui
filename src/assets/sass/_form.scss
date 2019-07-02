@@ -8,7 +8,7 @@ $hg-form: 40px;
 .txt {
 	width: calc(100% - 30px);
 	// height: $hg-form;
-	font-size: 11pt;
+	font-size: 13px;
 	padding: 10px 15px;
 	border-radius: 5px;
 	z-index: 1;
@@ -90,7 +90,7 @@ $hg-form: 40px;
 	position: relative;
 	width: calc(100% - 0px);
 	padding: 10px 15px;
-	font-size: 11pt;
+	font-size: 13px;
 	font-weight: 600;
 	border-radius: 5px;
 	cursor: pointer;
@@ -356,10 +356,11 @@ $hg-form: 40px;
 		right: 0;
 		background-color: $green;
 		color: #fff;
-		font-size: 9pt;
-		width: 20px;
-		height: 20px;
-		line-height: 20px;
+		font-size: 12px;
+		font-weight: 600;
+		width: 18px;
+		height: 18px;
+		line-height: 18px;
 		text-align: center;
 		border-radius: 100%;
 	}
@@ -472,7 +473,7 @@ $hg-form: 40px;
 
 	color: $txt-min-color;
 	font-weight: 900;
-	font-size: 11pt;
+	font-size: 13px;
 
 	&:hover input ~ .checkmark {
 		background-color: #ccc;
@@ -690,15 +691,15 @@ $hg-form: 40px;
 	width: 100%;
 	padding: 5px 0;
 	legend {
-		font-size: 24pt;
+		font-size: 26px;
 		font-weight: 600;
 		color: $txt-84-color;
-		margin: 10px 0;
+		margin: 0 0;
 	}
 	.field-description {
-		font-size: 11pt;
+		font-size: 14px;
 		color: $txt-54-color;
-		margin: 10px 0 20px 0;
+		margin: 10px 0 10px 0;
 	}
 	.field-string {
 		margin: 10px 0;
@@ -706,7 +707,7 @@ $hg-form: 40px;
 	.control-label {
 		position: relative;
 		width: 100%;
-		font-size: 11pt;
+		font-size: 13px;
 		color: $txt-84-color;
 		font-weight: 600;
 		margin-bottom: 5px;
@@ -725,7 +726,7 @@ $hg-form: 40px;
 .form-control {
 	position: relative;
 	width: calc(100% - 30px);
-	font-size: 11pt;
+	font-size: 13px;
 	padding: 10px 15px;
 	border-radius: 5px;
 	background-color: $sek-color;
@@ -767,7 +768,7 @@ $hg-form: 40px;
 	padding: 15px;
 	.list-group-item {
 		list-style: none;
-		font-size: 11pt;
+		font-size: 13px;
 		text-transform: capitalize;
 		&.text-danger {
 			color: $red;

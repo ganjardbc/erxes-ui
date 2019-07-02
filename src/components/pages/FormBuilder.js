@@ -229,7 +229,7 @@ class Pages extends Component {
 
 				<div>
 					
-					<div className="grid grid-2x">
+					<div className="grid grid-2x grid-mobile-none">
               <div className="col-1">
 
                 <div className="card no-hover">

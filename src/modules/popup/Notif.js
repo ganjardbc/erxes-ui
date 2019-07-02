@@ -36,14 +36,14 @@ class Pages extends Component {
         </div>
         <div className="c-n-col-2">
           <div className="txt-site txt-11">
-            <span className="txt-site txt-bold txt-main">
+            <div className="txt-site txt-bold txt-main">
               Admin2 
-            </span>
-            <span className="txt-site txt-thin txt-main">
+            </div>
+            <div className="txt-site txt-description txt-thin txt-main">
               This message will be place in here
-            </span>
+            </div>
           </div>
-          <div className="txt-site txt-9 txt-thin txt-primary">
+          <div className="txt-site txt-10 txt-thin txt-primary">
             14 April 2019 14:00
           </div>
         </div>
@@ -60,7 +60,7 @@ class Pages extends Component {
           onClick={this.opNotif}
           className={this.state.smallNotifClass}>
           <span className="btn-notif">2</span>
-          <i className="far fa-lg fa-bell"></i>
+          <i className="far fa-lg fa-bell txt-site txt-15"></i>
         </button>
 
         <div

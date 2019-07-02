@@ -34,7 +34,7 @@
 	-ms-grid-columns: $col1 !important;
 }
 @mixin grid_none() {
-	display: block;
+	display: block !important;
 }
 @mixin column_n($n) {
 	grid-column: $n;

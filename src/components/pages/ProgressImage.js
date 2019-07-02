@@ -17,7 +17,7 @@ class Pages extends Component {
         	
         	<div className="grid grid-2x">
 	          <div className="col-1">
-	            <div className="txt-site txt-18 txt-bold txt-main">
+	            <div className="txt-site txt-18 txt-bold txt-main margin-left-5px margin-top-5px">
 	              Image Loader
 	            </div>
 	          </div>
@@ -33,12 +33,12 @@ class Pages extends Component {
 			        		className="img"
 			        		loader={
 			        			<div className="icn">
-			        				<i className="color-green post-center fa fa-lg fa-circle-notch fa-spin" /> <span className="txt-site txt-primary txt-thin">Loading Image</span>
+			        				<i className="color-green post-center fa fa-lg fa-circle-notch fa-spin" /> <span className="txt-site txt-main txt-12 txt-thin">Loading Image</span>
 			        			</div>
 			        		}
 			        		unloader={
 			        			<div className="icn">
-			        				<i className="color-green post-center fa fa-lg fa-circle-notch fa-spin" /> <span className="txt-site txt-primary txt-thin">Try Again</span>
+			        				<i className="color-green post-center fa fa-lg fa-circle-notch fa-spin" /> <span className="txt-site txt-main txt-12 txt-thin">Try Again</span>
 			        			</div>
 			        		} />
 			       	</div>
@@ -51,12 +51,12 @@ class Pages extends Component {
 			        		className="img"
 			        		loader={
 			        			<div className="icn">
-			        				<i className="color-green post-center fa fa-lg fa-circle-notch fa-spin" /> <span className="txt-site txt-primary txt-thin">Loading Image</span>
+			        				<i className="color-green post-center fa fa-lg fa-circle-notch fa-spin" /> <span className="txt-site txt-main txt-12 txt-thin">Loading Image</span>
 			        			</div>
 			        		}
 			        		unloader={
 			        			<div className="icn">
-			        				<i className="color-green post-center fa fa-lg fa-circle-notch fa-spin" /> <span className="txt-site txt-primary txt-thin">Try Again</span>
+			        				<i className="color-green post-center fa fa-lg fa-circle-notch fa-spin" /> <span className="txt-site txt-main txt-12 txt-thin">Try Again</span>
 			        			</div>
 			        		} />
 			       	</div>
@@ -69,12 +69,12 @@ class Pages extends Component {
 			        		className="img"
 			        		loader={
 			        			<div className="icn">
-			        				<i className="color-green post-center fa fa-lg fa-circle-notch fa-spin" /> <span className="txt-site txt-primary txt-thin">Loading Image</span>
+			        				<i className="color-green post-center fa fa-lg fa-circle-notch fa-spin" /> <span className="txt-site txt-main txt-12 txt-thin">Loading Image</span>
 			        			</div>
 			        		}
 			        		unloader={
 			        			<div className="icn">
-			        				<i className="color-green post-center fa fa-lg fa-circle-notch fa-spin" /> <span className="txt-site txt-primary txt-thin">Try Again</span>
+			        				<i className="color-green post-center fa fa-lg fa-circle-notch fa-spin" /> <span className="txt-site txt-main txt-12 txt-thin">Try Again</span>
 			        			</div>
 			        		} />
 			       	</div>

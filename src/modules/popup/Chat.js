@@ -38,7 +38,7 @@ class Pages extends Component {
       dt.push(
         <div className="chat-profile" onClick={ this.opRoomChat }>
           <div className="col-1">
-            <div className="image image-40px image-circle background-blue" />
+            <div className="image image-35px image-circle background-blue" />
           </div>
           <div className="col-2">
             <div className="c-p-name">
@@ -116,7 +116,7 @@ class Pages extends Component {
           onClick={this.opChatPopup}
           className={this.state.smallChatClass}>
           <span className="btn-notif background-red">2</span>
-          <i className="far fa-lg fa-comment-alt"></i>
+          <i className="far fa-lg fa-comment-alt txt-site txt-13"></i>
         </button>
 
         {(this.state.sttChatPopup) ? (
@@ -126,7 +126,7 @@ class Pages extends Component {
               <div className="c-p-top background-blue">
                 <div className="grid grid-2x">
                   <div className="col-1">
-                    <div className="txt-site txt-11 txt-bold txt-top">
+                    <div className="txt-site txt-12 txt-bold txt-top">
                       Chats
                     </div>
                   </div>
@@ -164,7 +164,7 @@ class Pages extends Component {
                       <i className="fa fa-lg fa-angle-left" />
                     </button>
                     <div style={{display: 'inline-block', verticalAlign: 'center'}}>
-                      <div className="txt-site txt-11 txt-bold color-white">
+                      <div className="txt-site txt-12 txt-bold color-white">
                         Full Name
                       </div>
                     </div>
