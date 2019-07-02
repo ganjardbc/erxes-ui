@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.7c15877d.chunk.css",
+    "main.js": "/static/js/main.12dc36cd.chunk.js",
+    "main.js.map": "/static/js/main.12dc36cd.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/js/2.675cbb9e.chunk.js": "/static/js/2.675cbb9e.chunk.js",
+    "static/js/2.675cbb9e.chunk.js.map": "/static/js/2.675cbb9e.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.d6a39f0a511959231ef8fd24f7d0415b.js": "/precache-manifest.d6a39f0a511959231ef8fd24f7d0415b.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.7c15877d.chunk.css.map": "/static/css/main.7c15877d.chunk.css.map",
+    "static/media/app.css": "/static/media/Quicksand-Regular.f46f486e.ttf",
+    "static/media/cover.png": "/static/media/cover.80bfe00f.png",
+    "static/media/daya-logo.png": "/static/media/daya-logo.84d79f7d.png",
+    "static/media/all.min.css": "/static/media/fa-solid-900.fb493903.woff2"
+  }
+}
