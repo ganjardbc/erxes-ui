@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/erxes-ui/static/css/main.59edcd16.chunk.css",
-    "main.js": "/erxes-ui/static/js/main.11584535.chunk.js",
-    "main.js.map": "/erxes-ui/static/js/main.11584535.chunk.js.map",
+    "main.css": "/erxes-ui/static/css/main.82bf1d78.chunk.css",
+    "main.js": "/erxes-ui/static/js/main.6663b742.chunk.js",
+    "main.js.map": "/erxes-ui/static/js/main.6663b742.chunk.js.map",
     "runtime~main.js": "/erxes-ui/static/js/runtime~main.5a72f273.js",
     "runtime~main.js.map": "/erxes-ui/static/js/runtime~main.5a72f273.js.map",
     "static/js/2.675cbb9e.chunk.js": "/erxes-ui/static/js/2.675cbb9e.chunk.js",
     "static/js/2.675cbb9e.chunk.js.map": "/erxes-ui/static/js/2.675cbb9e.chunk.js.map",
     "index.html": "/erxes-ui/index.html",
-    "precache-manifest.1324c771216cd3a2db0bb2df736938bf.js": "/erxes-ui/precache-manifest.1324c771216cd3a2db0bb2df736938bf.js",
+    "precache-manifest.885bbb97ada48c99ecca20374b3b4b7a.js": "/erxes-ui/precache-manifest.885bbb97ada48c99ecca20374b3b4b7a.js",
     "service-worker.js": "/erxes-ui/service-worker.js",
-    "static/css/main.59edcd16.chunk.css.map": "/erxes-ui/static/css/main.59edcd16.chunk.css.map",
-    "static/media/app.css": "/erxes-ui/static/media/Quicksand-Regular.f46f486e.ttf",
+    "static/css/main.82bf1d78.chunk.css.map": "/erxes-ui/static/css/main.82bf1d78.chunk.css.map",
+    "static/media/app.css": "/erxes-ui/static/media/Ubuntu-Regular.6bb9beb4.ttf",
     "static/media/cover.png": "/erxes-ui/static/media/cover.80bfe00f.png",
     "static/media/daya-logo.png": "/erxes-ui/static/media/daya-logo.84d79f7d.png",
     "static/media/all.min.css": "/erxes-ui/static/media/fa-solid-900.fb493903.woff2"

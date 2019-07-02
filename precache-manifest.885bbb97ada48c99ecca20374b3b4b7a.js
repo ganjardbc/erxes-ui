@@ -1,31 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0934ae8bcac1daec7dd44ad3d2b44bba",
+    "revision": "d06f0d2b84c2587f0f37ccb37b800290",
     "url": "/erxes-ui/index.html"
   },
   {
-    "revision": "5fbc64db342581e817c3",
-    "url": "/erxes-ui/static/css/main.59edcd16.chunk.css"
+    "revision": "8e4dbb33cca02491654b",
+    "url": "/erxes-ui/static/css/main.82bf1d78.chunk.css"
   },
   {
     "revision": "5f92fc5ba561823f0f0d",
     "url": "/erxes-ui/static/js/2.675cbb9e.chunk.js"
   },
   {
-    "revision": "5fbc64db342581e817c3",
-    "url": "/erxes-ui/static/js/main.11584535.chunk.js"
+    "revision": "8e4dbb33cca02491654b",
+    "url": "/erxes-ui/static/js/main.6663b742.chunk.js"
   },
   {
     "revision": "c8c7263cedd27b4eede6",
     "url": "/erxes-ui/static/js/runtime~main.5a72f273.js"
-  },
-  {
-    "revision": "51066f4d1d33630cd761e8cd0168d7b0",
-    "url": "/erxes-ui/static/media/NunitoSans-Bold.51066f4d.ttf"
-  },
-  {
-    "revision": "e6a9e16cac802736f3c92c47d94a52de",
-    "url": "/erxes-ui/static/media/NunitoSans-ExtraBold.e6a9e16c.ttf"
   },
   {
     "revision": "fb98ed1700e8dfaf0764c11fc36a0a05",
@@ -34,6 +26,18 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "f46f486edefeba66ac4b538dd593d656",
     "url": "/erxes-ui/static/media/Quicksand-Regular.f46f486e.ttf"
+  },
+  {
+    "revision": "b5d4adffb6b244532a12c78f4124af70",
+    "url": "/erxes-ui/static/media/Ubuntu-Bold.b5d4adff.ttf"
+  },
+  {
+    "revision": "f5a896693ead0b135e7e3f7f695463b1",
+    "url": "/erxes-ui/static/media/Ubuntu-Light.f5a89669.ttf"
+  },
+  {
+    "revision": "6bb9beb4ae22b811bfd5369d517e2f7c",
+    "url": "/erxes-ui/static/media/Ubuntu-Regular.6bb9beb4.ttf"
   },
   {
     "revision": "80bfe00fb02fd900f1a75fe5bf4285e3",
