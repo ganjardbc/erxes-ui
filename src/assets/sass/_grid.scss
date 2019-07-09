@@ -77,21 +77,192 @@
 	}
 	&.grid-2x-col8 {
 		@include grid_2x(150px, 1fr);
+		.content-fixed-left {
+			position: fixed;
+			width: 100%;
+			width: 150px;
+			@media (max-width: $max-width) {
+				position: relative;
+				right: 0;
+				width: 100%;
+			}
+		}
+		.content-fixed-right {
+			position: fixed;
+			right: 10px;
+			width: 100%;
+			@media (max-width: $max-width) {
+				position: relative;
+				right: 0;
+				width: 100%;
+			}
+		}
 	}
 	&.grid-2x-col7 {
 		@include grid_2x(250px, 1fr);
+		.content-fixed-left {
+			position: fixed;
+			width: 100%;
+			width: 250px;
+			@media (max-width: $max-width) {
+				position: relative;
+				right: 0;
+				width: 100%;
+			}
+		}
+		.content-fixed-right {
+			position: fixed;
+			right: 10px;
+			width: 100%;
+			@media (max-width: $max-width) {
+				position: relative;
+				right: 0;
+				width: 100%;
+			}
+		}
 	}
+	&.grid-2x-col6 {
+		@include grid_2x(350px, 1fr);
+		.content-fixed-left {
+			position: fixed;
+			width: 100%;
+			width: 350px;
+			@media (max-width: $max-width) {
+				position: relative;
+				right: 0;
+				width: 100%;
+			}
+		}
+		.content-fixed-right {
+			position: fixed;
+			right: 10px;
+			width: 100%;
+			@media (max-width: $max-width) {
+				position: relative;
+				right: 0;
+				width: 100%;
+			}
+		}
+	}
+
+	&.grid-2x-col5 {
+		@include grid_2x(400px, 1fr);
+		.content-fixed-left {
+			position: fixed;
+			width: 100%;
+			width: 400px;
+			@media (max-width: $max-width) {
+				position: relative;
+				right: 0;
+				width: 100%;
+			}
+		}
+		.content-fixed-right {
+			position: fixed;
+			right: 10px;
+			width: 100%;
+			@media (max-width: $max-width) {
+				position: relative;
+				right: 0;
+				width: 100%;
+			}
+		}
+	}
+
+
 	&.grid-2x-col45 {
 		@include grid_2x(45px, 1fr);
 	}
+	&.grid-2x-colmin9 {
+		@include grid_2x(1fr, 80px);
+	}
 	&.grid-2x-colmin8 {
 		@include grid_2x(1fr, 150px);
+		.content-fixed-left {
+			position: fixed;
+			width: 100%;
+			@media (max-width: $max-width) {
+				position: relative;
+				right: 0;
+				width: 100%;
+			}
+		}
+		.content-fixed-right {
+			position: fixed;
+			right: 10px;
+			width: 150px;
+			@media (max-width: $max-width) {
+				position: relative;
+				right: 0;
+				width: 100%;
+			}
+		}
 	}
 	&.grid-2x-colmin7 {
 		@include grid_2x(1fr, 250px);
+		.content-fixed-left {
+			position: fixed;
+			width: 100%;
+			@media (max-width: $max-width) {
+				position: relative;
+				right: 0;
+				width: 100%;
+			}
+		}
+		.content-fixed-right {
+			position: fixed;
+			right: 10px;
+			width: 250px;
+			@media (max-width: $max-width) {
+				position: relative;
+				right: 0;
+				width: 100%;
+			}
+		}
 	}
 	&.grid-2x-colmin6 {
 		@include grid_2x(1fr, 350px);
+		.content-fixed-left {
+			position: fixed;
+			width: 100%;
+			@media (max-width: $max-width) {
+				position: relative;
+				right: 0;
+				width: 100%;
+			}
+		}
+		.content-fixed-right {
+			position: fixed;
+			right: 10px;
+			width: 350px;
+			@media (max-width: $max-width) {
+				position: relative;
+				right: 0;
+				width: 100%;
+			}
+		}
+	}
+	&.grid-2x-colmin5 {
+		@include grid_2x(1fr, 400px);
+		.content-fixed-left {
+			position: fixed;
+			width: 100%;
+			@media (max-width: $max-width) {
+				position: relative;
+				right: 0;
+				width: 100%;
+			}
+		}
+		.content-fixed-right {
+			position: fixed;
+			right: 10px;
+			width: 400px;
+			@media (max-width: $max-width) {
+				position: relative;
+				right: 0;
+				width: 100%;
+			}
+		}
 	}
 	&.grid-2x-colmin45 {
 		@include grid_2x(1fr, 45px);
@@ -153,4 +324,5 @@
 	.content-right {
 		text-align: right;
 	}
+	
 }

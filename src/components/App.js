@@ -19,8 +19,11 @@ import Dashboard from './dashboard/Index'
 import KanbanLayout from './pages/KanbanLayout'
 import SlideComponent from './pages/SlideComponent'
 import FormBuilder from './pages/FormBuilder'
+import FormStatic from './pages/FormStatic'
 import ProgressImage from './pages/ProgressImage'
 import Thumbnail from './pages/Thumbnail'
+import Table from './pages/Table'
+import DatePicker from './pages/DatePicker'
 
 
 class App extends Component {
@@ -124,11 +127,14 @@ class App extends Component {
                 </div>
 
                 <div className="app-menu">
+                  { this.createSubMenu('Form Static', '/form-static', 'far fa-lg fa-square') }
                   { this.createSubMenu('Form Builder', '/form-builder', 'far fa-lg fa-circle') }
                   { this.createSubMenu('Kanban Layout', '/kanban-layout', 'fa fa-lg fa-anchor') }
                   { this.createSubMenu('Slide Component', '/slide-component', 'fa fa-lg fa-list') }
-                  { this.createSubMenu('Progress Image', '/progress-image', 'fa fa-lg fa-images') }
                   { this.createSubMenu('Thumbnail', '/thumbnail', 'fa fa-lg fa-camera') }
+                  { this.createSubMenu('Progress Image', '/progress-image', 'fa fa-lg fa-images') }
+                  { this.createSubMenu('Smart Table', '/table', 'fa fa-lg fa-table') }
+                  {/* this.createSubMenu('Date Picker', '/date-picker', 'fa fa-lg fa-calendar-alt') */}
                 </div>
 
       				</div>
@@ -174,8 +180,11 @@ class App extends Component {
                 <Route exact path="/kanban-layout" component={ KanbanLayout } />
                 <Route exact path="/slide-component" component={ SlideComponent } />
                 <Route exact path="/form-builder" component={ FormBuilder } />
+                <Route exact path="/form-static" component={ FormStatic } />
                 <Route exact path="/progress-image" component={ ProgressImage } />
                 <Route exact path="/thumbnail" component={ Thumbnail } />
+                <Route exact path="/table" component={ Table } />
+                <Route exact path="/date-picker" component={ DatePicker } />
 
       				</div>
       			</div>

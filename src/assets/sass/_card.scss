@@ -360,10 +360,10 @@
     .input {
         position: relative;
         width: calc(100% - 30px);
-        padding: 15px;
+        padding: 10px 15px;
         background-color: #fff;
         color: $txt-84-color;
-        font-size: 11pt;
+        font-size: 13px;
         font-weight: 500;
         &:focus {
             color: $red;
@@ -377,7 +377,7 @@
         top: 0;
         left: 0;
         z-index: 10;
-        border: $border;
+        border: $border1;
         width: 100px;
         height: 100px;
         background-color: #fff;
@@ -385,10 +385,10 @@
     }
     .double {
         position: relative;
-        height: 45px;
-        border: $border;
+        height: 40px;
+        border: $border1;
         background-color: #fff;
-        border-radius: 10px;
+        border-radius: 5px;
         overflow: hidden;
         display: flex;
     }
@@ -396,12 +396,68 @@
         position: absolute;
         top: 40px;
         z-index: 10;
-        border: $border;
+        border: $border1;
         box-shadow: $shadow;
         background-color: #fff;
         margin-bottom: 15px;
         &.right {
             right: 0 !important;
+        }
+    }
+}
+
+.card-form {
+    position: relative;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px rgba(0,0,0,0.1) solid;
+    .cf-header {
+        position: relative;
+        width: calc(100% - 30px);
+        padding: 15px;
+    }
+    .cf-body {
+        position: relative;
+        width: calc(100% - 30px);
+        padding: 0 15px;
+        // background-color: #f8f8f8;
+    }
+    .cf-footer {
+        position: relative;
+        width: calc(100% - 30px);
+        padding: 15px;
+    }
+    .cf-title {
+        font-size: 18px;
+        font-weight: 600;
+        color: $txt-84-color;
+    }
+    .cf-subtitle {
+        font-size: 13px;
+        font-weight: 500;
+        color: $txt-54-color;
+        margin-top: 5px;
+    }
+    .cf-field {
+        position: relative;
+        width: 100%;
+        margin: 15px 0;
+        .cf-label {
+            font-size: 15px;
+            color: $txt-84-color;
+        }
+        .cf-important {
+            color: $red;
+            font-size: 13px;
+            margin-left: 5px;
+        }
+        .cf-input {
+            margin: 2.5px 0;
+        }
+        .cf-message {
+            font-size: 13px;
+            color: $txt-34-color;
         }
     }
 }

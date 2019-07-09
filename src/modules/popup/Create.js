@@ -36,7 +36,7 @@ class Pages extends Component {
         </button>
 
         <div
-          style={{top: "45px", width: "250px"}} 
+          style={{top: "40px", width: "250px"}} 
           className={this.state.createClass}>
           <ul>
             <li>

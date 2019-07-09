@@ -14,3 +14,11 @@
 		  -o-transition: all .35s cubic-bezier(0,1,0.5,1);
 		     transition: all .35s cubic-bezier(0,1,0.5,1);
 }
+
+@mixin animate_none() {
+	-webkit-transition: all 0 cubic-bezier(0,0,0,0);
+		-moz-transition: all 0 cubic-bezier(0,0,0,0);
+		 -ms-transition: all 0 cubic-bezier(0,0,0,0);
+		  -o-transition: all 0 cubic-bezier(0,0,0,0);
+		     transition: all 0 cubic-bezier(0,0,0,0);
+}

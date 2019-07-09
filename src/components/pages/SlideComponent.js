@@ -5,7 +5,10 @@ class Pages extends Component {
   constructor () {
     super()
     this.state = {
-      classAppSlidePage: 'app-side-page'
+      classAppSlidePage: 'app-side-page',
+      classAppSlidePageMain: 'a-s-p-main',
+      classNavigatorVersion: '',
+      classNavigatorEpics: ''
     }
   }
 
@@ -23,6 +26,52 @@ class Pages extends Component {
 
   clSidePage = () => {
     this.setState({classAppSlidePage: 'app-side-page'})
+  }
+
+  opSlidePageMain = () => {
+    if (this.state.classAppSlidePageMain === 'a-s-p-main') { 
+      this.setState({
+        classAppSlidePageMain: 'a-s-p-main op-a-s-p-main'
+      })
+    } else {
+      this.setState({
+        classAppSlidePageMain: 'a-s-p-main'
+      })
+    }
+  }
+
+  opNavigatorVersion = () => {
+    // this.opSlidePageMain()
+    if (this.state.classNavigatorVersion === '') { 
+      this.setState({
+        classNavigatorVersion: 'a-s-p-open',
+        classNavigatorEpics: '',
+        classAppSlidePageMain: 'a-s-p-main op-a-s-p-main'
+      })
+    } else {
+      this.setState({
+        classNavigatorVersion: '',
+        classNavigatorEpics: '',
+        classAppSlidePageMain: 'a-s-p-main'
+      })
+    }
+  }
+
+  opNavigatorEpics = () => {
+    // this.opSlidePageMain()
+    if (this.state.classNavigatorEpics === '') { 
+      this.setState({
+        classNavigatorEpics: 'a-s-p-open',
+        classNavigatorVersion: '',
+        classAppSlidePageMain: 'a-s-p-main op-a-s-p-main'
+      })
+    } else {
+      this.setState({
+        classNavigatorEpics: '',
+        classNavigatorVersion: '',
+        classAppSlidePageMain: 'a-s-p-main'
+      })
+    }
   }
 
   contentList = (length) => {
@@ -62,29 +111,89 @@ class Pages extends Component {
     return data
   }
 
+  contentNavigator = (val) => {
+    var data = []
+    for (var i = 0; i < val; i++) {
+      data.push(
+        <div className="a-s-p-item-navigator" >
+          <div>
+            <i className="fa fa-1x fa-plus color-green margin-right-10px" />
+            All Issue
+          </div>
+        </div>
+      )
+    }
+    return data
+  }
+
   render () {
 		return (
 			<div className="main-content">
 
 
         <div className={this.state.classAppSlidePage}>
-          
-          <div className="a-s-p-main">
-            <div className="card no-hover">
+
+          <div>
+            <div className={this.state.classAppSlidePageMain}>
+              <div className="a-s-p-navigator">
+                <div className="a-s-p-list">
+                  <ul>
+                    <li className={this.state.classNavigatorVersion}>
+                      <div className="top">
+                        <div className="ttl" onClick={this.opNavigatorVersion}>Versions</div>
+                        <div className="cl">
+                          <button className="btn btn-small-circle btn-grey" onClick={this.opNavigatorVersion}>
+                            <i className="fa fa-lw fa-times" />
+                          </button>
+                        </div>
+                      </div>
+                      <div className="mid">
+                        { this.contentNavigator(20) }
+                      </div>
+                    </li>
+                    <li className={this.state.classNavigatorEpics}>
+                      <div className="top">
+                        <div className="ttl" onClick={this.opNavigatorEpics}>Epics</div>
+                        <div className="cl">
+                          <button className="btn btn-small-circle btn-grey" onClick={this.opNavigatorEpics}>
+                            <i className="fa fa-lw fa-times" />
+                          </button>
+                        </div>
+                      </div>
+                      <div className="mid">
+                        { this.contentNavigator(2) }
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                
+              </div>
+
               <div className="a-s-p-place">
                 <div className="a-s-p-top">
                   <div className="grid grid-2x padding-5px">
                     <div className="col-1">
-                      <div className="txt-site txt-top txt-16 txt-main txt-bold margin-left-5px">
-                        Items
+                      <div className="margin-left-5px margin-top-10px">
+                        <div className="txt-site txt-top txt-14 txt-main txt-bold">
+                          Items
+                        </div>
+                        <div className="txt-site txt-top txt-10 txt-primary">
+                          20 results
+                        </div>
                       </div>
                     </div>
                     <div className="col-2 content-right">
-                      <button className="btn btn-circle btn-grey">
-                        <i className="fa fa-lg fa-search" />
-                      </button>
                       <button className="btn btn-grey">
-                        <i className="fa fa-lw fa-filter" /> Filter
+                        Linked Pages
+                      </button>
+                      <button className="btn btn-circle btn-grey">
+                        <i className="fa fa-lw fa-search" />
+                      </button>
+                      <button className="btn btn-circle btn-grey">
+                        <i className="fa fa-lw fa-filter" />
+                      </button>
+                      <button className="btn btn-circle btn-grey">
+                        <i className="fa fa-lw fa-ellipsis-h" />
                       </button>
                     </div>
                   </div>
@@ -94,6 +203,7 @@ class Pages extends Component {
                 </div>
               </div>
             </div>
+
           </div>
 
           <div className="a-s-p-side">
@@ -103,10 +213,10 @@ class Pages extends Component {
                   <div className="grid grid-2x padding-5px">
                     <div className="col-1">
                       <button className="btn btn-circle btn-grey">
-                        <i className="fa fa-lg fa-share-alt" />
+                        <i className="fa fa-lw fa-share-alt" />
                       </button>
                       <button className="btn btn-circle btn-grey">
-                        <i className="fa fa-lg fa-ellipsis-h" />
+                        <i className="fa fa-lw fa-ellipsis-h" />
                       </button>
                     </div>
                     <div className="col-2 content-right">
@@ -119,17 +229,17 @@ class Pages extends Component {
                   </div>
                 </div>
                 <div className="a-s-p-mid a-s-p-pad">
-                  <div className="image image-middle background-blue margin-bottom-15px"></div>
+                  <div className="image image-middle background-blue margin-bottom-5px"></div>
                   <div className="txt-site txt-title txt-line txt-main txt-bold">
                     Name Of Items
                   </div>
                   <div className="txt-site txt-12 txt-line txt-bold color-orange">
                     Rp. 25.000.000
                   </div>
-                  <div className="margin-10px txt-site txt-description txt-primary">
+                  <div className="margin-5px txt-site txt-description txt-primary">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   </div>
-                  <div className="margin-10px">
+                  <div className="margin-5px">
 
                     <div className="grid grid-2x">
                       <div className="col-1">

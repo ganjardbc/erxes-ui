@@ -498,13 +498,13 @@
 }
 
 
-$fnHeight: 45px;
+$fnHeight: 40px;
 .filter-navigator {
 	position: relative;
 	width: 100%;
 	height: $fnHeight;
 	overflow: hidden;
-	background-color: #fff;
+	background-color: rgba(0,0,0,0);
 	@include grid_3x($fnHeight, 1fr, $fnHeight);
 	.f-n-col-1 {
 		@include column_n(1);
@@ -517,7 +517,7 @@ $fnHeight: 45px;
 	}
 	ul {
 		position: absolute;
-		width: calc(100% - 92px);
+		width: calc(100% - 82px);
 		height: $fnHeight;
 		white-space: nowrap;
 		// display: flex;
@@ -551,9 +551,9 @@ $fnHeight: 45px;
 
 		padding: 0 15px;
 		margin: 0 7.5px;		
-		height: 41px;
-		line-height: 41px;
-		border-radius: 41px;
+		height: 36px;
+		line-height: 36px;
+		border-radius: 36px;
 
 		border: 2px rgba(0,0,0,0.14) solid;
 		background-color: #fff;
@@ -566,5 +566,8 @@ $fnHeight: 45px;
 			color: $txt-84-color;
 			@include animate_1();
 		}
+	}
+	.btn {
+		border: $border1;
 	}
 }

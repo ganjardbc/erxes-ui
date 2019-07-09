@@ -10,7 +10,7 @@ $hg-form: 40px;
 	// height: $hg-form;
 	font-size: 13px;
 	padding: 10px 15px;
-	border-radius: 5px;
+	border-radius: 3px;
 	z-index: 1;
 	&.txt-no-shadow {
 		box-shadow: 0 0 0 0 rgba(0,0,0,0);
@@ -122,7 +122,7 @@ $hg-form: 40px;
 	position: relative;
 	padding: 0 14px;
 	height: $hg-form;
-	border-radius: 5px;
+	border-radius: 3px;
 	font-size: 10pt;
 	// font-weight: 600;
 	text-align: center;
@@ -445,7 +445,7 @@ $hg-form: 40px;
 	height: 38px;
 	overflow: hidden;
 	display: inline-block;
-	border-radius: 5px;
+	border-radius: 3px;
 	@include grid_2x(1fr, 50px);
 	&.input-border {
 		border: $border;
@@ -474,6 +474,8 @@ $hg-form: 40px;
 	color: $txt-min-color;
 	font-weight: 900;
 	font-size: 13px;
+
+	margin: 0 10px;
 
 	&:hover input ~ .checkmark {
 		background-color: #ccc;
@@ -514,6 +516,62 @@ $hg-form: 40px;
 			     -o-transform: rotate(45deg);
 			        transform: rotate(45deg);
 		}
+	}
+	.txt-site {
+		line-height: 22px;
+	}
+}
+
+.radio {
+	position: relative;
+	display: block;
+	cursor: pointer;
+	user-select: none;
+	padding-left: 30px;
+
+	color: $txt-min-color;
+	font-weight: 900;
+	font-size: 13px;
+
+	margin: 0 10px;
+
+	&:hover input ~ .checkmark {
+		background-color: #ccc;
+	}
+	input {
+		position: absolute;
+		opacity: 0;
+		width: 0;
+		height: 0;
+		&:checked ~ .checkmark {
+			background-color: $green;
+		}
+		&:checked ~ .checkmark:after {
+			display: block;
+		}
+	}
+	.checkmark {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 22px;
+		height: 22px;
+		border-radius: 22px;
+		background-color: #eee;
+		&:after {
+			content: "";
+			position: absolute;
+			display: none;
+			left: 5px;
+			top: 5px;
+			width: 12px;
+			height: 12px;
+			background-color: #fff;
+			border-radius: 12px;
+		}
+	}
+	.txt-site {
+		line-height: 22px;
 	}
 }
 
@@ -728,10 +786,10 @@ $hg-form: 40px;
 	width: calc(100% - 30px);
 	font-size: 13px;
 	padding: 10px 15px;
-	border-radius: 5px;
+	border-radius: 3px;
 	background-color: $sek-color;
 	color: $txt-sek-color;
-	border: 1px rgba(0,0,0,0.1) solid;
+	border: $border1;
 	&:hover {
 		color: $txt-min-color;
 		border: 1px rgba(0,0,0,0.3) solid;

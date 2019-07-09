@@ -87,7 +87,7 @@ class Pages extends Component {
         </form>
 
         <div
-          style={{top: "45px"}} 
+          style={{top: "40px"}} 
           className={this.state.searchClass}>
 
           <div className="padding-5px grid grid-2x border-bottom">

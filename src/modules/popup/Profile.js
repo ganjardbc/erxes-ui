@@ -51,7 +51,7 @@ class Pages extends Component {
         </div>
 
         <div
-          style={{top: "45px", width: "200px"}} 
+          style={{top: "40px", width: "200px"}} 
           className={this.state.profileClass}>
           <ul>
             <NavLink to="/">

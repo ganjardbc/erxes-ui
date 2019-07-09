@@ -64,7 +64,7 @@ class Pages extends Component {
         </button>
 
         <div
-          style={{top: "45px"}} 
+          style={{top: "40px"}} 
           className={this.state.notifClass}>
           <div className="txt-site txt-left">
           	
