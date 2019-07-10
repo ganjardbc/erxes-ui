@@ -3404,6 +3404,11 @@ a {
         display: none; }
       .app.app-side-min .app-menu .content .list .icn-right {
         display: none; }
+    .app.app-side-min .app-menu .content .submenu .submenu-sign {
+      display: none; }
+    .app.app-side-min .app-menu .content .submenu .submenu-content li .list {
+      width: calc(100%);
+      padding: 0 0; }
     .app.app-side-min .app-space {
       display: none; }
     .app.app-side-min .app-title {
@@ -3485,7 +3490,7 @@ a {
     .app .app-slide .slide-list {
       position: relative;
       width: 100%;
-      height: calc(100vh - 55px);
+      height: calc(100vh - 50px);
       overflow-y: auto;
       overflow-x: hidden; }
   .app .app-main {
@@ -3591,6 +3596,65 @@ a {
           font-size: 13px;
           font-weight: 500;
           font-family: "FontFirstBold", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+      .app .app-menu .content .submenu input {
+        display: none; }
+        .app .app-menu .content .submenu input:checked ~ .list {
+          background-color: rgba(0, 0, 0, 0.1); }
+          .app .app-menu .content .submenu input:checked ~ .list .submenu-sign:after {
+            -webkit-transition: all .25s ease;
+            -moz-transition: all .25s ease;
+            -ms-transition: all .25s ease;
+            -o-transition: all .25s ease;
+            transition: all .25s ease;
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            transform: rotate(45deg); }
+        .app .app-menu .content .submenu input:checked ~ .submenu-content {
+          -webkit-transition: all .25s ease;
+          -moz-transition: all .25s ease;
+          -ms-transition: all .25s ease;
+          -o-transition: all .25s ease;
+          transition: all .25s ease;
+          display: block; }
+      .app .app-menu .content .submenu .submenu-sign {
+        position: relative;
+        width: 22px;
+        height: 22px;
+        border-radius: 3px; }
+        .app .app-menu .content .submenu .submenu-sign:after {
+          -webkit-transition: all .25s ease;
+          -moz-transition: all .25s ease;
+          -ms-transition: all .25s ease;
+          -o-transition: all .25s ease;
+          transition: all .25s ease;
+          content: "";
+          position: absolute;
+          right: 0;
+          top: 5px;
+          width: 7px;
+          height: 7px;
+          border: solid rgba(255, 255, 255, 0.7);
+          border-width: 0 3px 3px 0;
+          -webkit-transform: rotate(-45deg);
+          -moz-transform: rotate(-45deg);
+          -ms-transform: rotate(-45deg);
+          -o-transform: rotate(-45deg);
+          transform: rotate(-45deg); }
+      .app .app-menu .content .submenu .submenu-content {
+        position: relative;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.1);
+        display: none;
+        -webkit-transition: all .25s ease;
+        -moz-transition: all .25s ease;
+        -ms-transition: all .25s ease;
+        -o-transition: all .25s ease;
+        transition: all .25s ease; }
+        .app .app-menu .content .submenu .submenu-content li .list {
+          width: calc(100% - 30px);
+          padding: 12px 15px; }
   .app .app-panel {
     position: relative;
     width: 100%; }

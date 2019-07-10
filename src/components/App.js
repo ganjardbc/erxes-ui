@@ -114,27 +114,76 @@ class App extends Component {
 	                </div>
 	              </div>
 
-	              <div className="app-space">
-                  NAVIGATION
-                </div>
+                <div className="slide-list change-scrollbar">
 
-	              <div className="app-menu">
-	              	{ this.createSubMenu('Dashboard', '/home', 'fa fa-lg fa-home') }
-	              </div>
+  	              <div className="app-space">
+                    NAVIGATION
+                  </div>
 
-                <div className="app-space">
-                  COMPONENTS
-                </div>
+  	              <div className="app-menu">
+  	              	{ this.createSubMenu('Dashboard', '/home', 'fa fa-lg fa-home') }
+  	              </div>
 
-                <div className="app-menu">
-                  { this.createSubMenu('Form Static', '/form-static', 'far fa-lg fa-square') }
-                  { this.createSubMenu('Form Builder', '/form-builder', 'far fa-lg fa-circle') }
-                  { this.createSubMenu('Kanban Layout', '/kanban-layout', 'fa fa-lg fa-anchor') }
-                  { this.createSubMenu('Slide Component', '/slide-component', 'fa fa-lg fa-list') }
-                  { this.createSubMenu('Thumbnail', '/thumbnail', 'fa fa-lg fa-camera') }
-                  { this.createSubMenu('Progress Image', '/progress-image', 'fa fa-lg fa-images') }
-                  { this.createSubMenu('Smart Table', '/table', 'fa fa-lg fa-table') }
-                  {/* this.createSubMenu('Date Picker', '/date-picker', 'fa fa-lg fa-calendar-alt') */}
+                  <div className="app-space">
+                    SUBMENU
+                  </div>
+
+                  <div className="app-menu">
+                    <li className="content">
+
+                      <div className="submenu">
+                        <input type="checkbox" id="submenu-1" />
+                        <label for="submenu-1" className="list">
+                          <div className="icn">
+                            <i className="fa fa-lg fa-hashtag" />
+                          </div>
+                          <div className="ttl">
+                            Main Menu
+                          </div>
+                          <div className="submenu-sign"></div>
+                        </label>
+                        <div className="submenu-content">
+                          { this.createSubMenu('Sub Menu', '/', 'far fa-lw fa-circle') }
+                          { this.createSubMenu('Sub Menu', '/', 'far fa-lw fa-circle') }
+                          { this.createSubMenu('Sub Menu', '/', 'far fa-lw fa-circle') }
+                        </div>
+                      </div>
+
+                      <div className="submenu">
+                        <input type="checkbox" id="submenu-2" />
+                        <label for="submenu-2" className="list">
+                          <div className="icn">
+                            <i className="fa fa-lg fa-hashtag" />
+                          </div>
+                          <div className="ttl">
+                            Main Menu
+                          </div>
+                          <div className="submenu-sign"></div>
+                        </label>
+                        <div className="submenu-content">
+                          { this.createSubMenu('Sub Menu', '/', 'far fa-lw fa-circle') }
+                          { this.createSubMenu('Sub Menu', '/', 'far fa-lw fa-circle') }
+                        </div>
+                      </div>
+
+                    </li>
+                  </div>
+
+                  <div className="app-space">
+                    COMPONENTS
+                  </div>
+
+                  <div className="app-menu">
+                    { this.createSubMenu('Form Static', '/form-static', 'far fa-lg fa-square') }
+                    { this.createSubMenu('Form Builder', '/form-builder', 'far fa-lg fa-circle') }
+                    { this.createSubMenu('Kanban Layout', '/kanban-layout', 'fa fa-lg fa-anchor') }
+                    { this.createSubMenu('Slide Component', '/slide-component', 'fa fa-lg fa-list') }
+                    { this.createSubMenu('Thumbnail', '/thumbnail', 'fa fa-lg fa-camera') }
+                    { this.createSubMenu('Progress Image', '/progress-image', 'fa fa-lg fa-images') }
+                    { this.createSubMenu('Smart Table', '/table', 'fa fa-lg fa-table') }
+                    {/* this.createSubMenu('Date Picker', '/date-picker', 'fa fa-lg fa-calendar-alt') */}
+                  </div>
+
                 </div>
 
       				</div>
