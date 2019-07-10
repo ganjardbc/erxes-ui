@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1b04bbbc6ef6659f6c74bc6455c70036",
+    "revision": "cc46d06a3ca32744d25f870b7567cc8b",
     "url": "/erxes-ui/index.html"
   },
   {
-    "revision": "6a9a7e49e00d40fa4128",
-    "url": "/erxes-ui/static/css/main.8f0f4143.chunk.css"
+    "revision": "8eb265169124fc625b38",
+    "url": "/erxes-ui/static/css/main.837433fe.chunk.css"
   },
   {
     "revision": "640795873588e979632d",
     "url": "/erxes-ui/static/js/2.e4afa013.chunk.js"
   },
   {
-    "revision": "6a9a7e49e00d40fa4128",
-    "url": "/erxes-ui/static/js/main.db85b8d7.chunk.js"
+    "revision": "8eb265169124fc625b38",
+    "url": "/erxes-ui/static/js/main.0045c81d.chunk.js"
   },
   {
     "revision": "c8c7263cedd27b4eede6",
