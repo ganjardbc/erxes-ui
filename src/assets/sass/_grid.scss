@@ -60,6 +60,24 @@
 .grid {
 	position: relative;
 	width: 100%;
+	&.grid-8x {
+		display: grid !important;
+		display: -ms-grid !important;
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr !important;
+		-ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr !important; 
+	}
+	&.grid-7x {
+		display: grid !important;
+		display: -ms-grid !important;
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr !important;
+		-ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr !important; 
+	}
+	&.grid-6x {
+		display: grid !important;
+		display: -ms-grid !important;
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr !important;
+		-ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr !important; 
+	}
 	&.grid-5x {
 		@include grid_5x(1fr, 1fr, 1fr, 1fr, 1fr);
 	}
@@ -315,14 +333,15 @@
 		width: 100%;
 		@include column_n(5);
 	}
-	.content-left {
-		text-align: left;
-	}
-	.content-center {
-		text-align: center;
-	}
-	.content-right {
-		text-align: right;
-	}
 	
+}
+
+.content-left {
+	text-align: left;
+}
+.content-center {
+	text-align: center;
+}
+.content-right {
+	text-align: right;
 }

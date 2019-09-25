@@ -1,96 +1,53 @@
 import React, { Component } from 'react'
-import { DateRange, DateRangePicker, Calendar } from 'react-date-range'
+import TimePicker from '../../modules/popup/Time'
+import DatePicker from '../../modules/popup/Date'
+import CalendarPicker from '../../modules/popup/Calendar'
+import DropDown from '../../modules/popup/DropDown'
+import PopUp from '../../modules/popup/PopUpAlert'
 
 class Pages extends Component {
 
   constructor (props) {
     super(props)
     this.state = {
-      placeDate: false,
-      placeRange: false,
-      placeDateRange: false,
-      datePicker: new Date(),
-      dateRange: {
-        selection: {
-          startDate: new Date(),
-          endDate: new Date(),
-          key: 'selection',
-          color: '#2ecc71'
-        },
-        compare: {
-          startDate: new Date(),
-          endDate: new Date(),
-          key: 'compare',
-        },
-      },
-      dateRangePicker: {
-        selection: {
-          startDate: new Date(),
-          endDate: new Date(),
-          key: 'selection',
-          color: '#2ecc71'
-        },
-        compare: {
-          startDate: new Date(),
-          endDate: new Date(),
-          key: 'compare',
-        },
-      },
+      popup: false,
+      popupConfirm: false,
+      popupAlert: false,
+      exampleDropDown: [
+		    { id: '1', title: 'Drop Down 1', value: 'DD-1' },
+		    { id: '2', title: 'Drop Down 2', value: 'DD-2' },
+		    { id: '3', title: 'Drop Down 3', value: 'DD-3' },
+		    { id: '4', title: 'Drop Down 4', value: 'DD-4' },
+		    { id: '5', title: 'Drop Down 5', value: 'DD-5' },
+		    { id: '6', title: 'Drop Down 6', value: 'DD-6' }
+		  ]
     }
-	}
-
-	handleSelect = (range) => {
-    console.log(range)
-    this.setState({
-      datePicker: range
-    })
   }
-
-  handleRangeChange = (which, payload) => {
-    console.log(which, payload);
-    this.setState({
-      [which]: {
-        ...this.state[which],
-        ...payload,
-      },
-    })
-  }
-
-  opPlaceDate = () => {
-    if (this.state.placeDate == false) { 
-      this.setState({
-        placeDate: true
-      })
+  
+  opPopUp = () => {
+    if (this.state.popup) { 
+      this.setState({popup: false})
     } else {
-      this.setState({
-        placeDate: false
-      })
+      this.setState({popup: true})
     }
   }
 
-  opPlaceRange = () => {
-    if (this.state.placeRange == false) { 
-      this.setState({
-        placeRange: true
-      })
+  opPopUpConfirm = () => {
+    if (this.state.popupConfirm) { 
+      this.setState({popupConfirm: false})
     } else {
-      this.setState({
-        placeRange: false
-      })
+      this.setState({popupConfirm: true})
     }
   }
 
-  opPlaceDateRange = () => {
-    if (this.state.placeDateRange == false) { 
-      this.setState({
-        placeDateRange: true
-      })
+  opPopUpAlert = () => {
+    if (this.state.popupAlert) { 
+      this.setState({popupAlert: false})
     } else {
-      this.setState({
-        placeDateRange: false
-      })
+      this.setState({popupAlert: true})
     }
   }
+	
 
 	render () {
 		return (
@@ -99,203 +56,68 @@ class Pages extends Component {
         <div className="padding-5px grid grid-2x">
           <div className="col-1">
             <div className="txt-site txt-18 txt-bold txt-main padding-top-5px">
-              Date Picker
+              Component Pickers
             </div>
           </div>
           <div className="col-2 content-right"></div>
         </div>
 
-        {/* Date Picker */}
-        <div className="padding-5px">
-
-          <div className="txt-site txt-12 txt-bold txt-main margin-bottom-5px">
-            Date picker
+        <div>
+          <div className="margin-15px" style={{ width: '300px' }}>
+            <TimePicker time="15:15:33" onChange={(e) => {
+              console.log('start date', e)
+            }} />
           </div>
-
-          <div className="card-date-picker" style={{width: '300px'}}>
-
-            <div className="double">
-              <input
-                type="text"
-                className="input"
-                readOnly
-                value={ this.state.datePicker }
-              />
-              <button 
-                type="button" 
-                className="btn btn-grey border-left btn-no-radius" 
-                onClick={this.opPlaceDate}>
-                <i className="fa fa-lg fa-calendar-alt" />
-              </button>
-            </div>
-
-            {(this.state.placeDate) ? (
-              <div className="content">
-                <div className="padding-5px grid grid-2x border-bottom">
-                  <div className="col-1">
-                    <div className="txt-site txt-main txt-11 txt-bold post-top">
-                      Choose dates
-                    </div>
-                  </div>
-                  <div className="col-2 content-right">
-                    <button 
-                      type="button" 
-                      className="btn btn-grey btn-circle" 
-                      onClick={this.opPlaceDate}>
-                      <i className="fa fa-lg fa-times" />
-                    </button>
-                  </div>
-                </div>
-                <div>
-                  <Calendar 
-                    date={ this.state.datePicker } 
-                    onChange={ this.handleSelect }
-                    color="#2ecc71" />
-                </div>
-              </div>
-            ) : (
-              <div></div>
-            )}
-
+          <div className="margin-15px" style={{ width: '300px' }}>
+            <DatePicker />
           </div>
-
-        </div>
-
-
-
-        {/* Date Range */}
-        <div className="padding-5px">
-
-          <div className="txt-site txt-12 txt-bold txt-main margin-bottom-5px">
-            Date range
+          <div className="margin-15px" style={{ width: '300px' }}>
+            <CalendarPicker onChange={(e) => { console.log('calendar', e) }} />
           </div>
-
-          <div className="card-date-picker" style={{width: '600px'}}>
-
-            <div className="double">
-              <input
-                type="text"
-                className="input"
-                readOnly
-                value={ this.state.dateRange.selection.startDate }
-              />
-              <input
-                type="text"
-                className="input border-left"
-                readOnly
-                value={ this.state.dateRange.selection.endDate }
-              />
-              <button 
-                type="button" 
-                className="btn btn-grey border-left btn-no-radius" 
-                onClick={this.opPlaceRange}>
-                <i className="fa fa-lg fa-calendar-alt" />
-              </button>
-            </div>
-
-            {(this.state.placeRange) ? (
-              <div className="content">
-                <div className="padding-5px grid grid-2x border-bottom">
-                  <div className="col-1">
-                    <div className="txt-site txt-main txt-11 txt-bold post-top">
-                      Choose dates
-                    </div>
-                  </div>
-                  <div className="col-2 content-right">
-                    <button 
-                      type="button" 
-                      className="btn btn-grey btn-circle" 
-                      onClick={this.opPlaceRange}>
-                      <i className="fa fa-lg fa-times" />
-                    </button>
-                  </div>
-                </div>
-                <div>
-                  <DateRange
-                    onChange={this.handleRangeChange.bind(this, 'dateRange')}
-                    ranges={[this.state.dateRange.selection]}
-                    months={2}
-                    direction="horizontal"
-                    showSelectionPreview={true}
-                    moveRangeOnFirstSelection={false}
-                  />
-                </div>
-              </div>
-            ) : (
-              <div></div>
-            )}
-
+          <div className="margin-15px" style={{ width: '300px' }}>
+            <DropDown
+              onChange={(e) => { console.log('data', e) }}
+              data={this.state.exampleDropDown} />
           </div>
+          <div className="margin-15px" style={{ width: '300px' }}>
+            <button 
+              className="btn btn-all btn-blue margin-right-10px"
+              onClick={this.opPopUp}>
+              Done
+            </button>
+            <button 
+              className="btn btn-all btn-blue margin-right-10px"
+              onClick={this.opPopUpConfirm}>
+              Alert
+            </button>
+            <button 
+              className="btn btn-all btn-blue"
+              onClick={this.opPopUpAlert}>
+              Confirm
+            </button>
 
-        </div>
+            { (this.state.popup) 
+            ? <PopUp
+              type={"save"}
+              class={"app-popup app-popup-show"}
+              onClick={this.opPopUp} /> 
+            : <div></div> }
 
+            { (this.state.popupConfirm) 
+            ? <PopUp
+              type={"confirm"}
+              class={"app-popup app-popup-show"}
+              onClick={this.opPopUpConfirm} /> 
+            : <div></div> }
 
-
-        {/* Date Range Picker */}
-        <div className="padding-5px">
-
-          <div className="txt-site txt-12 txt-bold txt-main margin-bottom-5px">
-            Date range picker
+            { (this.state.popupAlert) 
+            ? <PopUp
+              type={"delete"}
+              class={"app-popup app-popup-show"}
+              onClick={this.opPopUpAlert} /> 
+            : <div></div> }
           </div>
-
-          <div className="card-date-picker" style={{width: '600px'}}>
-
-            <div className="double">
-              <input
-                type="text"
-                className="input"
-                readOnly
-                value={ this.state.dateRangePicker.selection.startDate }
-              />
-              <input
-                type="text"
-                className="input border-left"
-                readOnly
-                value={ this.state.dateRangePicker.selection.endDate }
-              />
-              <button 
-                type="button" 
-                className="btn btn-grey border-left btn-no-radius" 
-                onClick={this.opPlaceDateRange}>
-                <i className="fa fa-lg fa-calendar-alt" />
-              </button>
-            </div>
-
-            {(this.state.placeDateRange) ? (
-              <div className="content">
-                <div className="padding-5px grid grid-2x border-bottom">
-                  <div className="col-1">
-                    <div className="txt-site txt-main txt-11 txt-bold post-top">
-                      Choose dates
-                    </div>
-                  </div>
-                  <div className="col-2 content-right">
-                    <button 
-                      type="button" 
-                      className="btn btn-grey btn-circle" 
-                      onClick={this.opPlaceDateRange}>
-                      <i className="fa fa-lg fa-times" />
-                    </button>
-                  </div>
-                </div>
-                <div>
-                  <DateRangePicker
-                    onChange={this.handleRangeChange.bind(this, 'dateRangePicker')}
-                    ranges={[this.state.dateRangePicker.selection]}
-                    months={2}
-                    direction="horizontal"
-                    showSelectionPreview={true}
-                    moveRangeOnFirstSelection={false}
-                  />
-                </div>
-              </div>
-            ) : (
-              <div></div>
-            )}
-
-          </div>
-
-        </div>
+        </div>        
 
       </div>
 		)

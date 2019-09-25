@@ -257,7 +257,7 @@
         }
         .page-link {
             padding: 10px;
-            height: 45px;
+            height: 40px;
             border: $border;
             border-radius: 5px;
             margin: 0 5px;
@@ -360,10 +360,10 @@
     .input {
         position: relative;
         width: calc(100% - 30px);
-        padding: 10px 15px;
+        padding: 15px;
         background-color: #fff;
         color: $txt-84-color;
-        font-size: 13px;
+        font-size: 11pt;
         font-weight: 500;
         &:focus {
             color: $red;
@@ -377,7 +377,7 @@
         top: 0;
         left: 0;
         z-index: 10;
-        border: $border1;
+        border: 1px rgba(0,0,0,0.1) solid;
         width: 100px;
         height: 100px;
         background-color: #fff;
@@ -386,7 +386,7 @@
     .double {
         position: relative;
         height: 40px;
-        border: $border1;
+        border: 1px rgba(0,0,0,0.1) solid;
         background-color: #fff;
         border-radius: 5px;
         overflow: hidden;
@@ -395,15 +395,43 @@
     .content {
         position: absolute;
         top: 40px;
-        z-index: 10;
-        border: $border1;
+        width: 100%;
+        z-index: 100;
+        border: 1px rgba(0,0,0,0.1) solid;
         box-shadow: $shadow;
         background-color: #fff;
         margin-bottom: 15px;
+        border-radius: 5px;
+        box-shadow: $shadow;
         &.right {
             right: 0 !important;
         }
+        &.content-popup-center {
+            @include post_center(fixed);
+        }
+        .m-input-moment {
+            width: calc(100% - 30px) !important;
+            border: 0 solid #000;
+        }
+        .rdrCalendarWrapper {
+            position: relative;
+            width: calc(100%);
+            top: 0px;
+            .rdrMonthAndYearWrapper {
+                padding: 0 0;
+            }
+            .rdrMonth {
+                padding: 0 0;
+                width: 100% !important;
+            }
+        }
     }
+}
+
+.card-time-picker {
+    position: relative;
+    display: block;
+    width: 100%;
 }
 
 .card-form {

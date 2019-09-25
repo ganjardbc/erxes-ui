@@ -1,42 +1,60 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Switch, Router, Route, NavLink, HashRouter } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
 var opActivePopup = 'app-small-profile active'
 var clActivePopup = 'app-small-profile'
 
-var opContentPopup = 'app-menu-popup'
 var clContentPopup = 'app-menu-popup app-menu-popup-hide'
-
 
 class Pages extends Component {
 
-  constructor () {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
-    	profileClass: clContentPopup,
       smallProfileClass: clActivePopup,
+      profileClass: clContentPopup
     }
+  }
+
+  handleClickOutside(element) {
+    // console.log(element)
+    const outsideclickListener = event => {
+      if (!element.contains(event.target)) {
+        element.style.display = 'none'
+        removeClickListener()
+      }
+    }
+
+    const removeClickListener = () => {
+      this.setState({smallProfileClass: clActivePopup})
+      document.removeEventListener('click', outsideclickListener)
+    }
+
+    document.addEventListener('click', outsideclickListener)
   }
 
   opProfile = () => {
-    if (this.state.profileClass === clContentPopup) {
-      this.setState({profileClass: opContentPopup})
-      this.setState({smallProfileClass: opActivePopup})
-    } else {
-      this.setState({profileClass: clContentPopup})
-      this.setState({smallProfileClass: clActivePopup})
-    }
+    var element = document.getElementById('app-profile')
+    element.style.display = 'block'
+    this.setState({smallProfileClass: opActivePopup})
+    this.handleClickOutside(element)
   }
 
-  render () {
-		return (
+  logout() {
+    this.props.authLogout()
+  }
+
+  render() {
+    return (
       <div>
-      	<div 
+        <div
           onClick={this.opProfile}
           className={this.state.smallProfileClass}
-          style={ {float: 'right'} }>
+          style={{ float: 'right' }}>
           <div className="asp-col-1">
-            <div className="image image-circle image-30px background-blue"></div>
+            <div className="image image-circle image-30px background-blue">
+              <img width="100%" height="100%" src={this.state.imageUrl} alt=""/>
+            </div>
           </div>
           <div className="asp-col-2">
             <div className="ttl">
@@ -51,11 +69,18 @@ class Pages extends Component {
         </div>
 
         <div
-          style={{top: "40px", width: "200px"}} 
+          style={{ top: "45px", width: "200px" }}
+          id="app-profile"
           className={this.state.profileClass}>
           <ul>
             <NavLink to="/">
-              <li onClick={this.opProfile}>
+              <li>
+                <i className="icn fa fa-lw fa-user"></i>
+                Profile
+              </li>
+            </NavLink>
+            <NavLink to="/">
+              <li>
                 <i className="icn fa fa-lw fa-power-off"></i>
                 Logout
               </li>
@@ -64,8 +89,9 @@ class Pages extends Component {
         </div>
       </div>
     )
-	}
+  }
 
 }
+
 
 export default Pages

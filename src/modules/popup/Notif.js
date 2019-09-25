@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 
-var opContentPopup = 'app-menu-popup'
 var clContentPopup = 'app-menu-popup app-menu-popup-hide'
 
 var opButton = 'btn btn-circle btn-grey active'
@@ -16,14 +15,41 @@ class Pages extends Component {
     }
   }
 
-  opNotif = () => {
-    if (this.state.notifClass === clContentPopup) {
-      this.setState({notifClass: opContentPopup})
-      this.setState({smallNotifClass: opButton})
-    } else {
-      this.setState({notifClass: clContentPopup})
-      this.setState({smallNotifClass: clButton})
+  // componentDidMount() {
+    // var element = document.getElementById('app-notif')
+    // this.handleClickOutside(element)
+  // }
+
+  handleClickOutside(element) {
+    // console.log(element)
+    const outsideclickListener = event => {
+      if (!element.contains(event.target)) {
+        element.style.display = 'none'
+        removeClickListener()
+      }
     }
+
+    const removeClickListener = () => {
+      this.setState({smallNotifClass: clButton})
+      document.removeEventListener('click', outsideclickListener)
+    }
+
+    document.addEventListener('click', outsideclickListener)
+  }
+
+  opNotif = () => {
+    var element = document.getElementById('app-notif')
+    element.style.display = 'block'
+    this.setState({smallNotifClass: opButton})
+    this.handleClickOutside(element)
+
+    // if (this.state.notifClass === clContentPopup) {
+    //   this.setState({notifClass: opContentPopup})
+    //   this.setState({smallNotifClass: opButton})
+    // } else {
+    //   this.setState({notifClass: clContentPopup})
+    //   this.setState({smallNotifClass: clButton})
+    // }
   }
 
   contentNotif = (length) => {
@@ -64,7 +90,8 @@ class Pages extends Component {
         </button>
 
         <div
-          style={{top: "40px"}} 
+          id="app-notif"
+          style={{top: "45px"}} 
           className={this.state.notifClass}>
           <div className="txt-site txt-left">
           	

@@ -247,6 +247,20 @@ class Pages extends Component {
               {/* hapus content-fixed-right agar componenet tidak melayang */}
               <div className="col-2 content-fixed-right">
 
+                <div className="card-form margin-bottom-15px">
+                  <div className="cf-header">
+                    <div className="cf-title">
+                      Read me
+                    </div>
+                  </div>
+                  <div className="cf-body">
+                    <p className="txt-site txt-11 txt-primary">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                  </div>
+                  <div className="cf-footer"></div>
+                </div>
+
                 <div className="card-form">
                   <div className="cf-header">
                     <div className="cf-title">

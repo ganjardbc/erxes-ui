@@ -78,25 +78,25 @@ $border1: 1px rgba(0,0,0,0.1) solid;
 $border2: 1px rgba(0,0,0,0.2) solid;
 $no-border: 0 #fff solid;
 
-$shadow: 0 5px 20px rgba(154,161,171,.25);
+$shadow: 0 5px 30px rgba(154,161,171,.25);
 $shadow-small: 0 3px 10px rgba(154,161,171,.25);
 $shadow-line: 0 2px 10px rgba(0,0,0,0.14);
 
 // color
 .gradient-purple {
-    background: linear-gradient(top, $purple 10%, $red 100%);
+    background: linear-gradient(to top, $purple 10%, $red 100%);
     color: #fff;
 }
 .gradient-blue {
-    background: linear-gradient(top, $blue 10%, $purple 100%);
+    background: linear-gradient(to top, $blue 10%, $purple 100%);
     color: #fff;
 }
 .gradient-red {
-    background: linear-gradient(top, $red 10%, $magenta 100%);
+    background: linear-gradient(to top, $red 10%, $magenta 100%);
     color: #fff;
 }
 .gradient-orange {
-    background: linear-gradient(top, $orange 10%, $magenta 100%);
+    background: linear-gradient(to top, $orange 10%, $magenta 100%);
     color: #fff;
 }
 .background-white {
@@ -185,8 +185,11 @@ $shadow-line: 0 2px 10px rgba(0,0,0,0.14);
 }
 
 .border-radius {
-    border-radius: 10px;
-    overflow: hidden;
+    border-radius: 5px;
+    // overflow: hidden;
+}
+.border-radius-2 {
+    border-radius: 5px;
 }
 .border {
     $border: $border;
@@ -237,8 +240,7 @@ $shadow-line: 0 2px 10px rgba(0,0,0,0.14);
 @mixin transparantScrollBarHover() {
     
     &::scrollbar {
-        width: 10px;
-        height: 10px;
+        width: 0;
         background-color: rgba(0, 0, 0, 0);
     }
     &::scrollbar-thumb {
@@ -250,8 +252,7 @@ $shadow-line: 0 2px 10px rgba(0,0,0,0.14);
     }
 
     &::-webkit-scrollbar {
-        width: 10px;
-        height: 10px;
+        width: 0;
         background-color: rgba(0, 0, 0, 0);
     }
     &::-webkit-scrollbar-thumb {
@@ -263,8 +264,7 @@ $shadow-line: 0 2px 10px rgba(0,0,0,0.14);
     }
 
     &::-moz-scrollbar {
-        width: 10px;
-        height: 10px;
+        width: 0;
         background-color: rgba(0, 0, 0, 0);
     }
     &::-moz-scrollbar-thumb {
@@ -276,10 +276,19 @@ $shadow-line: 0 2px 10px rgba(0,0,0,0.14);
     }
 
     &:hover {
-        &::scrollbar-thumb {
-            @include animate_1();
-            background-color: rgba(0,0,0,0.14);
+        &::scrollbar {
+            width: 10px;
+            height: 10px;
         }
+        &::-webkit-scrollbar {
+            width: 10px;
+            height: 10px;
+        }
+        &::-moz-scrollbar {
+            width: 10px;
+            height: 10px;
+        }
+
         &::-webkit-scrollbar-thumb {
             @include animate_1();
             background-color: rgba(0,0,0,0.14);

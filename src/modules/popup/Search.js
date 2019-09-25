@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
 
-var opContentPopup = 'app-menu-popup'
-var clContentPopup = 'app-menu-popup app-menu-popup-hide'
-
-var opButtonBig = 'btn btn-green active'
-var clButtonBig = 'btn btn-grey'
+var opContentPopup = 'search-content active'
+var clContentPopup = 'search-content'
+var opSearchPicker = 'search-picker active'
+var clSearchPicker = 'search-picker'
 
 class Pages extends Component {
 
@@ -12,24 +11,39 @@ class Pages extends Component {
     super()
     this.state = {
     	searchClass: clContentPopup,
-      smallSearchClass: clButtonBig,
+      searchPicker: clSearchPicker,
+      searchContent: clContentPopup,
     	valSearch: '',
     }
   }
 
-  opSearch = (event) => {
-    event.preventDefault()
-
-    if (this.state.valSearch.length > 0) { 
-      this.setState({searchClass: opContentPopup})
-    } else {
-      this.setState({searchClass: clContentPopup})
+  handleClickOutside(element) {
+    // console.log(element)
+    const outsideclickListener = event => {
+      if (!element.contains(event.target)) {
+        this.setState({searchContent: clContentPopup})
+        this.setState({searchPicker: clSearchPicker})
+        removeClickListener()
+      }
     }
+
+    const removeClickListener = () => {
+      this.setState({searchContent: clContentPopup})
+      this.setState({searchPicker: clSearchPicker})
+      document.removeEventListener('click', outsideclickListener)
+    }
+
+    document.addEventListener('click', outsideclickListener)
   }
 
-  clSearch = () => {
-    this.setState({searchClass: clContentPopup})
-    // this.setState({valSearch: ''})
+  opFormSearch = () => {
+    var element = document.getElementById('app-search')
+    this.handleClickOutside(element)
+    this.setState({searchPicker: opSearchPicker})
+  }
+
+  clFormSearch = () => {
+    this.setState({searchPicker: opSearchPicker})
   }
 
   keyUpSearch = (event) => {
@@ -37,9 +51,9 @@ class Pages extends Component {
     this.setState({valSearch: dt})
 
     if (dt.length > 0) { 
-      this.setState({searchClass: opContentPopup})
+      this.setState({searchContent: opContentPopup})
     } else {
-      this.setState({searchClass: clContentPopup})
+      this.setState({searchContent: clContentPopup})
     }
   }
 
@@ -67,49 +81,36 @@ class Pages extends Component {
 
   render () {
 		return (
-      <div>
-      	
-      	<form onSubmit={this.opSearch}>
-          <div className="input-group input-grey input-border">
-            <input 
-              className="txt txt-transparant txt-no-radius txt-no-shadow" 
-              name="search" 
-              placeholder="Search.." 
-              onChange={this.keyUpSearch}
-              value={this.state.valSearch}
-              required />
-            <button 
-              type="submit" 
-              className="btn btn-all btn-no-radius btn-grey">
-              <i className="fa fa-lg fa-search" />
-            </button>
+      <div 
+        className={this.state.searchPicker}
+        id="app-search">
+
+        <form onSubmit={this.opSearch}>
+          <div className="search-form gradient-blue">
+            <div className="search-button">
+              <button 
+                type="button" 
+                className="btn btn-circle"
+                onClick={this.opFormSearch}>
+                <i className="icn fa fa-1x fa-search" />
+              </button>
+            </div>
+            <div className="search-input">
+              <input 
+                type="search"
+                name="search"
+                className="txt"
+                placeholder="Search.."
+                onChange={this.keyUpSearch}
+                value={this.state.valSearch} />
+            </div>
           </div>
         </form>
 
-        <div
-          style={{top: "40px"}} 
-          className={this.state.searchClass}>
-
-          <div className="padding-5px grid grid-2x border-bottom">
-            <div className="col-1">
-              <div className="padding-left-10px txt-site txt-main txt-11 txt-bold post-top">
-              	Search
-              </div>
-            </div>
-            <div className="col-2 content-right">
-              <button 
-                type="button" 
-                className="btn btn-grey btn-circle" 
-                onClick={this.clSearch}>
-                <i className="fa fa-lg fa-times" />
-              </button>
-            </div>
+        <div className={this.state.searchContent}>
+          <div className="search-place">
+            { this.contentSearch(8) }
           </div>
-                      
-          <div className="content">
-          	{ this.contentSearch(8) }
-          </div>
-
         </div>
 
       </div>
