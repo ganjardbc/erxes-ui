@@ -103,7 +103,7 @@ class App extends Component {
       					<div className="app-title">
 	                <div className="col-1">
 	                  <h1 className="txt-site txt-white txt-upp txt-18 txt-bold post-center margin-left-10px">
-	                    DDMS
+	                    ERXES
 	                  </h1>
 	                </div>
 	                <div className="col-2">
