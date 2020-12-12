@@ -62,7 +62,7 @@ class Pages extends Component {
           <div className="col-2 content-right"></div>
         </div>
 
-        <div>
+        <div className="padding-5px">
           <div className="margin-15px" style={{ width: '300px' }}>
             <TimePicker time="15:15:33" onChange={(e) => {
               console.log('start date', e)

@@ -10,7 +10,7 @@ class Pages extends Component {
     this.state = {
       curentIndex: 0,
       stepIndex: 200,
-      nextStep: 0,
+      nextStep: 0
     }
   }
 
