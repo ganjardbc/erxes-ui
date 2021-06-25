@@ -154,7 +154,7 @@ class Pages extends Component {
             <div className="col-2 content-right"></div>
           </div>*/}
 
-          <div className="display-flex">
+          <div className="display-flex wrap">
             { this.contentCard(9) }
           </div>
 
