@@ -103,11 +103,11 @@ class ComplexMenu extends Component {
 
                   <div className="content">
                     {this.state.tabListMenu.map((listMenu, j) => {
+                      let menu = null
                       if (listMenu.for === subMenu.id) {
-                        return (
-                          <div 
-                            className="content-space"
-                            id={ listMenu.id }>
+                        menu = <div 
+                                className="content-space"
+                                id={ listMenu.id }>
                             <div className="normal-menu">
                               <div className="n-m-space">
                                 { listMenu.title }
@@ -129,8 +129,8 @@ class ComplexMenu extends Component {
                               </ul>
                             </div>
                           </div>
-                        )
                       }
+                      return menu
                     })}
                   </div>
                 </div>

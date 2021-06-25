@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Switch, Router, Route, NavLink, HashRouter } from 'react-router-dom'
+import { BrowserRouter as Router, Route, NavLink, HashRouter } from 'react-router-dom'
 
 // modules
 import ChatPopup from '../modules/popup/Chat'

@@ -146,7 +146,7 @@ class Pages extends Component {
   onSubmit = (event) => {
 
   	// untuk keperluan submit
-  	var jsn = event.formData
+  	// var jsn = event.formData
 
   	// untuk result
   	var str = JSON.stringify(event.formData, null, 2)

@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, NavLink, HashRouter, Redirect } from "react-router-dom"
 
 import CardPercentage from '../../cards/Percentage'
 import CardPiechart from '../../cards/Piechart'

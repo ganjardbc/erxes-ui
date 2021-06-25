@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, NavLink, HashRouter, Redirect } from "react-router-dom"
-import cover from './../../assets/img/cover.png'
+import { BrowserRouter as Router, HashRouter, Redirect } from "react-router-dom"
 import logo from './../../assets/img/daya-logo.png'
 
 class Login extends Component {

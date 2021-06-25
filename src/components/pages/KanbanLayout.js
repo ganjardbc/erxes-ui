@@ -8,13 +8,14 @@ class Pages extends Component {
   }
 
   createCard = (type, title, status) => {
+    var dt = ''
 
     if (type === 'text') {
-      var dt = <div className="margin-bottom-10px txt-site txt-12 txt-bold">{title}</div>
+      dt = <div className="margin-bottom-10px txt-site txt-12 txt-bold">{title}</div>
     }
 
     if (type === 'image') {
-      var dt = <div>
+      dt = <div>
           <div className="image image-middle image-radius background-dark-grey"></div>
           <div className="margin-10px txt-site txt-11 txt-bold">{title}</div>
         </div>

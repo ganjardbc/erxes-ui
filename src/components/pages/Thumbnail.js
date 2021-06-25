@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import Img from 'react-image'
 
-const data = {}
-
 class Pages extends Component {
 
   constructor () {
@@ -21,7 +19,6 @@ class Pages extends Component {
 
   toLeft = () => {
     var dt = document.getElementById('navigator')
-    var width = dt.scrollWidth
     var step = dt.clientWidth
     var nextStep = this.state.nextStep - step
 
@@ -36,7 +33,6 @@ class Pages extends Component {
     var dt = document.getElementById('navigator')
     var width = dt.scrollWidth
     var step = dt.clientWidth
-    var scroll = dt.scrollLeft
     var nextStep = this.state.nextStep + step
 
     if (nextStep <= width) {
@@ -49,7 +45,6 @@ class Pages extends Component {
   contentTag = (length) => {
     var dt = []
     for (var i = 1; i <= length; ++i) {
-      var ttl = 'Navigasi ' + i
       dt.push(
         <li key={i}>
           <input 

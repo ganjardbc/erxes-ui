@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Calendar } from 'react-date-range'
-import moment from 'moment'
 
 class Pages extends Component {
 

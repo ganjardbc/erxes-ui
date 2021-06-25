@@ -36,6 +36,8 @@ class Pages extends Component {
             status: stt
           }
         )
+
+        return null
       })
       this.setState({ ddData: payload })
       // console.log('new data', payload)
@@ -58,6 +60,7 @@ class Pages extends Component {
               status: stt
             }
           )
+          return null 
         })
         this.setState({ ddData: payload })
         this.setState({ ddTitle: val })
@@ -83,6 +86,8 @@ class Pages extends Component {
         value: data.value,
         status: stt
       })
+
+      return null
     })
 
     let newData = {
