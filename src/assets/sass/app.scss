@@ -1186,6 +1186,7 @@ a {
 				height: $hgAppPage2;
 				overflow-y: auto;
 				overflow-x: hidden;
+				@include transparantScrollBarHover();
 			}
 			.a-s-p-pad {
 				position: relative;

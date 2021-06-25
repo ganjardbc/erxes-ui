@@ -203,15 +203,14 @@ $shadow-line: 0 2px 10px rgba(0,0,0,0.14);
 
 .content-center {
     text-align: center;
-    justify: center;
+    justify-content: center;
 }
 
 // scrollbar
 @mixin transparantScrollBar() {
     // normal
     &::-moz-scrollbar {
-        width: 10px;
-        height: 10px;
+        width: 6px;
         background-color: rgba(0, 0, 0, 0);
     }
     &::-moz-scrollbar-thumb {
@@ -224,8 +223,7 @@ $shadow-line: 0 2px 10px rgba(0,0,0,0.14);
 
     // webkit
     &::-webkit-scrollbar {
-        width: 10px;
-        height: 10px;
+        width: 6px;
         background-color: rgba(0, 0, 0, 0);
     }
     &::-webkit-scrollbar-thumb {
@@ -240,10 +238,12 @@ $shadow-line: 0 2px 10px rgba(0,0,0,0.14);
 @mixin transparantScrollBarHover() {
     
     &::scrollbar {
+        position: absolute;
         width: 0;
         background-color: rgba(0, 0, 0, 0);
     }
     &::scrollbar-thumb {
+        position: absolute;
         background-color: rgba(0, 0, 0, 0);
         border-radius: 1ex;
     }
@@ -258,6 +258,7 @@ $shadow-line: 0 2px 10px rgba(0,0,0,0.14);
     &::-webkit-scrollbar-thumb {
         background-color: rgba(0, 0, 0, 0);
         -webkit-border-radius: 1ex;
+        border-radius: 1ex;
     }
     &::-webkit-scrollbar-corner {
         background-color: #fff;
@@ -270,6 +271,7 @@ $shadow-line: 0 2px 10px rgba(0,0,0,0.14);
     &::-moz-scrollbar-thumb {
         background-color: rgba(0, 0, 0, 0);
         -moz-border-radius: 1ex;
+        border-radius: 1ex;
     }
     &::-moz-scrollbar-corner {
         background-color: #fff;
@@ -277,37 +279,40 @@ $shadow-line: 0 2px 10px rgba(0,0,0,0.14);
 
     &:hover {
         &::scrollbar {
-            width: 10px;
-            height: 10px;
+            width: 6px;
         }
         &::-webkit-scrollbar {
-            width: 10px;
-            height: 10px;
+            width: 6px;
         }
         &::-moz-scrollbar {
-            width: 10px;
-            height: 10px;
+            width: 6px;
         }
 
+        &::scrollbar-thumb {
+            @include animate_1();
+            background-color: rgba(0, 0, 0, 0.3);
+            width: 6px;
+        }
         &::-webkit-scrollbar-thumb {
             @include animate_1();
-            background-color: rgba(0,0,0,0.14);
+            background-color: rgba(0, 0, 0, 0.3);
+            width: 6px;
         }
         &::-moz-scrollbar-thumb {
             @include animate_1();
-            background-color: rgba(0,0,0,0.14);
+            background-color: rgba(0, 0, 0, 0.3);
+            width: 6px;
         }
     }
 }
 
 @mixin greyScrollBar() {
     &::scrollbar {
-        width: 10px;
-        height: 10px;
+        width: 6px;
         background-color: rgba(0, 0, 0, 0.1);
     }
     &::scrollbar-thumb {
-        background-color: rgba(0, 0, 0, 0.1);
+        background-color: rgba(0, 0, 0, 0.3);
         border-radius: 1ex;
     }
     &::scrollbar-corner {
@@ -315,12 +320,11 @@ $shadow-line: 0 2px 10px rgba(0,0,0,0.14);
     }
 
     &::-webkit-scrollbar {
-        width: 10px;
-        height: 10px;
+        width: 6px;
         background-color: rgba(0, 0, 0, 0.1);
     }
     &::-webkit-scrollbar-thumb {
-        background-color: rgba(0, 0, 0, 0.1);
+        background-color: rgba(0, 0, 0, 0.3);
         -webkit-border-radius: 1ex;
     }
     &::-webkit-scrollbar-corner {
@@ -328,12 +332,11 @@ $shadow-line: 0 2px 10px rgba(0,0,0,0.14);
     }
 
     &::-moz-scrollbar {
-        width: 10px;
-        height: 10px;
+        width: 6px;
         background-color: rgba(0, 0, 0, 0.1);
     }
     &::-moz-scrollbar-thumb {
-        background-color: rgba(0, 0, 0, 0.1);
+        background-color: rgba(0, 0, 0, 0.3);
         -webkit-border-radius: 1ex;
     }
     &::-moz-scrollbar-corner {
