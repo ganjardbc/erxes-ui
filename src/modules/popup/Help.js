@@ -98,7 +98,7 @@ class Pages extends Component {
       	<button 
           onClick={this.opNotif}
           className={this.state.smallNotifClass}>
-          <i className="fa fa-lg fa-question-circle txt-site txt-15"></i>
+          <i className="far fa-lg fa-question-circle txt-site txt-15"></i>
         </button>
 
         <div
