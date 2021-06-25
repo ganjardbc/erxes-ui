@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, NavLink, HashRouter } from 'react-route
 import ChatPopup from '../modules/popup/Chat'
 import CreatePopup from '../modules/popup/Create'
 import NotifPopup from '../modules/popup/Notif'
+import HelpPopoup from '../modules/popup/Help'
 import SearchPopup from '../modules/popup/Search'
 import ProfilePopup from '../modules/popup/Profile'
 
@@ -103,7 +104,7 @@ class App extends Component {
       					<div className="app-title">
 	                <div className="col-1">
 	                  <h1 className="txt-site txt-white txt-upp txt-18 txt-bold post-center margin-left-10px">
-	                    ERXES
+	                    BITOZEN
 	                  </h1>
 	                </div>
 	                <div className="col-2">
@@ -116,24 +117,6 @@ class App extends Component {
 	              </div>
 
                 <div className="slide-list change-scrollbar">
-
-                  {/* <div className="app-space">
-                    <input type="checkbox" checked name="mainmenu" id="mainmenu-navigation" />
-                    <label htmlFor="mainmenu-navigation" className="list">
-                      <span className="app-space-icon">
-                        <i className="fa fa-1x fa-home" />
-                      </span>
-                      <span className="app-space-text">
-                        NAVIGATION
-                      </span>
-                      <span className="app-space-sign"></span>
-                    </label>
-                    <div className="app-space-content">
-                      <div className="app-menu">
-                        { this.createSubMenu('Dashboard', '/home', 'fa fa-lg fa-home') }
-                      </div>
-                    </div>
-                  </div> */}
                   <div className="app-menu">
                     { this.createSubMenu('Dashboard', '/home', 'fa fa-lg fa-home') }
                   </div>
@@ -237,10 +220,13 @@ class App extends Component {
 	                  <div className="panel-button app-desktop">
 	                    <CreatePopup />
 	                  </div>
-	                  <div className="panel-button app-desktop" style={{marginLeft: "10px"}}>
+	                  <div className="panel-button app-desktop" style={{marginLeft: "5px"}}>
+	                    <HelpPopoup />
+	                  </div>
+                    <div className="panel-button app-desktop" style={{marginLeft: "5px"}}>
 	                    <ChatPopup />
 	                  </div>
-	                  <div className="panel-button app-desktop" style={{marginLeft: "10px"}}>
+	                  <div className="panel-button app-desktop" style={{marginLeft: "5px"}}>
 	                    <NotifPopup />
 	                  </div>
 	                  <div className="panel-button">
