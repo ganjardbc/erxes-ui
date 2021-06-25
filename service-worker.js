@@ -11,10 +11,10 @@
  * See https://goo.gl/2aRDsh
  */
 
-importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.0/workbox-sw.js");
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/erxes-ui/precache-manifest.7dc1def41edd4dc9503ba484055c13ec.js"
+  "/erxes-ui/precache-manifest.4ed6712b9638037417b814dcd168a8f2.js"
 );
 
 self.addEventListener('message', (event) => {
