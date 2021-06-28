@@ -17,6 +17,8 @@ exports.customTable = function () {
           responsiveScroll: {
             position: 'relative',
             width: '100% !important',
+            height: 'calc(100vh - 190px)',
+            maxHeight: 'calc(100vh - 190px)'
           }
         },
         MuiToolbar: {
@@ -33,16 +35,16 @@ exports.customTable = function () {
         MUIDataTableToolbar: {
           root: {
             position: 'relative',
-            backgroundColor: mainColor,
+            backgroundColor: '#fff',
           },
           titleText: {
-            color: "#fff"
+            color: "#555 !important"
           },
           icon: {
-            color: "#fff !important"
+            color: "#555 !important"
           },
           iconActive: {
-            color: "#fff !important"
+            color: "#555 !important"
           },
           left: {
             flex: "0 0 auto !important"
@@ -54,31 +56,32 @@ exports.customTable = function () {
         MUIDataTableSearch: {
           main: {
             position: 'relative',
-            // top: "7px",
-            // right: "0px",
+            marginTop: "0 !important",
+            marginRight: "15px !important",
             width: "100% !important",
-            backgroundColor: mainColor,
+            backgroundColor: "mainColor",
             zIndex: "10",
             textAlign: "right",
             display: "block",
           },
           searchIcon: {
             width: "50px !important",
-            color: "#fff !important",
+            color: "#555 !important",
             display: "inline-block",
             textAlign: "center",
             verticalAlign: "top",
           },
           searchText: {
-            width: "calc(100% - 120px) !important",
-            marginRight: "10px",
-            color: "#fff !important",
+            width: "calc(100% - 50px) !important",
+            marginTop: "0 !important",
+            marginRight: "0",
+            color: "#555 !important",
             display: "inline-block",
             verticalAlign: "top",
           },
           clearIcon: {
             width: "50px !important",
-            color: "#fff !important",
+            color: "#555 !important",
             display: "inline-block",
             verticalAlign: "top",
           },
@@ -86,14 +89,14 @@ exports.customTable = function () {
         MUIDataTableHead: {
           main: {
             position: 'relative',
-            backgroundColor: mainColor,
-            color: "#fff"
+            backgroundColor: '#fff',
+            color: "#555"
           }
         },
         MUIDataTableHeadRow: {
           root: {
             position: 'relative',
-            backgroundColor: mainColor,
+            backgroundColor: '#fff',
           }
         },
         MUIDataTableHeadCell: {
@@ -105,7 +108,7 @@ exports.customTable = function () {
           fixedHeader: {
             position: "relative",
             borderBottom: "1px rgba(0,0,0,0.1) solid",
-            backgroundColor: secondColor,
+            backgroundColor: '#fff',
             color: "#555",
             padding: "10px",
             height: "auto"
@@ -122,13 +125,13 @@ exports.customTable = function () {
             color: "#555"
           },
           sortAction: {
-            color: "#fff",
+            color: "#555",
             display: "inline-block",
             verticalAlign: "top",
             MuiButtonBase: {
-              color: "#fff",
+              color: "#555",
               root: {
-                color: "#fff",
+                color: "#555",
               }
             }
           }
@@ -154,7 +157,7 @@ exports.customTable = function () {
         MuiInput: {
           root: {
             top: "5px",
-            color: "#fff !important",
+            color: "#555 !important",
           },
           underline: {
             borderBottom: "1px #fff solid !important",

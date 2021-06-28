@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles'
-import MUIDataTable from "mui-datatables"
+import MUIDataTable from "mui-datatables-bitozen"
 
 import InlineEditing from '../../modules/forms/InlineEditing'
 
@@ -129,22 +129,16 @@ class Pages extends Component {
 
     return (
       <div className="main-content">
-
-        <div className="txt-site txt-18 txt-bold txt-main padding-top-5px margin-left-5px margin-bottom-5px">
-          Smart Tables
-        </div>
-
         <div className="padding-5px">
-
           <MuiThemeProvider theme={this.getMuiTheme()}>
             <MUIDataTable
               title={"Table"}
+              subtitle={"Subtable"}
               data={data}
               columns={this.columns}
               options={this.options}
             />
           </MuiThemeProvider>
-
         </div>
 
       </div>
