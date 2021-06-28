@@ -52,7 +52,7 @@ import componentsInlineEditing from './components/InlineEditing'
 import componentsGridLayout from './components/GridLayout'
 import componentsFormBuilder from './components/FormBuilder'
 import componentsOrganizationChart from './components/OrganizationChart'
-import componentsAccordion from './components/Accordion'
+// import componentsAccordion from './components/Accordion'
 import componentsDualListbox from './components/DualListbox'
 // import componentsMosaic from './components/Mosaic'
 import componentsSortableTree from './components/SortableTree'
@@ -272,7 +272,7 @@ class App extends Component {
                         { this.createSubMenu('Dual Listbox', '/component-dual-listbox', 'far fa-lg fa-circle') }
                         { this.createSubMenu('Cool Login', '/cool-login', 'far fa-lg fa-circle') }
                         { this.createSubMenu('Alternative Login', '/alternative-login', 'far fa-lg fa-circle') }
-                        { this.createSubMenu('Accordion', '/component-accordion', 'far fa-lg fa-circle') }
+                        {/* { this.createSubMenu('Accordion', '/component-accordion', 'far fa-lg fa-circle') } */}
                         { this.createSubMenu('Organization Chart', '/component-organization-chart', 'far fa-lg fa-circle') }
                         { this.createSubMenu('Form Builder', '/component-form-builder', 'far fa-lg fa-circle') }
                         { this.createSubMenu('Grid Layout', '/component-grid-layout', 'far fa-lg fa-circle') }
@@ -372,7 +372,7 @@ class App extends Component {
                 <Route exact path="/component-grid-layout" component={ componentsGridLayout }></Route>
                 <Route exact path="/component-form-builder" component={ componentsFormBuilder }></Route>
                 <Route exact path="/component-organization-chart" component={ componentsOrganizationChart }></Route>
-                <Route exact path="/component-accordion" component={ componentsAccordion }></Route>
+                {/* <Route exact path="/component-accordion" component={ componentsAccordion }></Route> */}
                 <Route exact path="/component-dual-listbox" component={ componentsDualListbox }></Route>
                 {/* <Route exact path="/component-mozaic" component={ componentsMosaic }></Route> */}
                 <Route exact path="/component-sortable-tree" component={ componentsSortableTree }></Route>
