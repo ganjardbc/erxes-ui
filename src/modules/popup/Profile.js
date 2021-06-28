@@ -70,13 +70,22 @@ class Pages extends Component {
           <div className="content">
             <div style={{paddingTop: 20}}>
               <div className="image image-80px image-center background-blue" style={{marginBottom: 10}}></div>
-              <div className="txt-site txt-main txt-11 txt-center">City of FleetIo</div>
+              <div className="txt-site txt-main txt-11 txt-center txt-bold">City of FleetIo</div>
             </div>
           	<div className="txt-site txt-left">
           		<div style={{paddingTop: 15, paddingBottom: 15}} className="border-bottom">
                 <CardMenu data={firstMenu} />
               </div>
               <div style={{paddingTop: 15, paddingBottom: 15}}>
+                <div className="display-flex" style={{paddingLeft: 10, paddingRight: 10, paddingBottom: 10}}>
+                  <div className="image image-circle image-30px overflow background-blue">
+                    <img width="100%" src={this.state.imageUrl} alt=""/>
+                  </div>
+                  <div style={{marginLeft: 10}}>
+                    <div className="txt-site txt-main txt-10">Caiment Dennis</div>
+                    <div className="txt-site txt-primary txt-9">cdedennis@fleetio.com</div>
+                  </div>
+                </div>
                 <CardMenu data={secondMenu} />
               </div>
           	</div>

@@ -75590,7 +75590,7 @@ a {
 .app .app-menu-popup .content {
   position: relative;
   width: 100%;
-  max-height: 300px;
+  max-height: 350px;
   overflow-y: auto;
 }
 .app .app-menu-popup .app-menu-sign {
