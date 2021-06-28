@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Board, NewCard} from 'react-trello'
+import {Board} from 'react-trello'
 
 const cardStyle = {
   borderRadius: 7, 

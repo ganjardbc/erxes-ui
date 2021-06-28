@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, NavLink, HashRouter, Redirect } from "react-router-dom"
-import cover from './../../assets/img/cover.png'
+import { BrowserRouter as Router, HashRouter, Redirect } from "react-router-dom"
 import logo from './../../assets/img/daya-logo.png'
 import bgLogin from './../../assets/img/bg-login.png'
 
@@ -48,7 +47,7 @@ class Login extends Component {
 
                 <div className="display-flex-normal">
                   <div className="image image-circle image-50px background-white border-all">
-                    <img src={logo}></img>
+                    <img src={logo} alt=""></img>
                   </div>
                   
                   <div style={{position: 'relative', top: '15px', paddingLeft: '15px'}}>
@@ -154,7 +153,7 @@ class Login extends Component {
               <div className="lc-col-2">
                 <div className="image image-all" style={{backgroundImage: 'url('+bgLogin+')'}}></div>
                 <div className="float-label">
-                  Image by <a href="https://dribbble.com/kit8" target="_blank">@Kit8</a>
+                  Image by <a href="https://dribbble.com/kit8" target="_blank" rel="noopener noreferrer">@Kit8</a>
                 </div>
               </div>
             </div>

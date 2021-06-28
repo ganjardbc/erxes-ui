@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import SortableTree, { changeNodeAtPath, addNodeUnderParent, removeNodeAtPath } from 'react-sortable-tree'
+import SortableTree, { changeNodeAtPath, removeNodeAtPath } from 'react-sortable-tree'
 
 const defaultTreeData = [
 	{ 

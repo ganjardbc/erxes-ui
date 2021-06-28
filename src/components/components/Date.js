@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { DateRange, DateRangePicker, Calendar } from 'react-date-range'
+import { DateRangePicker } from 'react-date-range'
 
 class Pages extends Component {
 

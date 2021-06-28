@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import Example from './Example'
-import { DndProvider, DragSource } from 'react-dnd'
+import { DndProvider } from 'react-dnd'
 import HTML5Backend from 'react-dnd-html5-backend'
 
 class Pages extends Component {

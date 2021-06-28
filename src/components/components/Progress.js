@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 
-import { makeStyles, withStyles } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import { lighten } from '@material-ui/core/styles/colorManipulator';
 import LinearProgress from '@material-ui/core/LinearProgress';
 import CircularProgress from '@material-ui/core/CircularProgress';
@@ -22,6 +22,7 @@ class Pages extends Component {
 
   constructor () {
     super()
+    this.state = {}
   }
 
   render () {
@@ -53,7 +54,7 @@ class Pages extends Component {
               </div>
               <div>
                 <span className="txt-site txt-10 txt-bold color-post">
-                  <a href="#">dano.malik </a>
+                  <a href="/">dano.malik </a>
                 </span>
                 <span className="txt-site txt-primary txt-10">
                   / 8 GB Memory / 50 GB Disk / SGP1

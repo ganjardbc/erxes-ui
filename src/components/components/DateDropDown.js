@@ -57,7 +57,7 @@ class Pages extends Component {
   }
 
   opPlaceDate = () => {
-    if (this.state.placeDate == false) { 
+    if (this.state.placeDate === false) { 
       this.setState({
         placeDate: true
       })
@@ -69,7 +69,7 @@ class Pages extends Component {
   }
 
   opPlaceRange = () => {
-    if (this.state.placeRange == false) { 
+    if (this.state.placeRange === false) { 
       this.setState({
         placeRange: true
       })
@@ -81,7 +81,7 @@ class Pages extends Component {
   }
 
   opPlaceDateRange = () => {
-    if (this.state.placeDateRange == false) { 
+    if (this.state.placeDateRange === false) { 
       this.setState({
         placeDateRange: true
       })

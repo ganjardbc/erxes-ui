@@ -1,11 +1,6 @@
 import React, { Component } from 'react'
-// import FormBuilders from '../components/forms/FormBuilders'
-// import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser'
-// import FormBuilder from '@langleyfoxall/react-dynamic-form-builder';
 
 import Form from "react-jsonschema-form"
-
-// require('bootstrap')
 
 const schema = {
   title: "Todo",
@@ -146,7 +141,7 @@ class Pages extends Component {
   onSubmit = (event) => {
 
   	// untuk keperluan submit
-  	var jsn = event.formData
+  	// var jsn = event.formData
 
   	// untuk result
   	var str = JSON.stringify(event.formData, null, 2)

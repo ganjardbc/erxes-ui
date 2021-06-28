@@ -19,10 +19,11 @@ class Pages extends Component {
   }
 
   cardMain = (name, about, job, report) => {
-    if (report == '') { 
-      var bot = ''
+    var bot = ''
+    if (report === '') { 
+      bot = ''
     } else {
-      var bot = (
+      bot = (
         <div className="co-bot">
           <div className="txt-site txt-9 txt-primary">{report}</div>
         </div>
@@ -52,10 +53,11 @@ class Pages extends Component {
   }
 
   cardSpace = (title, report) => {
-    if (report == '') { 
-      var bot = ''
+    var bot = ''
+    if (report === '') { 
+      bot = ''
     } else {
-      var bot = (
+      bot = (
         <div className="co-bot">
           <div className="txt-site txt-9 txt-primary">{report}</div>
         </div>

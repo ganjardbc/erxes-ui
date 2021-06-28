@@ -81,7 +81,7 @@ class ComplexMenu extends Component {
           style={{ height: this.props.height }}>
           <div className="col-1">
             <ul className="vertical-tab" style={{ width: '300px' }}>
-              {this.state.tabMenu.map((data, index) => {
+              {this.state.tabMenu.map((data) => {
                 return this.opNavigator(data)
               })}
             </ul>
@@ -106,6 +106,7 @@ class ComplexMenu extends Component {
                       if (listMenu.for === subMenu.id) {
                         return (
                           <div 
+                            key={j}
                             className="content-space"
                             id={ listMenu.id }>
                             <div className="normal-menu">
@@ -130,6 +131,8 @@ class ComplexMenu extends Component {
                             </div>
                           </div>
                         )
+                      } else {
+                        return null 
                       }
                     })}
                   </div>

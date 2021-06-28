@@ -35,22 +35,26 @@ class Pages extends Component {
   }
 
   opNavigator = (id, target, title, icon = '', value = '', status = false) => {
-  	if (status) {
-  		var cl = 'n-c-link active'
+	var cl = ''
+	var icn = ''
+	var val = ''
+
+	if (status) {
+  		cl = 'n-c-link active'
   	} else {
-  		var cl = 'n-c-link'
+  		cl = 'n-c-link'
   	}
 
   	if (icon !== '') { 
-  		var icn = <i className={'fa fa-lw ' + icon + ' txt-site txt-9 margin-right-5px'} />
+  		icn = <i className={'fa fa-lw ' + icon + ' txt-site txt-9 margin-right-5px'} />
   	} else {
-  		var icn = ''
+  		icn = ''
   	}
 
   	if (value !== '') { 
-  		var val = <span className={'margin-left-5px txt-site txt-9 txt-safe txt-bold'}>{value}</span>
+  		val = <span className={'margin-left-5px txt-site txt-9 txt-safe txt-bold'}>{value}</span>
   	} else {
-  		var val = ''
+  		val = ''
   	}
 
   	return (

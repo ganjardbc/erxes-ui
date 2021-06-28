@@ -71,11 +71,11 @@ const Container = () => {
         />
       )
     }
-    const renderContainer = () => {
-      return (
-        <div style={style.container}></div>
-      )
-    }
+    // const renderContainer = () => {
+    //   return (
+    //     <div style={style.container}></div>
+    //   )
+    // }
     const renderAdd = () => {
       return (
         <div style={style.container}>

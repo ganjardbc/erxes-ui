@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Card from 'react-credit-cards'
-// import Img from 'react-image'
 
 class Pages extends Component {
 
@@ -15,10 +14,6 @@ class Pages extends Component {
 	    focused: '',
 	    formData: null,
   	}
-    // this.handleCardNumber = this.handleCardNumber.bind(this)
-    // this.handleCardName = this.handleCardName.bind(this)
-    // this.handleCardExpiry = this.handleCardExpiry.bind(this)
-    // this.handleCardCvc = this.handleCardCvc.bind(this)
   }
 
   handleCallback = ({ issuer }, isValid) => {
@@ -34,20 +29,19 @@ class Pages extends Component {
   };
 
   handleInputChange = ({ target }) => {
-    if (target.name === 'number') {
-      target.value = target.value;
-    } else if (target.name === 'expiry') {
-      target.value = target.value;
-    } else if (target.name === 'cvc') {
-      target.value = target.value;
-    }
+    // if (target.name === 'number') {
+    //   target.value = target.value;
+    // } else if (target.name === 'expiry') {
+    //   target.value = target.value;
+    // } else if (target.name === 'cvc') {
+    //   target.value = target.value;
+    // }
 
     this.setState({ [target.name]: target.value });
   };
 
   handleSubmit = e => {
     e.preventDefault();
-    const { issuer } = this.state;
     const formData = [...e.target.elements]
       .filter(d => d.name)
       .reduce((acc, d) => {
@@ -58,26 +52,6 @@ class Pages extends Component {
     this.setState({ formData });
     this.form.reset();
   };
-
-  // handleCardNumber(event) {
-  // 	this.setState({number: event.target.value})
-  // }
-
-  // handleCardName(event) {
-  // 	this.setState({name: event.target.value})
-  // }
-
-  // handleCardExpiry(event) {
-  // 	this.setState({expiry: event.target.value})
-  // }
-
-  // handleCardCvc(event) {
-  // 	this.setState({cvc: event.target.value})
-  // }
-
-  // handleSubmit(event) {
-  // 	event.preventDefault()
-  // }
 
   render() {
   	

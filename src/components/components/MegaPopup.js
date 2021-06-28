@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import ButtonAction from '../components/forms/ButtonAction'
 import InlineEditing from '../components/forms/InlineEditing'
 
 const opAlert = 'app-popup app-popup-show'

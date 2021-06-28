@@ -1,14 +1,9 @@
 import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
 
 // steppers
 import Stepper from '@material-ui/core/Stepper'
 import Step from '@material-ui/core/Step'
-import StepContent from '@material-ui/core/StepContent'
-import StepLabel from '@material-ui/core/StepLabel'
-import StepIcon from '@material-ui/core/StepIcon'
 import StepButton from '@material-ui/core/StepButton'
-import Button from '@material-ui/core/Button'
 
 import createMuiTheme from '@material-ui/core/styles/createMuiTheme'
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider'
@@ -18,22 +13,6 @@ import Form1 from './pages/Form1'
 import Form2 from './pages/Form2'
 import Form3 from './pages/Form3'
 import Form4 from './pages/Form4'
-
-const styles = theme => ({
-  root: {
-    width: '100%'
-  },
-  button: {
-    marginRight: theme.spacing.unit
-  },
-  completed: {
-    display: 'inline-block'
-  },
-  instructions: {
-    marginTop: theme.spacing.unit,
-    marginBtottom: theme.spacing.unit
-  }
-})
 
 function getSteps() {
   return [
@@ -113,7 +92,6 @@ class Pages extends Component {
 
   render() {
 
-    const { classes } = this.props
     const steps = getSteps()
     const { activeStep } = this.state
 
@@ -149,7 +127,7 @@ class Pages extends Component {
 
         <div className="padding-15px">
           
-          {this.state.activeStep == steps.length ? (
+          {this.state.activeStep === steps.length ? (
             <div>
               <div className="padding-bottom-15px">All steps completed</div>
               <div>
