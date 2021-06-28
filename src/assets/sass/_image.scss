@@ -9,6 +9,9 @@
 		@include post_center(relative);
 		width: 100%;
 	}
+	&.overflow {
+		overflow: hidden;
+	}
 	&.no-bg-color {
 		background-color: rgba(0,0,0,0);
 	}

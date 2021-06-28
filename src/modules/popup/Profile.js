@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { NavLink } from "react-router-dom"
 import CardMenu from '../CardMenu'
 
 var opActivePopup = 'app-small-profile active'
@@ -13,7 +12,8 @@ class Pages extends Component {
     super(props)
     this.state = {
       smallProfileClass: clActivePopup,
-      profileClass: clContentPopup
+      profileClass: clContentPopup,
+      imageUrl: 'https://previews.123rf.com/images/stylephotographs/stylephotographs1301/stylephotographs130100017/17104891-headshot-of-a-young-happy-smiling-man.jpg'
     }
   }
 
@@ -52,8 +52,8 @@ class Pages extends Component {
           className={this.state.smallProfileClass}
           style={{ float: 'right' }}>
           <div className="asp-col-1">
-            <div className="image image-circle image-30px background-blue">
-              <img width="100%" height="100%" src={this.state.imageUrl} alt=""/>
+            <div className="image image-circle image-30px overflow background-blue">
+              <img width="100%" src={this.state.imageUrl} alt=""/>
             </div>
           </div>
           <div className="asp-col-2">
@@ -69,7 +69,7 @@ class Pages extends Component {
           className={this.state.profileClass}>
           <div className="content">
             <div style={{paddingTop: 20}}>
-              <div className="image image-80px image-center background-blue"></div>
+              <div className="image image-80px image-center background-blue" style={{marginBottom: 10}}></div>
               <div className="txt-site txt-main txt-11 txt-center">City of FleetIo</div>
             </div>
           	<div className="txt-site txt-left">

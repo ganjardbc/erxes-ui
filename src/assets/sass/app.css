@@ -7226,6 +7226,9 @@
   transform: translate(-50%, -50%);
   width: 100%;
 }
+.image.overflow {
+  overflow: hidden;
+}
 .image.no-bg-color {
   background-color: rgba(0, 0, 0, 0);
 }
@@ -13683,11 +13686,8 @@
   position: relative;
   width: calc(100% - 20px);
   padding: 10px;
-  border-bottom: 1px #f3f3f3 solid;
-  display: grid !important;
-  display: -ms-grid !important;
-  grid-template-columns: 50px 1fr !important;
-  -ms-grid-columns: 50px 1fr !important;
+  display: flex;
+  flex-direction: row;
 }
 .card-notif:hover {
   -webkit-transition: all 0.25s ease;
@@ -13697,14 +13697,6 @@
   transition: all 0.25s ease;
   background-color: #f5f5f5;
   color: rgba(0, 0, 0, 0.84);
-}
-.card-notif .c-n-col-1 {
-  grid-column: 1;
-  -ms-grid-column: 1;
-}
-.card-notif .c-n-col-2 {
-  grid-column: 2;
-  -ms-grid-column: 2;
 }
 
 .card-item {

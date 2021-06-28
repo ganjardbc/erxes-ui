@@ -57,7 +57,7 @@ class Pages extends Component {
     for (var i = 0; i < length; ++i) {
       data.push(
       <div className="card-notif" key={i}>
-        <div className="c-n-col-1">
+        <div className="c-n-col-1" style={{marginRight: 10}}>
           <div className="image image-circle image-40px background-blue"></div>
         </div>
         <div className="c-n-col-2">
