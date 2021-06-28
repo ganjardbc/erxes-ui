@@ -102,7 +102,7 @@ class Pages extends Component {
 						<h3 className="txt-site txt-main margin-bottom-15px">
 							Accordion With Radiobutton
 						</h3>
-						<div className="card no-margin">
+						<div className="card small-margin no-radius">
 							<div className="accordion-selectbox">
 								<ul>
 									
@@ -166,7 +166,7 @@ class Pages extends Component {
 						<h3 className="txt-site txt-main margin-bottom-15px">
 							Accordion With Selecbox
 						</h3>
-						<div className="card no-margin">
+						<div className="card small-margin no-radius">
 							<div className="accordion-selectbox">
 								<ul>
 									

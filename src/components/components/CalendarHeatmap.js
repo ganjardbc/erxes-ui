@@ -36,50 +36,51 @@ class Pages extends Component {
 
 		return (
 			<div className="main-content">
-				<div className="padding-15px">
+				<div className="card small-margin no-radius">
+					<div className="padding-15px">
+						<h1 className="txt-site txt-18 txt-bold txt-main padding-top-5px">
+							Calendar Heatmap
+						</h1>
 
-					<h1>
-						Calendar Heatmap
-					</h1>
+						<div className="padding-10px"></div>
 
-					<div className="padding-10px"></div>
+						<CalendarHeatmap
+							startDate={shiftDate(today, -400)}
+							endDate={today}
+							values={randomValues}
+							classForValue={value => {
+							if (!value) {
+								return 'color-empty';
+							}
+							return `color-github-${value.count}`;
+							}}
+							tooltipDataAttrs={value => {
+							return {
+								'data-tip': `${value.date.toISOString().slice(0, 10)} has count: ${
+								value.count
+								}`,
+							};
+							}}
+							showWeekdayLabels={false}
+							onClick={value => alert(`Clicked on value with count: ${value.count}`)}
+						/>
 
-					<CalendarHeatmap
-		        startDate={shiftDate(today, -400)}
-		        endDate={today}
-		        values={randomValues}
-		        classForValue={value => {
-		          if (!value) {
-		            return 'color-empty';
-		          }
-		          return `color-github-${value.count}`;
-		        }}
-		        tooltipDataAttrs={value => {
-		          return {
-		            'data-tip': `${value.date.toISOString().slice(0, 10)} has count: ${
-		              value.count
-		            }`,
-		          };
-		        }}
-		        showWeekdayLabels={false}
-		        onClick={value => alert(`Clicked on value with count: ${value.count}`)}
-		      />
+						<ReactTooltip />
 
-		      <ReactTooltip />
+						<div className="padding-15px"></div>
 
-					<div className="padding-15px"></div>
-
-					<CalendarHeatmap
-					  startDate={new Date('2019-01-01')}
-					  endDate={new Date('2019-12-31')}
-					  values={[
-					    { date: '2019-01-01' },
-					    { date: '2019-01-10' },
-					    { date: '2019-01-20' },
-					    { date: '2019-01-30' },
-					    // ...and so on
-					  ]}
-					/>
+						<CalendarHeatmap
+						startDate={new Date('2019-01-01')}
+						endDate={new Date('2019-12-31')}
+						values={[
+							{ date: '2019-01-01' },
+							{ date: '2019-01-10' },
+							{ date: '2019-01-20' },
+							{ date: '2019-01-30' },
+							// ...and so on
+						]}
+						/>
+					</div>
 
 				</div>
 			</div>

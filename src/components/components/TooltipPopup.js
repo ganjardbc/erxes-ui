@@ -12,7 +12,7 @@ class Pages extends Component {
 			<div className="main-content">
 				<div className="padding-15px">
 					<h1>Tooltip</h1>
-					<div className="margin-top-15px display-flex">
+					<div className="margin-top-15px display-flex space-between">
 						<span
 							className="app-pointer" 
 							data-tip="This is tool tip">

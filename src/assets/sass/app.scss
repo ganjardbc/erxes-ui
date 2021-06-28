@@ -849,12 +849,13 @@ a {
 
 	.app-menu-popup {
 		position: absolute;
+		top: 0;
 		right: 0;
 		width: 350px;
 		background-color: #fff;
-		border: $border;
-		border-radius: 10px;
-		overflow: hidden;
+		border: $border1;
+		border-radius: 5px;
+		// overflow: hidden;
 		z-index: 100 !important;
 		box-shadow: $shadow;
 		@media (max-width: $max-width) {
@@ -872,10 +873,9 @@ a {
 				padding: 15px;
 				list-style-type: none;
 				text-align: left;
-				font-size: 10pt;
+				font-size: 11pt;
 				color: $txt-84-color;
 				cursor: pointer;
-				font-family: "FontFirstBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
 				&:hover {
 					background-color: #f5f5f5;
 				}
@@ -889,6 +889,12 @@ a {
 			width: 100%;
 			max-height: 300px;
 			overflow-y: auto;
+		}
+		.app-menu-sign {
+			position: absolute;
+			top: -20px;
+			right: 50px;
+			color: #fff;
 		}
 	}
 
