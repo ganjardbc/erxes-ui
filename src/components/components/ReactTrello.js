@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Board} from 'react-trello'
+import Board from 'react-trello'
 
 const cardStyle = {
   borderRadius: 7, 
@@ -159,7 +159,7 @@ class Pages extends Component {
               collapsibleLanes={true}
               draggable={true}
               style={{
-                backgroundColor: '#fff',
+                backgroundColor: 'rgba(0, 0, 0, 0)',
                 padding: '0px',
                 height: 'auto'
               }} />
