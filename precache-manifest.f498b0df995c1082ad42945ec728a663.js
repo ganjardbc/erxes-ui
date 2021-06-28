@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "16add801a4dffa2e59af2e7e4bd7ca01",
+    "revision": "c5878a83413f5655704fc37ad655edce",
     "url": "/erxes-ui/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/erxes-ui/static/css/2.553b841d.chunk.css"
   },
   {
-    "revision": "7f0153675d0796dc21ea",
+    "revision": "addb26be3d8629f6018b",
     "url": "/erxes-ui/static/css/main.fe3c83aa.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/erxes-ui/static/js/2.a0b0aa50.chunk.js"
   },
   {
-    "revision": "7f0153675d0796dc21ea",
-    "url": "/erxes-ui/static/js/main.b65ffca2.chunk.js"
+    "revision": "addb26be3d8629f6018b",
+    "url": "/erxes-ui/static/js/main.de80068a.chunk.js"
   },
   {
     "revision": "c8c7263cedd27b4eede6",
