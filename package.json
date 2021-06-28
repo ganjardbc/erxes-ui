@@ -13,6 +13,7 @@
     "moment": "^2.24.0",
     "moment-timezone": "^0.5.26",
     "mui-datatables": "^2.6.1",
+    "mui-datatables-bitozen": "^4.0.16",
     "react": "^16.8.6",
     "react-date-range": "^1.0.0-beta",
     "react-dom": "^16.8.6",
