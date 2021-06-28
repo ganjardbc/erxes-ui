@@ -19,8 +19,19 @@
     &.no-overflow {
         overflow: visible;
     }
+    &.no-radius {
+        border-radius: 5px;
+    }
+    &.no-hover {
+        box-shadow: 0 0 0 #fff;
+    }
     &.no-margin {
+        width: 100%;
         margin: 0 0;
+    }
+    &.small-margin {
+        width: calc(100% - 10px);
+        margin: 5px;
     }
     .card-top {
         position: relative;
@@ -438,10 +449,11 @@
     }
     .double {
         position: relative;
-        height: 45px;
+        height: 40px;
         border: $border;
         background-color: #fff;
-        border-radius: 10px;
+        border: $border1;
+        border-radius: 5px;
         overflow: hidden;
         display: flex;
     }
@@ -484,6 +496,58 @@
     }
 }
 
+.card-form {
+    position: relative;
+    width: 100%;
+    border: $border1;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px rgba(0,0,0,0.1) solid;
+    .cf-header {
+        padding: 15px;
+    }
+    .cf-body {
+        position: relative;
+        width: calc(100% - 30px);
+        padding: 0 15px;
+        // background-color: #f8f8f8;
+    }
+    .cf-title {
+        font-size: 18px;
+        font-weight: 600;
+        color: $txt-84-color;
+    }
+    .cf-subtitle {
+        font-size: 13px;
+        font-weight: 500;
+        color: $txt-54-color;
+        margin-top: 5px;
+    }
+    .cf-label {
+        font-size: 15px;
+        color: $txt-84-color;
+    }
+    .cf-important {
+        color: $red;
+        font-size: 13px;
+        margin-left: 5px;
+    }
+    .cf-field {
+        position: relative;
+        width: 100%;
+        margin: 15px 0;
+    }
+    .cf-input {
+        margin: 2.5px 0;
+    }
+    .cf-message {
+        font-size: 13px;
+        color: $txt-34-color;
+    }
+    .cf-footer {
+        padding: 15px;
+    }
+}
 
 .card-org {
     position: relative;

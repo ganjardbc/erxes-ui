@@ -207,7 +207,7 @@ class Pages extends Component {
           </div>
 
           <div className="a-s-p-side">
-            <div className="card no-hover">
+            <div className="card small-margin no-radius no-hover border-all">
               <div className="a-s-p-place">
                 <div className="a-s-p-top">
                   <div className="grid grid-2x padding-5px">

@@ -13458,23 +13458,23 @@
 }
 
 .border-all {
-  border: 1px rgba(0, 0, 0, 0.1) solid;
+  border: 1px rgba(0, 0, 0, 0.1) solid !important;
 }
 
 .border-top {
-  border-top: 1px rgba(0, 0, 0, 0.1) solid;
+  border-top: 1px rgba(0, 0, 0, 0.1) solid !important;
 }
 
 .border-bottom {
-  border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
+  border-bottom: 1px rgba(0, 0, 0, 0.1) solid !important;
 }
 
 .border-left {
-  border-left: 1px rgba(0, 0, 0, 0.1) solid;
+  border-left: 1px rgba(0, 0, 0, 0.1) solid !important;
 }
 
 .border-right {
-  border-right: 1px rgba(0, 0, 0, 0.1) solid;
+  border-right: 1px rgba(0, 0, 0, 0.1) solid !important;
 }
 
 .border-no {
@@ -13482,23 +13482,23 @@
 }
 
 .bdr-all {
-  border: 1px rgba(0, 0, 0, 0.1) solid;
+  border: 1px rgba(0, 0, 0, 0.1) solid !important;
 }
 
 .bdr-top {
-  border-top: 1px rgba(0, 0, 0, 0.1) solid;
+  border-top: 1px rgba(0, 0, 0, 0.1) solid !important;
 }
 
 .bdr-bottom {
-  border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
+  border-bottom: 1px rgba(0, 0, 0, 0.1) solid !important;
 }
 
 .bdr-left {
-  border-left: 1px rgba(0, 0, 0, 0.1) solid;
+  border-left: 1px rgba(0, 0, 0, 0.1) solid !important;
 }
 
 .bdr-right {
-  border-right: 1px rgba(0, 0, 0, 0.1) solid;
+  border-right: 1px rgba(0, 0, 0, 0.1) solid !important;
 }
 
 .bdr-no {
@@ -13534,8 +13534,19 @@
 .card.no-overflow {
   overflow: visible;
 }
+.card.no-radius {
+  border-radius: 5px;
+}
+.card.no-hover {
+  box-shadow: 0 0 0 #fff;
+}
 .card.no-margin {
+  width: 100%;
   margin: 0 0;
+}
+.card.small-margin {
+  width: calc(100% - 10px);
+  margin: 5px;
 }
 .card .card-top {
   position: relative;
@@ -13958,10 +13969,11 @@
 }
 .card-date-picker .double {
   position: relative;
-  height: 45px;
+  height: 40px;
   border: 1px #f3f3f3 solid;
   background-color: #fff;
-  border-radius: 10px;
+  border: 1px rgba(0, 0, 0, 0.1) solid;
+  border-radius: 5px;
   overflow: hidden;
   display: flex;
 }
@@ -13999,6 +14011,58 @@
   position: absolute;
   bottom: -5px;
   right: -5px;
+}
+
+.card-form {
+  position: relative;
+  width: 100%;
+  border: 1px rgba(0, 0, 0, 0.1) solid;
+  border-radius: 5px;
+  background-color: #fff;
+  border: 1px rgba(0, 0, 0, 0.1) solid;
+}
+.card-form .cf-header {
+  padding: 15px;
+}
+.card-form .cf-body {
+  position: relative;
+  width: calc(100% - 30px);
+  padding: 0 15px;
+}
+.card-form .cf-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #444444;
+}
+.card-form .cf-subtitle {
+  font-size: 13px;
+  font-weight: 500;
+  color: #888888;
+  margin-top: 5px;
+}
+.card-form .cf-label {
+  font-size: 15px;
+  color: #444444;
+}
+.card-form .cf-important {
+  color: #e74c3c;
+  font-size: 13px;
+  margin-left: 5px;
+}
+.card-form .cf-field {
+  position: relative;
+  width: 100%;
+  margin: 15px 0;
+}
+.card-form .cf-input {
+  margin: 2.5px 0;
+}
+.card-form .cf-message {
+  font-size: 13px;
+  color: #aaaeb3;
+}
+.card-form .cf-footer {
+  padding: 15px;
 }
 
 .card-org {
@@ -66047,7 +66111,6 @@
   position: relative;
   width: 100%;
   height: 40px;
-  background-color: #fff;
 }
 .drop-down:hover .dd-border {
   border: 1px rgba(0, 0, 0, 0.2) solid;
@@ -66092,6 +66155,8 @@
 .drop-down .dd-border {
   border: 1px rgba(0, 0, 0, 0.1) solid;
   border-radius: 5px;
+  overflow: hidden;
+  background-color: #fff;
 }
 .drop-down .dd-selected {
   position: relative;

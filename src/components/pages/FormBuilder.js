@@ -232,7 +232,7 @@ class Pages extends Component {
 					<div className="grid grid-2x grid-mobile-none">
               <div className="col-1">
 
-                <div className="card no-hover">
+                <div className="card small-margin no-radius no-hover border-all">
                   <div className="padding-15px">
                   	<div className="txt-site txt-11 txt-bold margin-bottom-5px">
                   		JSON Schema
@@ -262,7 +262,7 @@ class Pages extends Component {
 
                 <div className="margin-top-10px"></div>
 
-                <div className="card no-hover">
+                <div className="card small-margin no-radius no-hover border-all">
                   <div className="padding-15px">
                   	<div className="txt-site txt-11 txt-bold margin-bottom-5px">
                   		JSON Form
@@ -280,7 +280,7 @@ class Pages extends Component {
               </div>
               <div className="col-2">
 
-                <div className="card no-hover">
+                <div className="card small-margin no-radius no-hover border-all">
   	              <div className="padding-15px margin-15px">
 
   	              	{ (this.state.status === true) ? (
@@ -304,7 +304,7 @@ class Pages extends Component {
            </div>
 
            <div>
-           	<div className="card no-hover">
+           	<div className="card small-margin no-radius no-hover border-all">
            		<div className="padding-15px">
                 	<div className="txt-site txt-11 txt-bold margin-bottom-5px">
                 		JSON Result

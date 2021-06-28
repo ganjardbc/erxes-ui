@@ -4,7 +4,6 @@ $dd-height: 40px;
     position: relative;
     width: 100%;
     height: $dd-height;
-    background-color: #fff;
     &:hover {
         .dd-border {
             border: $border2;
@@ -48,6 +47,8 @@ $dd-height: 40px;
     .dd-border {
         border: $border1;
         border-radius: 5px;
+        overflow: hidden;
+        background-color: #fff;
     }
     .dd-selected {
         position: relative;
