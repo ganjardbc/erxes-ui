@@ -19,6 +19,7 @@
 @import 'slider';
 @import 'dropDown';
 @import 'search';
+@import 'accordion';
 
 * {
 	padding: 0;
@@ -837,6 +838,12 @@ a {
 			@include post_center(absolute);
 			overflow: hidden;
 			width: 350px;
+		}
+		.popup-btn-close {
+			position: absolute;
+			top: -15px;
+			right: -15px;
+			z-index: 2;
 		}
 	}
 

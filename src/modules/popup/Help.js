@@ -1,31 +1,10 @@
 import React, { Component } from 'react'
+import CardMenu from '../CardMenu'
 
 var clContentPopup = 'app-menu-popup app-menu-popup-hide'
 
 var opButton = 'btn btn-circle btn-grey active'
 var clButton = 'btn btn-circle btn-grey'
-
-class CardMenu extends Component {
-  render () {
-    const {data} = this.props 
-    return (
-      <div style={{width: '100%'}}>
-        {data && data.map((dt, i) => {
-          return (
-            <div className="card-notif" style={{cursor: 'pointer', paddingTop: 5, paddingBottom: 5}} key={i}>
-              <div style={{width: 'calc(100% - 30px)'}}>
-                <div className="txt-site txt-11 txt-bold txt-main">{ dt.title }</div>
-              </div>
-              <div style={{width: 30, textAlign: 'center'}}>
-                {dt.enableIcon && <i className="txt-site txt-9 txt-primary fa fa-lw fa-external-link-alt" />}
-              </div>
-            </div>
-          )
-        })}
-      </div>
-    )
-  }
-}
 
 class Pages extends Component {
 
@@ -37,13 +16,7 @@ class Pages extends Component {
     }
   }
 
-  // componentDidMount() {
-    // var element = document.getElementById('app-help')
-    // this.handleClickOutside(element)
-  // }
-
   handleClickOutside(element) {
-    // console.log(element)
     const outsideclickListener = event => {
       if (!element.contains(event.target)) {
         element.style.display = 'none'
@@ -64,14 +37,6 @@ class Pages extends Component {
     element.style.display = 'block'
     this.setState({smallNotifClass: opButton})
     this.handleClickOutside(element)
-
-    // if (this.state.notifClass === clContentPopup) {
-    //   this.setState({notifClass: opContentPopup})
-    //   this.setState({smallNotifClass: opButton})
-    // } else {
-    //   this.setState({notifClass: clContentPopup})
-    //   this.setState({smallNotifClass: clButton})
-    // }
   }
 
   contentHelp = (length) => {

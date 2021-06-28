@@ -3,7 +3,7 @@
 	background-size: cover !important;
 	background-position: center;
 	background-repeat: no-repeat;
-	overflow: hidden;
+	// overflow: hidden;
 	// background-color: #f0f0f0;
 	img {
 		@include post_center(relative);
@@ -12,98 +12,12 @@
 	&.no-bg-color {
 		background-color: rgba(0,0,0,0);
 	}
-	&.image-20px {
-		width: 20px;
-		height: 20px;
-	}
-	&.image-25px {
-		width: 25px;
-		height: 25px;
-	}
-	&.image-30px {
-		width: 30px;
-		height: 30px;
-	}
-	&.image-35px {
-		width: 35px;
-		height: 35px;
-	}
-	&.image-40px {
-		width: 40px;
-		height: 40px;
-	}
-	&.image-45px {
-		width: 45px;
-		height: 45px;
-	}
-	&.image-50px {
-		width: 50px;
-		height: 50px;
-	}
-	&.image-60px {
-		width: 60px;
-		height: 60px;
-	}
-	&.image-70px {
-		width: 70px;
-		height: 70px;
-	}
-	&.image-80px {
-		width: 80px;
-		height: 80px;
-	}
-	&.image-90px {
-		width: 90px;
-		height: 90px;
-	}
-	&.image-100px {
-		width: 100px;
-		height: 100px;
-	}
-	&.image-110px {
-		width: 110px;
-		height: 110px;
-	}
-	&.image-120px {
-		width: 120px;
-		height: 120px;
-	}
-	&.image-130px {
-		width: 130px;
-		height: 130px;
-	}
-	&.image-140px {
-		width: 140px;
-		height: 140px;
-	}
-	&.image-150px {
-		width: 150px;
-		height: 150px;
-	}
-	&.image-160px {
-		width: 160px;
-		height: 160px;
-	}
-	&.image-170px {
-		width: 170px;
-		height: 170px;
-	}
-	&.image-180px {
-		width: 180px;
-		height: 180px;
-	}
-	&.image-190px {
-		width: 190px;
-		height: 190px;
-	}
-	&.image-200px {
-		width: 200px;
-		height: 200px;
-	}
-	&.image-250px {
-		width: 250px;
-		height: 250px;
-	}
+	@for $var from 0 to 1000 {
+        &.image-#{$var}px {
+            width: #{$var} + 'px';
+			height: #{$var} + 'px';
+        }
+    }
 	&.image-all {
 		width: 100%;
 		height: 100%;
@@ -151,6 +65,16 @@
 		.icn-big {
 			font-size: 34px;
 		}
+	}
+	.stt {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 15px;
+		height: 15px;
+		border-radius: 100%;
+		background-color: $green;
+		z-index: 10;
 	}
 }
 

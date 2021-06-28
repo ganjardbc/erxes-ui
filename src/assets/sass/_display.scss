@@ -42,6 +42,32 @@
     &.column-reverse {
         flex-direction: column-reverse;
     }
+    .df-card {
+		flex: 1 1 calc(33.33% - 1em);
+		margin: .55rem .25em;
+	}
+	@media (max-width: $max-width) {
+		.df-card {
+			flex: 1 1 calc(100% - 1em);
+		}
+	}
+}
+
+.display-flex-normal {
+	position: relative;
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.display-flex-mobile {
+	position: relative;
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	justify-content: space-between;
+	@media (max-width: $max-width) {
+		display: block;
+	}
 }
 
 .display-popup-normal {

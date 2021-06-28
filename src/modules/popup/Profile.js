@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { NavLink } from "react-router-dom"
+import CardMenu from '../CardMenu'
 
 var opActivePopup = 'app-small-profile active'
 var clActivePopup = 'app-small-profile'
@@ -17,7 +18,6 @@ class Pages extends Component {
   }
 
   handleClickOutside(element) {
-    // console.log(element)
     const outsideclickListener = event => {
       if (!element.contains(event.target)) {
         element.style.display = 'none'
@@ -60,38 +60,47 @@ class Pages extends Component {
             <div className="ttl">
               <i className="fa fa-lw fa-angle-down txt-site txt-primary txt-16" />
             </div>
-            {/*<div className="ttl">
-              <div className="txt-site txt-main txt-12 txt-cap">
-              	Admin
-              </div>
-            </div>*/}
           </div>
         </div>
 
         <div
-          style={{ top: "45px", width: "200px" }}
+          style={{ top: "45px", width: "250px" }}
           id="app-profile"
           className={this.state.profileClass}>
-          <ul>
-            <NavLink to="/">
-              <li>
-                <i className="icn fa fa-lw fa-user"></i>
-                Profile
-              </li>
-            </NavLink>
-            <NavLink to="/">
-              <li>
-                <i className="icn fa fa-lw fa-power-off"></i>
-                Logout
-              </li>
-            </NavLink>
-          </ul>
+          <div className="content">
+            <div style={{paddingTop: 20}}>
+              <div className="image image-80px image-center background-blue"></div>
+              <div className="txt-site txt-main txt-11 txt-center">City of FleetIo</div>
+            </div>
+          	<div className="txt-site txt-left">
+          		<div style={{paddingTop: 15, paddingBottom: 15}} className="border-bottom">
+                <CardMenu data={firstMenu} />
+              </div>
+              <div style={{paddingTop: 15, paddingBottom: 15}}>
+                <CardMenu data={secondMenu} />
+              </div>
+          	</div>
+          </div>
         </div>
       </div>
     )
   }
 
 }
+
+const firstMenu = [
+  {title: 'Account Settings', enableIcon: false, link: ''},
+  {title: 'Billing & Subscriptions', enableIcon: false, link: ''},
+  {title: 'User Management', enableIcon: false, link: ''},
+  {title: 'Switch Accounts', enableIcon: false, link: ''}
+]
+
+const secondMenu = [
+  {title: 'User Settings', enableIcon: false, link: ''},
+  {title: 'Notification Preference', enableIcon: false, link: ''},
+  {title: 'Edit Login & Password', enableIcon: false, link: ''},
+  {title: 'Logout', enableIcon: true, icon: 'fa fa-lw fa-power-off', link: ''}
+]
 
 
 export default Pages

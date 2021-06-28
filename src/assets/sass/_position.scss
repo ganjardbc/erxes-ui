@@ -79,35 +79,14 @@
 	@include post_top(relative);
 }
 
-.display-flex {
-	position: relative;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;	
-	.df-card {
-		flex: 1 1 calc(33.33% - 1em);
-		margin: .55rem .25em;
-	}
-	@media (max-width: $max-width) {
-		.df-card {
-			flex: 1 1 calc(100% - 1em);
-		}
-	}
+.float-top-right {
+	position: absolute;
+	top: 15px;
+	right: 15px;
 }
 
-.display-flex-normal {
-	position: relative;
-	display: flex;
-	flex-wrap: nowrap;
-}
-
-.display-flex-mobile {
-	position: relative;
-	display: flex;
-	flex-wrap: nowrap;
-	flex-direction: row;
-	justify-content: space-between;
-	@media (max-width: $max-width) {
-		display: block;
-	}
+.float-top-left {
+	position: absolute;
+	top: 15px;
+	left: 15px;
 }

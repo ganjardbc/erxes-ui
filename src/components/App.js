@@ -11,6 +11,8 @@ import ProfilePopup from '../modules/popup/Profile'
 
 // auth
 import Login from './auth/Index'
+import AlternativeLogin from './auth/AlternativeLogin'
+import CoolLogin from './auth/CoolLogin'
 
 // home
 // import Home from './home/Index'
@@ -26,6 +28,45 @@ import Thumbnail from './pages/Thumbnail'
 import Table from './pages/Table'
 import DatePicker from './pages/DatePicker'
 import Menus from './pages/Menus'
+
+// components
+import componentsMoveableComponent from './components/moveable/index'
+import componentsMultistepLinear from './components/MultistepLinear'
+import componentsMultistepNonLinear from './components/MultistepNonLinear'
+import componentsTimeline from './components/Timeline'
+import componentsDate from './components/Date'
+import componentsDateDropDown from './components/DateDropDown'
+import componentsAlert from './components/Alert'
+import componentsProgress from './components/Progress'
+import componentsToggle from './components/Toggle'
+import componentsChat from './components/Chat'
+import componentsSlide from './components/Slide'
+import componentsKanbanLayout from './components/kanban/Index'
+import componentsReactTrello from './components/ReactTrello'
+import componentsCoolFilter from './components/CoolFilter'
+import componentsMegaPopup from './components/MegaPopup'
+import componentsRowRendering from './components/RowRendering'
+import componentsThumbnail from './components/Thumbnail'
+import componentsProgressImage from './components/ProgressImage'
+import componentsInlineEditing from './components/InlineEditing'
+import componentsGridLayout from './components/GridLayout'
+import componentsFormBuilder from './components/FormBuilder'
+import componentsOrganizationChart from './components/OrganizationChart'
+import componentsAccordion from './components/Accordion'
+import componentsDualListbox from './components/DualListbox'
+// import componentsMosaic from './components/Mosaic'
+import componentsSortableTree from './components/SortableTree'
+import componentsCalendarHeatmap from './components/CalendarHeatmap'
+import componentsReactBigCalendar from './components/ReactBigCalendar'
+import componentsReactBigSchedular from './components/ReactBigSchedular'
+import componentsGithubStyle from './components/GithubStyle'
+import componentsFlippingCard from './components/FlippingCard'
+import componentsBeautifulCard from './components/BeautifulCard'
+import componentsCoolPopup from './components/CoolPopup'
+import componentsTooltipPopup from './components/TooltipPopup'
+import componentsList from './components/list/Index'
+import componentsLiveText from './components/LiveText'
+import componentsMenu from './components/Menu'
 
 
 class App extends Component {
@@ -177,13 +218,13 @@ class App extends Component {
                   </div>
 
                   <div className="app-space">
-                    <input type="checkbox" name="mainmenu" id="mainmenu-components" />
-                    <label htmlFor="mainmenu-components" className="list">
+                    <input type="checkbox" name="mainmenu" id="mainmenu-pages" />
+                    <label htmlFor="mainmenu-pages" className="list">
                       <span className="app-space-icon">
                         <i className="fa fa-1x fa-bars" />
                       </span>
                       <span className="app-space-text">
-                        COMPONENTS
+                        PAGES 
                       </span>
                       <span className="app-space-sign"></span>
                     </label>
@@ -198,6 +239,62 @@ class App extends Component {
                         { this.createSubMenu('Progress Image', '/progress-image', 'fa fa-lg fa-images') }
                         { this.createSubMenu('Smart Table', '/table', 'fa fa-lg fa-table') }
                         { this.createSubMenu('Date Picker', '/date-picker', 'fa fa-lg fa-calendar-alt') }
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="app-space">
+                    <input type="checkbox" name="mainmenu" id="mainmenu-components" />
+                    <label htmlFor="mainmenu-components" className="list">
+                      <span className="app-space-icon">
+                        <i className="fa fa-1x fa-bars" />
+                      </span>
+                      <span className="app-space-text">
+                        COMPONENTS
+                      </span>
+                      <span className="app-space-sign"></span>
+                    </label>
+                    <div className="app-space-content">
+                      <div className="app-menu">
+                        { this.createSubMenu('Moveable Component', '/component-moveable-component', 'far fa-lg fa-circle') }
+                        { this.createSubMenu('Sortable Tree', '/component-sortable-tree', 'far fa-lg fa-circle') }
+                        { this.createSubMenu('Live Text', '/component-live-text', 'far fa-lg fa-circle') }
+                        { this.createSubMenu('Moveable List', '/component-list', 'far fa-lg fa-circle') }
+                        {/* { this.createSubMenu('Big Schedular', '/component-big-schedular', 'far fa-lg fa-circle') } */}
+                        {/* { this.createSubMenu('Big Calendar', '/component-big-calendar', 'far fa-lg fa-circle') } */}
+                        { this.createSubMenu('Tooltip Popup', '/component-tooltip-popup', 'far fa-lg fa-circle') }
+                        { this.createSubMenu('Cool Popup', '/component-cool-popup', 'far fa-lg fa-circle') }
+                        { this.createSubMenu('Beautiful Card', '/component-beautiful-card', 'far fa-lg fa-circle') }
+                        { this.createSubMenu('Flipping Card', '/component-flipping-card', 'far fa-lg fa-circle') }
+                        { this.createSubMenu('Github Style Tabsheet', '/component-github-style', 'far fa-lg fa-circle') }
+                        { this.createSubMenu('Calendar Heatmap', '/component-calendar-heatmap', 'far fa-lg fa-circle') }
+                        {/* { this.createSubMenu('Mosaic', '/component-mosaic', 'far fa-lg fa-circle') } */}
+                        { this.createSubMenu('Dual Listbox', '/component-dual-listbox', 'far fa-lg fa-circle') }
+                        { this.createSubMenu('Cool Login', '/cool-login', 'far fa-lg fa-circle') }
+                        { this.createSubMenu('Alternative Login', '/alternative-login', 'far fa-lg fa-circle') }
+                        { this.createSubMenu('Accordion', '/component-accordion', 'far fa-lg fa-circle') }
+                        { this.createSubMenu('Organization Chart', '/component-organization-chart', 'far fa-lg fa-circle') }
+                        { this.createSubMenu('Form Builder', '/component-form-builder', 'far fa-lg fa-circle') }
+                        { this.createSubMenu('Grid Layout', '/component-grid-layout', 'far fa-lg fa-circle') }
+                        { this.createSubMenu('Inline Editing', '/component-inline-editing', 'far fa-lg fa-circle') }
+                        { this.createSubMenu('Image Loader', '/component-progress-image', 'far fa-lg fa-circle') }
+                        { this.createSubMenu('Row Rendering', '/component-row-rendering', 'far fa-lg fa-circle') }
+                        { this.createSubMenu('Show Thumbnail', '/component-thumbnail', 'far fa-lg fa-circle') }
+                        { this.createSubMenu('Mega Popup', '/component-mega-popup', 'far fa-lg fa-circle') }
+                        { this.createSubMenu('Cool Filter', '/component-cool-filter', 'far fa-lg fa-circle') }
+                        { this.createSubMenu('Kanban Layout', '/component-kanban-layout', 'far fa-lg fa-circle') }
+                        { this.createSubMenu('React Trello', '/component-react-trello', 'far fa-lg fa-circle') }
+                        { this.createSubMenu('Slide Component', '/component-slide', 'far fa-lg fa-circle') }
+                        { this.createSubMenu('Chat Room', '/component-chat', 'far fa-lg fa-circle') }
+                        { this.createSubMenu('Toggle Button', '/component-toggle', 'far fa-lg fa-circle') }
+                        { this.createSubMenu('Progress Bar', '/component-progress', 'far fa-lg fa-circle') }
+                        { this.createSubMenu('Sweet Alert', '/component-alert', 'far fa-lg fa-circle') }
+                        { this.createSubMenu('Date Picker', '/component-date', 'far fa-lg fa-circle') }
+                        { this.createSubMenu('Date Drop Down', '/component-date-drop-down', 'far fa-lg fa-circle') }
+                        { this.createSubMenu('Menus', '/menus', 'far fa-lg fa-circle') }
+                        { this.createSubMenu('Multistep Linear', '/component-multistep-linear', 'far fa-lg fa-circle') }
+                        { this.createSubMenu('Multistep Non Linear', '/component-multistep-nonlinear', 'far fa-lg fa-circle') }
+                        { this.createSubMenu('Timeline', '/component-timeline', 'far fa-lg fa-circle') }
                       </div>
                     </div>
                   </div>
@@ -250,6 +347,44 @@ class App extends Component {
                 <Route exact path="/date-picker" component={ DatePicker } />
                 <Route exact path="/menus" component={ Menus } />
 
+                <Route exact path="/component-moveable-component" component={ componentsMoveableComponent }></Route>
+                <Route exact path="/component-menu" component={ componentsMenu }></Route>
+                <Route exact path="/component-live-text" component={ componentsLiveText }></Route>
+                <Route exact path="/component-list" component={ componentsList }></Route>
+                <Route exact path="/component-multistep-linear" component={ componentsMultistepLinear }></Route>
+                <Route exact path="/component-multistep-nonlinear" component={ componentsMultistepNonLinear }></Route>
+                <Route exact path="/component-timeline" component={ componentsTimeline }></Route>
+                <Route exact path="/component-date" component={ componentsDate }></Route>
+                <Route exact path="/component-date-drop-down" component={ componentsDateDropDown }></Route>
+                <Route exact path="/component-alert" component={ componentsAlert }></Route>
+                <Route exact path="/component-progress" component={ componentsProgress }></Route>
+                <Route exact path="/component-toggle" component={ componentsToggle }></Route>
+                <Route exact path="/component-chat" component={ componentsChat }></Route>
+                <Route exact path="/component-slide" component={ componentsSlide }></Route>
+                <Route exact path="/component-kanban-layout" component={ componentsKanbanLayout }></Route>
+                <Route exact path="/component-react-trello" component={ componentsReactTrello }></Route>
+                <Route exact path="/component-cool-filter" component={ componentsCoolFilter }></Route>
+                <Route exact path="/component-mega-popup" component={ componentsMegaPopup }></Route>
+                <Route exact path="/component-row-rendering" component={ componentsRowRendering }></Route>
+                <Route exact path="/component-thumbnail" component={ componentsThumbnail }></Route>
+                <Route exact path="/component-progress-image" component={ componentsProgressImage }></Route>
+                <Route exact path="/component-inline-editing" component={ componentsInlineEditing }></Route>
+                <Route exact path="/component-grid-layout" component={ componentsGridLayout }></Route>
+                <Route exact path="/component-form-builder" component={ componentsFormBuilder }></Route>
+                <Route exact path="/component-organization-chart" component={ componentsOrganizationChart }></Route>
+                <Route exact path="/component-accordion" component={ componentsAccordion }></Route>
+                <Route exact path="/component-dual-listbox" component={ componentsDualListbox }></Route>
+                {/* <Route exact path="/component-mozaic" component={ componentsMosaic }></Route> */}
+                <Route exact path="/component-sortable-tree" component={ componentsSortableTree }></Route>
+                <Route exact path="/component-calendar-heatmap" component={ componentsCalendarHeatmap }></Route>
+                <Route exact path="/component-github-style" component={ componentsGithubStyle }></Route>
+                <Route exact path="/component-flipping-card" component={ componentsFlippingCard }></Route>
+                <Route exact path="/component-beautiful-card" component={ componentsBeautifulCard }></Route>
+                <Route exact path="/component-cool-popup" component={ componentsCoolPopup }></Route>
+                <Route exact path="/component-tooltip-popup" component={ componentsTooltipPopup }></Route>
+                <Route exact path="/component-big-calendar" component={ componentsReactBigCalendar }></Route>
+                <Route exact path="/component-big-schedular" component={ componentsReactBigSchedular }></Route>
+
       				</div>
       			</div>
       			
@@ -258,6 +393,9 @@ class App extends Component {
       		{/* Single Page */}
       		<div className="app">
       			<Route exact path="/" component={ Login } />
+            
+            <Route exact path="/alternative-login" component={ AlternativeLogin }></Route>
+            <Route exact path="/cool-login" component={ CoolLogin }></Route>
       		</div>
 
       	</div>
