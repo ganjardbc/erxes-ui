@@ -26,6 +26,9 @@ import Thumbnail from './pages/Thumbnail'
 import Table from './pages/Table'
 import DatePicker from './pages/DatePicker'
 import Menus from './pages/Menus'
+import NewSavedReport from './pages/NewSavedReport'
+import ShareReport from './pages/ShareReport'
+import LineItems from './pages/LineItems'
 
 
 class App extends Component {
@@ -198,6 +201,9 @@ class App extends Component {
                         { this.createSubMenu('Progress Image', '/progress-image', 'fa fa-lg fa-images') }
                         { this.createSubMenu('Smart Table', '/table', 'fa fa-lg fa-table') }
                         { this.createSubMenu('Date Picker', '/date-picker', 'fa fa-lg fa-calendar-alt') }
+                        { this.createSubMenu('New Saved Report', '/new-saved-report', 'fa fa-lg fa-circle') }
+                        { this.createSubMenu('Share Report', '/share-report', 'fa fa-lg fa-circle') }
+                        { this.createSubMenu('Line Items', '/line-items', 'fa fa-lg fa-circle') }
                       </div>
                     </div>
                   </div>
@@ -249,6 +255,9 @@ class App extends Component {
                 <Route exact path="/table" component={ Table } />
                 <Route exact path="/date-picker" component={ DatePicker } />
                 <Route exact path="/menus" component={ Menus } />
+                <Route exact path="/new-saved-report" component={ NewSavedReport } />
+                <Route exact path="/share-report" component={ ShareReport } />
+                <Route exact path="/line-items" component={ LineItems } />
 
       				</div>
       			</div>
