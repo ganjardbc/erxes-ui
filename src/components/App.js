@@ -64,6 +64,7 @@ import componentsBeautifulCard from './components/BeautifulCard'
 import componentsCoolPopup from './components/CoolPopup'
 import componentsTooltipPopup from './components/TooltipPopup'
 import PercentField from './components/PercentField'
+import SearchRecommendation from './components/SearchRecommendation'
 // import componentsDualListbox from './components/DualListbox'
 
 
@@ -291,6 +292,7 @@ class App extends Component {
                         { this.createSubMenu('Multistep Linear', '/component-multistep-linear', 'far fa-lg fa-circle') }
                         { this.createSubMenu('Multistep Non Linear', '/component-multistep-nonlinear', 'far fa-lg fa-circle') }
                         { this.createSubMenu('Timeline', '/component-timeline', 'far fa-lg fa-circle') }
+                        { this.createSubMenu('Search', '/component-search', 'far fa-lg fa-circle') }
                       </div>
                     </div>
                   </div>
@@ -378,6 +380,7 @@ class App extends Component {
                 <Route exact path="/component-beautiful-card" component={ componentsBeautifulCard }></Route>
                 <Route exact path="/component-cool-popup" component={ componentsCoolPopup }></Route>
                 <Route exact path="/component-tooltip-popup" component={ componentsTooltipPopup }></Route>
+                <Route exact path="/component-search" component={ SearchRecommendation }></Route>
                 {/* <Route exact path="/component-dual-listbox" component={ componentsDualListbox }></Route> */}
 
       				</div>

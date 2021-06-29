@@ -16,6 +16,7 @@
     "mui-datatables-bitozen": "^4.0.16",
     "node-sass": "^4.12.0",
     "react": "^16.8.6",
+    "react-autosuggest": "^10.1.0",
     "react-big-calendar": "^0.22.0",
     "react-big-scheduler": "^0.2.7",
     "react-calendar-heatmap": "^1.8.0",
