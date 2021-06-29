@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/erxes-ui/precache-manifest.030f277167e721e8ce279bd47a2f0488.js"
+  "/erxes-ui/precache-manifest.707bd7ff839a3a4d1490704fbdcdc5bf.js"
 );
 
 self.addEventListener('message', (event) => {
