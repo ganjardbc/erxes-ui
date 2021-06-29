@@ -54,6 +54,11 @@
 		width: calc(100% - 30px);
 		padding: 0 15px;
 	}
+	@for $var from 0 to 100 {
+		&.width-#{$var} {
+			@include width(#{$var} + '%');
+		}
+    }
 	@for $var from 0 to 1000 {
 		&.width-#{$var}px {
 			@include width(#{$var} + 'px');

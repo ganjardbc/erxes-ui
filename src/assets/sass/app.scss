@@ -410,14 +410,14 @@ a {
 		@include animate_2();
 		.main-content {
 			position: relative;
-			width: 100%;
 			width: calc(100% - 10px);
 			padding: 5px;
 			padding-top: 55px;
-			// @media (max-width: $max-width) {
-			// 	width: 100%;
-			// 	padding: 0 0;
-			// }
+			&.no-padding {
+				width: 100%;
+				padding: 0;
+				padding-top: 50px;
+			}
 		}
 	}
 

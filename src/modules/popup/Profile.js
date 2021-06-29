@@ -69,15 +69,17 @@ class Pages extends Component {
           className={this.state.profileClass}>
           <div className="content">
             <div style={{paddingTop: 20}}>
-              <div className="image image-80px image-center background-blue" style={{marginBottom: 10}}></div>
+              <div className="image image-80px image-center" style={{marginBottom: 10}}>
+                <img src="https://d33wubrfki0l68.cloudfront.net/e51a186ee69c48beddbb5d667c06eb8a6a2a4a21/595e9/assets/images/logos/fleetio-logo-mark-only.svg" alt="" />
+              </div>
               <div className="txt-site txt-main txt-11 txt-center txt-bold">City of FleetIo</div>
             </div>
           	<div className="txt-site txt-left">
-          		<div style={{paddingTop: 15, paddingBottom: 15}} className="border-bottom">
+          		<div style={{paddingTop: 15, paddingBottom: 15}}>
                 <CardMenu data={firstMenu} />
               </div>
-              <div style={{paddingTop: 15, paddingBottom: 15}}>
-                <div className="display-flex" style={{paddingLeft: 10, paddingRight: 10, paddingBottom: 10}}>
+              <div style={{paddingTop: 0, paddingBottom: 15}}>
+                <div className="display-flex" style={{paddingLeft: 10, paddingRight: 10, paddingBottom: 15}}>
                   <div className="image image-circle image-30px overflow background-blue">
                     <img width="100%" src={this.state.imageUrl} alt=""/>
                   </div>
