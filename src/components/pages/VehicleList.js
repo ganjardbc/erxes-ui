@@ -1,5 +1,73 @@
 import React, { Component } from 'react'
 import TabBar from '../../modules/TabBar'
+import CardMenu from '../../modules/CardMenu'
+
+class ButtonAction extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            visiblePopup: false
+        }
+    }
+
+    handleClickOutside(element) {
+        const outsideclickListener = event => {
+            if (!element.contains(event.target)) {
+                removeClickListener()
+            }
+        }
+    
+        const removeClickListener = () => {
+            this.setState({visiblePopup: false})
+            document.removeEventListener('click', outsideclickListener)
+        }
+    
+        document.addEventListener('click', outsideclickListener)
+    }
+    
+    opMenu = () => {
+        var element = document.getElementById('button-actions')
+        this.setState({visiblePopup: true})
+        this.handleClickOutside(element)
+    }
+
+    render () {
+        const {visiblePopup} = this.state
+        return (
+            <div style={{position: 'relative'}}>
+                <button className="btn btn-sekunder" onClick={() => this.opMenu()}>
+                    <i className="icn icn-left fa fa-lw fa-ellipsis-v" /> Actions
+                </button>
+
+                <div
+                    style={{ top: "45px", width: "280px" }}
+                    id="button-actions"
+                    className={visiblePopup ? "app-menu-popup" : "app-menu-popup app-menu-popup-hide"}>
+                    <div className="content">
+                        <div style={{paddingTop: 10, paddingBottom: 10}} className="border-bottom">
+                            <CardMenu data={[{title: 'Add Multiple Users', enableIcon: false, link: ''},]} />
+                        </div>
+                        <div style={{paddingTop: 10, paddingBottom: 10}} className="border-bottom">
+                            <CardMenu data={[{title: 'Import Contacts', enableIcon: false, link: ''},]} />
+                        </div>
+                        <div style={{paddingTop: 10, paddingBottom: 10}} className="border-bottom">
+                            <CardMenu data={[
+                                {title: 'Manage User Roles', enableIcon: false, link: ''},
+                                {title: 'Manage Password Requirements', enableIcon: false, link: ''}
+                            ]} />
+                        </div>
+                        <div style={{paddingTop: 10, paddingBottom: 10}}>
+                            <CardMenu reverseIcon={true} data={[
+                                {title: 'Find Duplicates', enableIcon: true, icon: 'fa fa-lw fa-user', link: ''},
+                                {title: 'Export CSV', enableIcon: true, icon: 'fa fa-lw fa-download', link: ''}
+                            ]} />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+}
 
 class CardHeader extends Component {
     render () {
@@ -123,9 +191,10 @@ class Pages extends Component {
                         <div className="post-top txt-site txt-16 txt-bold txt-main padding-top-5px">Vehicle List</div>
                     </div>
                     <div className="width width-30 display-flex right">
-                        <button className="btn btn-sekunder">
+                        {/* <button className="btn btn-sekunder">
                             <i className="icn icn-left fa fa-lw fa-ellipsis-v" /> Actions
-                        </button>
+                        </button> */}
+                        <ButtonAction />
                         <button className="btn btn-green" style={{marginLeft: 10}}>
                             <i className="icn icn-left fa fa-lw fa-plus" /> Add Vehicle
                         </button>
