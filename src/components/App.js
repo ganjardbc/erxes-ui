@@ -67,6 +67,7 @@ import componentsTooltipPopup from './components/TooltipPopup'
 import componentsList from './components/list/Index'
 import componentsLiveText from './components/LiveText'
 import componentsMenu from './components/Menu'
+import PercentField from './components/PercentField'
 
 
 class App extends Component {
@@ -287,6 +288,7 @@ class App extends Component {
                         { this.createSubMenu('Slide Component', '/component-slide', 'far fa-lg fa-circle') }
                         { this.createSubMenu('Chat Room', '/component-chat', 'far fa-lg fa-circle') }
                         { this.createSubMenu('Toggle Button', '/component-toggle', 'far fa-lg fa-circle') }
+                        { this.createSubMenu('Percent Button', '/component-percent', 'far fa-lg fa-circle') }
                         { this.createSubMenu('Progress Bar', '/component-progress', 'far fa-lg fa-circle') }
                         { this.createSubMenu('Sweet Alert', '/component-alert', 'far fa-lg fa-circle') }
                         { this.createSubMenu('Date Picker', '/component-date', 'far fa-lg fa-circle') }
@@ -359,6 +361,7 @@ class App extends Component {
                 <Route exact path="/component-alert" component={ componentsAlert }></Route>
                 <Route exact path="/component-progress" component={ componentsProgress }></Route>
                 <Route exact path="/component-toggle" component={ componentsToggle }></Route>
+                <Route exact path="/component-percent" component={ PercentField }></Route>
                 <Route exact path="/component-chat" component={ componentsChat }></Route>
                 <Route exact path="/component-slide" component={ componentsSlide }></Route>
                 <Route exact path="/component-kanban-layout" component={ componentsKanbanLayout }></Route>
