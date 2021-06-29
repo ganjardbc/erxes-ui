@@ -1,7 +1,4 @@
 import React, { Component } from 'react'
-// import OrgChart from 'react-orgchart'
-// import 'react-orgchart/index.css'
-
 
 class Pages extends Component {
 
