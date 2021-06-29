@@ -74,6 +74,18 @@ const data = [
     }
 ];
 
+const history = [
+    {
+        title: 'RECENT VEHICLES',
+        content: [
+            { name: "Chevy Service Van" },
+            { name: "LE-5" },
+            { name: "123 RWN" },
+            { name: "DW-2" },
+        ]
+    }
+]
+
 // https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#Using_Special_Characters
 function escapeRegexCharacters(str) {
     return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
@@ -103,7 +115,6 @@ function getSuggestionValue(suggestion) {
 }
 
 function renderSuggestion(suggestion) {
-    console.log("sug", suggestion)
     return (
         <div style={{ padding: "0px" }}>
             <div style={{ fontWeight: "bold" }}>{suggestion.name}</div>
@@ -112,6 +123,14 @@ function renderSuggestion(suggestion) {
                 {suggestion.image}
             </div>
             <span></span>
+        </div>
+    );
+}
+
+function renderHistory(suggestion) {
+    return (
+        <div style={{ padding: "0px" }}>
+            <div style={{ fontWeight: "bold" }}>{suggestion.name}</div>
         </div>
     );
 }
@@ -131,18 +150,24 @@ function getSectionSuggestions(section) {
 class SearchRecommendation extends React.Component {
     constructor() {
         super();
-
         this.state = {
             value: '',
+            focus: false,
             suggestions: []
         };
     }
 
     onChange = (event, { newValue, method }) => {
         this.setState({
-            value: newValue
+            value: newValue,
+            focus: false
         });
     };
+
+    onHistory = () => {
+        let suggestions = Object.assign([], history)
+        this.setState({ suggestions, value: 'History' })
+    }
 
     onSuggestionsFetchRequested = ({ value }) => {
         this.setState({
@@ -157,11 +182,12 @@ class SearchRecommendation extends React.Component {
     };
 
     render() {
-        const { value, suggestions } = this.state;
+        const { value, suggestions, focus } = this.state;
         const inputProps = {
             placeholder: "Type 'LE'",
             value,
-            onChange: this.onChange
+            onChange: this.onChange,
+            onFocus: () => this.setState({ focus: true }, this.onHistory)
         };
 
         const renderInputComponent = inputProps => (
@@ -190,11 +216,12 @@ class SearchRecommendation extends React.Component {
                 </div>
                 <Autosuggest
                     multiSection={true}
+                    highlightFirstSuggestion={true}
                     suggestions={suggestions}
-                    onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
+                    onSuggestionsFetchRequested={focus ? this.onHistory : this.onSuggestionsFetchRequested}
                     onSuggestionsClearRequested={this.onSuggestionsClearRequested}
                     getSuggestionValue={getSuggestionValue}
-                    renderSuggestion={renderSuggestion}
+                    renderSuggestion={focus ? renderHistory : renderSuggestion}
                     renderSectionTitle={renderSectionTitle}
                     getSectionSuggestions={getSectionSuggestions}
                     inputProps={inputProps}
