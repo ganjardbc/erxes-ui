@@ -30,16 +30,40 @@
 		padding: 20px;
 		background-color: #fff;
 		border-radius: 7.5px;
-		border: $border1;
+		box-shadow: $shadow-small;
 		@media (max-width: $max-width) {
 			@include post_none();
 			margin: auto;
 			margin-top: 70px;
 			margin-bottom: 20px;
 		}
-		@media (max-width: $min-width) {
+			@media (max-width: $min-width) {
 			@include post_none();
 			width: calc(100% - 60px);
+		}
+	}
+	.login-cool {
+		position: relative;
+		width: 900px;
+		height: 550px;
+		margin: auto;
+		background-color: #fff;
+		box-shadow: $shadow;
+		@include post_top(absolut);
+		@include grid_2x(400px, 1fr);
+		@media (max-width: $max-width) {
+			@include grid_none();
+		}
+		.lc-col-1 {
+			@include column_n(1);
+		}
+		.lc-col-2 {
+			@include column_n(2);
+			position: relative;
+			width: 100%;
+			@media (max-width: $max-width) {
+				display: none;
+			}
 		}
 	}
 	.logo-faded {
@@ -52,13 +76,14 @@
 			height: 100px;
 		}
 	}
-}
-
-.app-popup-bottom {
-	position: fixed;
-	bottom: 0;
-	right: 0;
-	width: 1000px;
-	height: 500px;
-	z-index: 2000;
+	.float-label {
+		@include post_bottom(absolute);
+		bottom: 15px;
+		font-size: 10pt;
+		color: $txt-54-color;
+		a {
+			font-weight: 600;
+			color: $pos-color;
+		}
+	}
 }

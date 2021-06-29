@@ -28,7 +28,6 @@ class LineItems extends Component {
     renderTaskDetail = (details) => {
         return (
             <div style={{ minHeight: '300px' }}>
-                AAAAAAAAAAAAA
             </div>
         )
     }
@@ -40,7 +39,7 @@ class LineItems extends Component {
                 <div className="cf-header">
                     <div className="cf-title grid grid-2x">
                         <div className="column-1">
-                            Add Service Task
+                            <label className="margin-right-20px">Add Service Task</label>
                             <select className="margin-left-10px cf-input slc slc-sekunder" style={{ width: '50%' }}>
                                 <option value="1">Add to top</option>
                                 <option value="1">opsi kategori</option>

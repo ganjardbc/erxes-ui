@@ -58,6 +58,9 @@
 				// 	display: block;
 				// }
 			}
+			.tree-button {
+				display: none;
+			}
 		}
 		ul {
 			&::before {
@@ -75,17 +78,17 @@
 		ul {
 			li {
 				label {
+					max-width: 250px;
 					cursor: pointer;
-					.tree-card {
-						&:hover {
-							background-color: #f5f5f5;
-							box-shadow: $shadow-line;
-						}
+					display: block;
+					margin: 0 auto;
+					&:hover {
+						// background-color: #f9f9f9;
+						box-shadow: $shadow;
 					}
 				}
 			}
 			.tree-button {
-				display: none;
 				&:checked + ul {
 					display: block;
 				}

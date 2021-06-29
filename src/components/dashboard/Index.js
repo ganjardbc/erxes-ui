@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 
-import CardPercentage from '../../cards/Percentage'
-import CardPiechart from '../../cards/Piechart'
-import CardLinechart from '../../cards/Linechart'
-import CardBarchart from '../../cards/Barchart'
-import CardStatistic from '../../cards/Statistic'
+import CardPercentage from '../../components/cards/Percentage'
+import CardPiechart from '../../components/cards/Piechart'
+import CardLinechart from '../../components/cards/Linechart'
+import CardBarchart from '../../components/cards/Barchart'
+import CardStatistic from '../../components/cards/Statistic'
 
 
 class Home extends Component {

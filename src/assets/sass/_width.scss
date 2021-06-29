@@ -54,61 +54,14 @@
 		width: calc(100% - 30px);
 		padding: 0 15px;
 	}
-	&.width-100px {
-        @include width(100px);
+	@for $var from 0 to 100 {
+		&.width-#{$var} {
+			@include width(#{$var} + '%');
+		}
     }
-	&.width-150px {
-        @include width(150px);
-    }
-	&.width-200px {
-        @include width(200px);
-    }
-    &.width-250px {
-        @include width(250px);
-    }
-    &.width-300px {
-        @include width(300px);
-    }
-    &.width-350px {
-        @include width(350px);
-    }
-    &.width-400px {
-        @include width(400px);
-    }
-    &.width-450px {
-        @include width(450px);
-    }
-    &.width-500px {
-        @include width(500px);
-    }
-    &.width-550px {
-        @include width(550px);
-    }
-    &.width-600px {
-        @include width(600px);
-    }
-    &.width-650px {
-        @include width(650px);
-    }
-    &.width-700px {
-        @include width(700px);
-	}
-	&.width-750px {
-        @include width(750px);
-	}
-	&.width-800px {
-        @include width(800px);
-	}
-	&.width-850px {
-        @include width(850px);
-	}
-	&.width-900px {
-        @include width(900px);
-	}
-	&.width-950px {
-        @include width(950px);
-	}
-	&.width-1000px {
-        @include width(1000px);
+	@for $var from 0 to 1000 {
+		&.width-#{$var}px {
+			@include width(#{$var} + 'px');
+		}
     }
 }

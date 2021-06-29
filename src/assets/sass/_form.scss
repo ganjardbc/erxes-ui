@@ -125,12 +125,8 @@ $hg-form: 40px;
 	height: $hg-form;
 	border-radius: 3px;
 	font-size: 10pt;
-	// font-weight: 600;
 	text-align: center;
 	cursor: pointer;
-	/*&:focus {
-		box-shadow: 0 0 0 4px $pos-color;
-	}*/
 	&.btn-width-all {
 		width: 100%;
 	}
@@ -204,9 +200,50 @@ $hg-form: 40px;
 		border-radius: 5px;
 		text-align: center;
 	}
+	&.btn-mikro {
+		padding: 0 10px;
+		height: 25px;
+		font-size: 11px;
+	}
+	&.btn-main {
+		background-color: $min-color;
+		color: $sek-color;
+	}
+	&.btn-micro-circle {
+		width: 26px;
+		height: 26px;
+		padding: 0 0;
+		border-radius: 100%;
+		text-align: center;
+		border: 2px #fff solid;
+	}
+	&.btn-main2 {
+		background-color: rgba(0,0,0,0);
+		color: $txt-sek-color;
+		&:hover {
+			background-color: rgba(225,225,225,0.54);
+			color: $txt-min-color;
+		}
+	}
+	&.btn-main3 {
+		background-color: $pos-color;
+		color: $sek-color;
+	}
+	&.btn-main4 {
+		background-color: $sek-color;
+		color: $min-color;
+	}
 	&.btn-main-color {
 		background-color: $min-color;
 		color: $sek-color;
+	}
+	&.btn-micro-circle {
+		width: 26px;
+		height: 26px;
+		padding: 0 0;
+		border-radius: 100%;
+		text-align: center;
+		border: 2px #fff solid;
 	}
 	&.btn-main2-color {
 		background-color: rgba(0,0,0,0);
@@ -225,10 +262,10 @@ $hg-form: 40px;
 		color: $min-color;
 	}
 	&.btn-black {
-		background-color: rgba(0,0,0,0.1);
+		background-color: rgba(0,0,0,0.84);
 		color: #fff;
 		&:hover {
-			background-color: rgba(0,0,0,0.54);
+			background-color: rgba(0,0,0,1);
 			color: #fff;
 		}
 	}
@@ -387,6 +424,15 @@ $hg-form: 40px;
 	&.icn {
 		font-size: 10pt;
 		font-weight: 500;
+	}
+	.icn {
+		font-size: 10pt;
+		&.icn-right {
+			margin-left: 8px;
+		}
+		&.icn-left {
+			margin-right: 8px;
+		}
 	}
 }
 
@@ -727,8 +773,8 @@ $hg-form: 40px;
 		.i-e-text {
 			width: calc(100% - 20px);
 			padding: 7.5px 10px;
-			// border: $border2;
-			box-shadow: 0 0 2px $red !important;
+			border: $border2;
+			// box-shadow: 0 0 2px $red !important;
 			background-color: #f5f5f5;
 			&:hover {
 				cursor: text;

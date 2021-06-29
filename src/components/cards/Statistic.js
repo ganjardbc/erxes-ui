@@ -4,11 +4,11 @@ class Statistic extends Component {
   render() {
     return (
       <div className="card">
-        <div className="padding-10px background-white border-bottom">
-          <div className="txt-site txt-bold text-main txt-12">Statistik</div>
+        <div className="padding-15px background-blue">
+            Statistik
         </div>
         <div className="padding-15px">
-          <div className="margin-10px txt-site txt-primary txt-12">
+          <div className="margin-10px txt-site txt-primary txt-14">
               Customers
           </div>
           <div className="margin-15px txt-site txt-main txt-20 txt-bold">

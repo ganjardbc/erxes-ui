@@ -46,8 +46,8 @@ class CardBartChart extends Component {
   render() {
     return (
       <div className="card">
-        <div className="padding-10px background-white border-bottom">
-          <div className="txt-site txt-bold text-main txt-12">Bar Chart</div>
+        <div className="padding-15px background-blue">
+          Bar Chart
         </div>
         <div>
           <div className="padding-10px txt-site txt-9">
