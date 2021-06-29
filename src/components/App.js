@@ -64,6 +64,8 @@ import componentsFlippingCard from './components/FlippingCard'
 import componentsBeautifulCard from './components/BeautifulCard'
 import componentsCoolPopup from './components/CoolPopup'
 import componentsTooltipPopup from './components/TooltipPopup'
+import PercentField from './components/PercentField'
+import SearchRecommendation from './components/SearchRecommendation'
 // import componentsDualListbox from './components/DualListbox'
 
 
@@ -283,6 +285,7 @@ class App extends Component {
                         { this.createSubMenu('Slide Component', '/component-slide', 'far fa-lg fa-circle') }
                         { this.createSubMenu('Chat Room', '/component-chat', 'far fa-lg fa-circle') }
                         { this.createSubMenu('Toggle Button', '/component-toggle', 'far fa-lg fa-circle') }
+                        { this.createSubMenu('Percent Button', '/component-percent', 'far fa-lg fa-circle') }
                         { this.createSubMenu('Progress Bar', '/component-progress', 'far fa-lg fa-circle') }
                         { this.createSubMenu('Sweet Alert', '/component-alert', 'far fa-lg fa-circle') }
                         { this.createSubMenu('Date Picker', '/component-date', 'far fa-lg fa-circle') }
@@ -291,6 +294,7 @@ class App extends Component {
                         { this.createSubMenu('Multistep Linear', '/component-multistep-linear', 'far fa-lg fa-circle') }
                         { this.createSubMenu('Multistep Non Linear', '/component-multistep-nonlinear', 'far fa-lg fa-circle') }
                         { this.createSubMenu('Timeline', '/component-timeline', 'far fa-lg fa-circle') }
+                        { this.createSubMenu('Search', '/component-search', 'far fa-lg fa-circle') }
                       </div>
                     </div>
                   </div>
@@ -357,6 +361,7 @@ class App extends Component {
                 <Route exact path="/component-alert" component={ componentsAlert }></Route>
                 <Route exact path="/component-progress" component={ componentsProgress }></Route>
                 <Route exact path="/component-toggle" component={ componentsToggle }></Route>
+                <Route exact path="/component-percent" component={ PercentField }></Route>
                 <Route exact path="/component-chat" component={ componentsChat }></Route>
                 <Route exact path="/component-slide" component={ componentsSlide }></Route>
                 <Route exact path="/component-kanban-layout" component={ componentsKanbanLayout }></Route>
@@ -378,6 +383,7 @@ class App extends Component {
                 <Route exact path="/component-beautiful-card" component={ componentsBeautifulCard }></Route>
                 <Route exact path="/component-cool-popup" component={ componentsCoolPopup }></Route>
                 <Route exact path="/component-tooltip-popup" component={ componentsTooltipPopup }></Route>
+                <Route exact path="/component-search" component={ SearchRecommendation }></Route>
                 {/* <Route exact path="/component-dual-listbox" component={ componentsDualListbox }></Route> */}
 
       				</div>
