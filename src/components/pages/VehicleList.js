@@ -2,6 +2,75 @@ import React, { Component } from 'react'
 import TabBar from '../../modules/TabBar'
 import CardMenu from '../../modules/CardMenu'
 
+class ButtonImport extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            visiblePopup: false
+        }
+    }
+
+    handleClickOutside(element) {
+        const outsideclickListener = event => {
+            if (!element.contains(event.target)) {
+                removeClickListener()
+            }
+        }
+    
+        const removeClickListener = () => {
+            this.setState({visiblePopup: false})
+            document.removeEventListener('click', outsideclickListener)
+        }
+    
+        document.addEventListener('click', outsideclickListener)
+    }
+    
+    opMenu = () => {
+        var element = document.getElementById('button-import')
+        this.setState({visiblePopup: true})
+        this.handleClickOutside(element)
+    }
+
+    render () {
+        const {visiblePopup} = this.state
+        return (
+            <div style={{position: 'relative'}}>
+                <button className="btn btn-sekunder" onClick={() => this.opMenu()}>
+                    <i className="icn icn-left fa fa-lw fa-file" /> Import Templates
+                </button>
+
+                <div
+                    style={{ top: "45px", width: "280px" }}
+                    id="button-import"
+                    className={visiblePopup ? "app-menu-popup" : "app-menu-popup app-menu-popup-hide"}>
+                    <div className="content">
+                        <div style={{paddingTop: 10, paddingBottom: 10}}>
+                            <CardMenu reverseIcon={true} data={[
+                                {title: 'Fuel Entry Template', enableIcon: true, icon: 'fa fa-lw fa-battery-half', link: ''},
+                                {title: 'Meter Readings Template', enableIcon: true, icon: 'fa fa-lw fa-signal', link: ''},
+                                {title: 'Part Template', enableIcon: true, icon: 'fa fa-lw fa-cube', link: ''},
+                                {title: 'Part Inventory Template', enableIcon: true, icon: 'fa fa-lw fa-cube', link: ''},
+                                {title: 'Issue Template', enableIcon: true, icon: 'fa fa-lw fa-info-circle', link: ''},
+                                {title: 'Contact Template', enableIcon: true, icon: 'fa fa-lw fa-address-book', link: ''},
+                                {title: 'Contact Renewal Reminder Template', enableIcon: true, icon: 'fa fa-lw fa-calendar-alt', link: ''},
+                                {title: 'Expense Entry Template', enableIcon: true, icon: 'fa fa-lw fa-clipboard', link: ''},
+                                {title: 'Group Template', enableIcon: true, icon: 'fa fa-lw fa-users', link: ''},
+                                {title: 'Service Entry Template', enableIcon: true, icon: 'fa fa-lw fa-cog', link: ''},
+                                {title: 'Service Remnider Template', enableIcon: true, icon: 'fa fa-lw fa-bell', link: ''},
+                                {title: 'Service Task Template', enableIcon: true, icon: 'fa fa-lw fa-check', link: ''},
+                                {title: 'Vehicle Template', enableIcon: true, icon: 'fa fa-lw fa-car', link: ''},
+                                {title: 'Vehicle Renewal Reminder Template', enableIcon: true, icon: 'fa fa-lw fa-calendar-alt', link: ''},
+                                {title: 'Vehicle Assignment Template', enableIcon: true, icon: 'fa fa-lw fa-calendar-alt', link: ''},
+                                {title: 'Vendor Template', enableIcon: true, icon: 'fa fa-lw fa-store-alt', link: ''}
+                            ]} />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+}
+
 class ButtonAction extends Component {
     constructor(props) {
         super(props)
@@ -187,14 +256,14 @@ class Pages extends Component {
         return (
             <div className="main-content no-padding">
                 <div className="padding-15px display-flex space-between background-white border-bottom">
-                    <div className="width width-70">
+                    <div className="width width-30">
                         <div className="post-top txt-site txt-16 txt-bold txt-main padding-top-5px">Vehicle List</div>
                     </div>
-                    <div className="width width-30 display-flex right">
-                        {/* <button className="btn btn-sekunder">
-                            <i className="icn icn-left fa fa-lw fa-ellipsis-v" /> Actions
-                        </button> */}
-                        <ButtonAction />
+                    <div className="width width-70 display-flex right">
+                        <ButtonImport />
+                        <div style={{marginLeft: 10}}>
+                            <ButtonAction />
+                        </div>
                         <button className="btn btn-green" style={{marginLeft: 10}}>
                             <i className="icn icn-left fa fa-lw fa-plus" /> Add Vehicle
                         </button>
