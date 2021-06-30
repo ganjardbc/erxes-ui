@@ -70,6 +70,7 @@ import componentsTooltipPopup from './components/TooltipPopup'
 import PercentField from './components/PercentField'
 import SearchRecommendation from './components/SearchRecommendation'
 import SidePopup from './components/SidePopup'
+import UserManagement from './pages/UserManagement'
 // import componentsDualListbox from './components/DualListbox'
 
 
@@ -244,6 +245,7 @@ class App extends Component {
                         { this.createSubMenu('Smart Table', '/table', 'fa fa-lg fa-table') }
                         { this.createSubMenu('Date Picker', '/date-picker', 'fa fa-lg fa-calendar-alt') }
                         { this.createSubMenu('Vehicle List', '/vehicle-list', 'fa fa-lg fa-truck') }
+                        { this.createSubMenu('User Management', '/user-management', 'fa fa-lg fa-user-cog') }
                       </div>
                     </div>
                   </div>
@@ -358,6 +360,7 @@ class App extends Component {
                 <Route exact path="/share-report" component={ ShareReport } />
                 <Route exact path="/line-items" component={ LineItems } />
                 <Route exact path="/vehicle-list" component={ VehicleList } />
+                <Route exact path="/user-management" component={ UserManagement } />
 
                 {/* components */}
                 <Route exact path="/component-moveable-component" component={ componentsMoveableComponent }></Route>
