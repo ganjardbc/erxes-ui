@@ -72,6 +72,7 @@ import PercentField from './components/PercentField'
 import SearchRecommendation from './components/SearchRecommendation'
 import SidePopup from './components/SidePopup'
 import UserManagement from './pages/UserManagement'
+import FuelHistory from './pages/FuelHistory'
 // import componentsDualListbox from './components/DualListbox'
 
 
@@ -248,6 +249,7 @@ class App extends Component {
                         { this.createSubMenu('Vehicle List', '/vehicle-list', 'fa fa-lg fa-truck') }
                         { this.createSubMenu('Fault List', '/fault-list', 'fa fa-lg fa-truck') }
                         { this.createSubMenu('User Management', '/user-management', 'fa fa-lg fa-user-cog') }
+                        { this.createSubMenu('Fuel History', '/fuel-history', 'fa fa-lg fa-battery-half') }
                       </div>
                     </div>
                   </div>
@@ -364,6 +366,7 @@ class App extends Component {
                 <Route exact path="/vehicle-list" component={ VehicleList } />
                 <Route exact path="/fault-list" component={FaultList}></Route>
                 <Route exact path="/user-management" component={ UserManagement } />
+                <Route exact path="/fuel-history" component={ FuelHistory } />
 
                 {/* components */}
                 <Route exact path="/component-moveable-component" component={ componentsMoveableComponent }></Route>
