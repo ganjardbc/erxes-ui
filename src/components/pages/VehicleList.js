@@ -200,9 +200,7 @@ class CardVehicle extends Component {
                 </div>
                 <div className="width width-10">
                     <div className="display-flex">
-                        <div>
-                            <div className="post-top background-green" style={{width: 13, height: 13, borderRadius: '100%', marginRight: 5}}></div>
-                        </div>
+                        <div className="fa fa-1x fa-circle" style={{ fontSize: 13, color: 'green', marginRight: 5}}></div>
                         <div className="txt-site txt-10 txt-main txt-bold">Active</div>
                     </div>
                 </div>
