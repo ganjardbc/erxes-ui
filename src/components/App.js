@@ -32,6 +32,7 @@ import NewSavedReport from './pages/NewSavedReport'
 import ShareReport from './pages/ShareReport'
 import LineItems from './pages/LineItems'
 import VehicleList from './pages/VehicleList'
+import FaultList from './pages/FaultList'
 
 // components
 import componentsMoveableComponent from './components/moveable/index'
@@ -243,6 +244,7 @@ class App extends Component {
                         { this.createSubMenu('Smart Table', '/table', 'fa fa-lg fa-table') }
                         { this.createSubMenu('Date Picker', '/date-picker', 'fa fa-lg fa-calendar-alt') }
                         { this.createSubMenu('Vehicle List', '/vehicle-list', 'fa fa-lg fa-truck') }
+                        { this.createSubMenu('Fault List', '/fault-list', 'fa fa-lg fa-truck') }
                       </div>
                     </div>
                   </div>
@@ -356,6 +358,7 @@ class App extends Component {
                 <Route exact path="/share-report" component={ ShareReport } />
                 <Route exact path="/line-items" component={ LineItems } />
                 <Route exact path="/vehicle-list" component={ VehicleList } />
+                <Route exact path="/fault-list" component={FaultList}></Route>
 
                 {/* components */}
                 <Route exact path="/component-moveable-component" component={ componentsMoveableComponent }></Route>
