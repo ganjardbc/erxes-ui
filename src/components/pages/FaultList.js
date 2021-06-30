@@ -1,75 +1,7 @@
 import React, { Component } from 'react'
 import TabBar from '../../modules/TabBar'
 import CardMenu from '../../modules/CardMenu'
-
-class ButtonImport extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            visiblePopup: false
-        }
-    }
-
-    handleClickOutside(element) {
-        const outsideclickListener = event => {
-            if (!element.contains(event.target)) {
-                removeClickListener()
-            }
-        }
-    
-        const removeClickListener = () => {
-            this.setState({visiblePopup: false})
-            document.removeEventListener('click', outsideclickListener)
-        }
-    
-        document.addEventListener('click', outsideclickListener)
-    }
-    
-    opMenu = () => {
-        var element = document.getElementById('button-import')
-        this.setState({visiblePopup: true})
-        this.handleClickOutside(element)
-    }
-
-    render () {
-        const {visiblePopup} = this.state
-        return (
-            <div style={{position: 'relative'}}>
-                <button className="btn btn-sekunder" onClick={() => this.opMenu()}>
-                    <i className="icn icn-left fa fa-lw fa-file" /> Import Templates
-                </button>
-
-                <div
-                    style={{ top: "45px", width: "280px" }}
-                    id="button-import"
-                    className={visiblePopup ? "app-menu-popup" : "app-menu-popup app-menu-popup-hide"}>
-                    <div className="content">
-                        <div style={{paddingTop: 10, paddingBottom: 10}}>
-                            <CardMenu reverseIcon={true} data={[
-                                {title: 'Fuel Entry Template', enableIcon: true, icon: 'fa fa-lw fa-battery-half', link: ''},
-                                {title: 'Meter Readings Template', enableIcon: true, icon: 'fa fa-lw fa-signal', link: ''},
-                                {title: 'Part Template', enableIcon: true, icon: 'fa fa-lw fa-cube', link: ''},
-                                {title: 'Part Inventory Template', enableIcon: true, icon: 'fa fa-lw fa-cube', link: ''},
-                                {title: 'Issue Template', enableIcon: true, icon: 'fa fa-lw fa-info-circle', link: ''},
-                                {title: 'Contact Template', enableIcon: true, icon: 'fa fa-lw fa-address-book', link: ''},
-                                {title: 'Contact Renewal Reminder Template', enableIcon: true, icon: 'fa fa-lw fa-calendar-alt', link: ''},
-                                {title: 'Expense Entry Template', enableIcon: true, icon: 'fa fa-lw fa-clipboard', link: ''},
-                                {title: 'Group Template', enableIcon: true, icon: 'fa fa-lw fa-users', link: ''},
-                                {title: 'Service Entry Template', enableIcon: true, icon: 'fa fa-lw fa-cog', link: ''},
-                                {title: 'Service Remnider Template', enableIcon: true, icon: 'fa fa-lw fa-bell', link: ''},
-                                {title: 'Service Task Template', enableIcon: true, icon: 'fa fa-lw fa-check', link: ''},
-                                {title: 'Vehicle Template', enableIcon: true, icon: 'fa fa-lw fa-car', link: ''},
-                                {title: 'Vehicle Renewal Reminder Template', enableIcon: true, icon: 'fa fa-lw fa-calendar-alt', link: ''},
-                                {title: 'Vehicle Assignment Template', enableIcon: true, icon: 'fa fa-lw fa-calendar-alt', link: ''},
-                                {title: 'Vendor Template', enableIcon: true, icon: 'fa fa-lw fa-store-alt', link: ''}
-                            ]} />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        )
-    }
-}
+import Dots from '../../modules/Dots'
 
 class ButtonAction extends Component {
     constructor(props) {
@@ -114,10 +46,10 @@ class ButtonAction extends Component {
                     className={visiblePopup ? "app-menu-popup" : "app-menu-popup app-menu-popup-hide"}>
                     <div className="content">
                         <div style={{paddingTop: 10, paddingBottom: 10}} className="border-bottom">
-                            <CardMenu data={[{title: 'Add Multiple Users', enableIcon: false, link: ''},]} />
+                            <CardMenu data={[{title: 'Add Multiple Users', enableIcon: false, link: ''}]} />
                         </div>
                         <div style={{paddingTop: 10, paddingBottom: 10}} className="border-bottom">
-                            <CardMenu data={[{title: 'Import Contacts', enableIcon: false, link: ''},]} />
+                            <CardMenu data={[{title: 'Import Contacts', enableIcon: false, link: ''}]} />
                         </div>
                         <div style={{paddingTop: 10, paddingBottom: 10}} className="border-bottom">
                             <CardMenu data={[
@@ -142,23 +74,23 @@ class CardHeader extends Component {
     render () {
         return (
             <div className="padding-15px display-flex space-between">
-                <div className="width width-40">
-                    <div className="txt-site txt-10 txt-main txt-bold">Name</div>
+                <div className="width width-20">
+                    <div className="txt-site txt-10 txt-main txt-bold">Vehicle</div>
+                </div>
+                <div className="width width-25">
+                    <div className="txt-site txt-10 txt-main txt-bold">Code</div>
+                </div>
+                <div className="width width-15">
+                    <div className="txt-site txt-10 txt-main txt-bold">Last Occured</div>
                 </div>
                 <div className="width width-10">
                     <div className="txt-site txt-10 txt-main txt-bold">Status</div>
                 </div>
-                <div className="width width-7">
-                    <div className="txt-site txt-10 txt-main txt-bold">Type</div>
-                </div>
-                <div className="width width-13">
-                    <div className="txt-site txt-10 txt-main txt-bold">Group</div>
-                </div>
-                <div className="width width-10">
-                    <div className="txt-site txt-10 txt-main txt-bold">Current Meter</div>
-                </div>
-                <div className="width width-10">
-                    <div className="txt-site txt-10 txt-main txt-bold">Operator</div>
+                <div className="width width-5">
+                    <div className="display-flex">
+                        <div className="txt-site txt-10 txt-main txt-bold">Count</div>
+                        <i className="fa fa-lw fa-info-circle" style={{marginLeft: 4}} />
+                    </div>
                 </div>
                 <div className="width width-5">
                     <div className="txt-site txt-10 txt-main txt-bold"></div>
@@ -177,48 +109,49 @@ class CardVehicle extends Component {
     render () {
         return (
             <div className="padding-15px display-flex space-between">
-                <div className="width width-40">
+                <div className="width width-20">
                     <div className="display-flex">
-                        <div style={{width: 50, marginRight: 15}}>
-                            <div className="image image-50px image-radius background-blue" style={{overflow: 'hidden'}}>
+                        <div style={{width: 40, marginRight: 15}}>
+                            <div className="image image-40px image-radius background-blue" style={{overflow: 'hidden'}}>
                                 <img style={{height: '100%', width: 'auto'}} src="https://asset.kompas.com/crops/O28JjUYAX1rzviozhepsrpdovk0=/79x29:1226x794/750x500/data/photo/2019/03/20/2754664179.jpeg" alt="" />
                             </div>
                         </div>
-                        <div style={{width: 'calc(100% - 65px)'}}>
-                            <div className="txt-site txt-12 txt-main txt-bold" style={{marginBottom: 8}}>123RWN</div>
-                            <div className="txt-site txt-9 txt-primary" style={{marginBottom: 4}}>2011 Toyota Hilux</div>
-                            <div className="display-flex" style={{marginBottom: 4}}>
-                                <div className="txt-site txt-9 txt-primary" style={{marginRight: 5}}>VIN/SN:</div>
-                                <div className="txt-site txt-9 txt-main">MR0CX3342312312FD</div>
-                            </div>
+                        <div style={{width: 'calc(100% - 55px)'}}>
+                            <div className="txt-site txt-12 txt-main txt-bold" style={{marginBottom: 5}}>Chevy Service Van</div>
                             <div className="display-flex">
-                                <div className="txt-site txt-9 txt-primary" style={{marginRight: 5}}>License Plate:</div>
-                                <div className="txt-site txt-9 txt-main">123RWN</div>
+                                <div className="fa fa-1x fa-circle" style={{ fontSize: 11, color: 'red', marginTop: 2, marginRight: 5}}></div>
+                                <div className="txt-site txt-9 txt-primary">Out of Service <Dots /> Van <Dots /> Admin</div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="width width-10">
+                <div className="width width-25">
+                    <div className="txt-site txt-10 txt-main txt-bold" style={{marginBottom: 3}}>P0611</div>
                     <div className="display-flex">
-                        <div className="fa fa-1x fa-circle" style={{ fontSize: 13, color: 'green', marginRight: 5}}></div>
-                        <div className="txt-site txt-10 txt-main txt-bold">Active</div>
+                        <div className="txt-site txt-9 txt-primary">Fuel Injector Control Module Failure</div>
+                        <div className="fa fa-1x fa-circle" style={{ fontSize: 11, color: '#000', marginTop: 2, marginLeft: 5}}></div>
                     </div>
                 </div>
-                <div className="width width-7">
-                    <div className="txt-site txt-10 txt-main txt-bold">UTE</div>
-                </div>
-                <div className="width width-13">
-                    <div className="txt-site txt-10 txt-main txt-bold">Law Enforcement</div>
-                </div>
-                <div className="width width-10">
-                    <div className="txt-site txt-10 txt-main txt-bold" style={{marginBottom: 3}}>28,800 mi</div>
-                    <div className="txt-site txt-9 txt-primary">3 days ago</div>
+                <div className="width width-15">
+                    <div className="display-flex">
+                        <div className="txt-site txt-10 txt-main txt-bold">Over 1 year ago <Dots /></div>
+                        <div className="fa fa-1x fa-crosshairs" style={{ fontSize: 12, color: '#000', marginTop: 2, marginLeft: 5}}></div>
+                    </div>
                 </div>
                 <div className="width width-10">
-                    <div className="txt-site txt-10 txt-main txt-bold">Allie Hudson</div>
+                    <div className="display-flex">
+                        <div className="fa fa-1x fa-circle" style={{ fontSize: 11, color: 'green', marginTop: 2, marginRight: 5}}></div>
+                        <div className="txt-site txt-10 txt-main txt-bold">Resolved</div>
+                    </div>
+                    <div className="txt-site txt-9 txt-primary">Issue # 45</div>
                 </div>
                 <div className="width width-5">
-                    <button className="btn btn-small btn-grey" style={{height: 20}}>
+                    <button className="btn btn-small-circle" style={{backgroundColor: '#999', color: '#fff', width: 30, height: 30}}>
+                        3
+                    </button>
+                </div>
+                <div className="width width-5">
+                    <button className="btn btn-small btn-grey" style={{width: 30, height: 30}}>
                         <i className="fa fa-lw fa-ellipsis-v" />
                     </button>
                 </div>
@@ -232,10 +165,11 @@ class Pages extends Component {
         super(props)
         this.state = {
             navigator: [
-                { status: 'active', title: 'All' },
-                { status: '', title: 'Assigned' },
-                { status: '', title: 'Unassigned' },
-                { status: '', title: 'Archived' },
+                { status: 'active', title: 'All', value: '0' },
+                { status: '', title: 'Open', value: '3' },
+                { status: '', title: 'Pending', value: '0' },
+                { status: '', title: 'Resolved', value: '1' },
+                { status: '', title: 'Ignored', value: '0' }
             ]
         }
     }
@@ -255,16 +189,12 @@ class Pages extends Component {
             <div className="main-content no-padding">
                 <div className="padding-15px display-flex space-between background-white border-bottom">
                     <div className="width width-30">
-                        <div className="post-top txt-site txt-16 txt-bold txt-main padding-top-5px">Vehicle List</div>
+                        <div className="post-top txt-site txt-16 txt-bold txt-main padding-top-5px">Faults</div>
                     </div>
                     <div className="width width-70 display-flex right">
-                        <ButtonImport />
                         <div style={{marginLeft: 10}}>
                             <ButtonAction />
                         </div>
-                        <button className="btn btn-green" style={{marginLeft: 10}}>
-                            <i className="icn icn-left fa fa-lw fa-plus" /> Add Vehicle
-                        </button>
                     </div>
                 </div>
 
@@ -274,18 +204,13 @@ class Pages extends Component {
                     </div>
 
                     <div className="display-flex border-bottom" style={{width: '100%', paddingTop: 15, paddingBottom: 15}}>
+                        <button className="btn btn-sekunder" style={{marginRight: 5}}>
+                            All Codes <i className="icn icn-right fa fa-lw fa-chevron-down" />
+                        </button>
                         <input 
                             type="text" 
                             className="txt txt-sekunder-color"
-                            placeholder="Search names, VINs, and Code"
-                            style={{width: 200, marginRight: 10}}
-                            // value={}
-                            // onChange={}
-                            required />
-                        <input 
-                            type="text" 
-                            className="txt txt-sekunder-color"
-                            placeholder="Filter vehicle types"
+                            placeholder="Filter vehicle"
                             style={{width: 200, marginRight: 10}}
                             // value={}
                             // onChange={}
@@ -310,20 +235,7 @@ class Pages extends Component {
                     </div>
 
                     <div className="display-flex space-between" style={{width: '100%', paddingTop: 15, paddingBottom: 15}}>
-                        <div className="width width-50 display-flex">
-                            <div style={{marginRight: 15}}>
-                                <div className="post-top txt-site txt-10 txt-main">0 selected:</div>
-                            </div>
-                            <button className="btn btn-small btn-sekunder" style={{marginRight: 5}}>
-                                Updates <i className="icn icn-right fa fa-lw fa-chevron-down" />
-                            </button>
-                            <button className="btn btn-small btn-icn btn-sekunder" style={{marginRight: 5}}>
-                                <i className="icn fa fa-lw fa-trash-alt" />
-                            </button>
-                            <button className="btn btn-small btn-sekunder" style={{marginRight: 5}}>
-                                <i className="icn icn-left fa fa-lw fa-print" /> Print Labels
-                            </button>
-                        </div>
+                        <div className="width width-50 display-flex"></div>
                         <div className="width width-50 display-flex right">
                             <button className="btn btn-small btn-sekunder">
                                 Sort: Name (alphabetic) <i className="icn icn-right fa fa-lw fa-chevron-down" />

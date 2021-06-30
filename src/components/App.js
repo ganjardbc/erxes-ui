@@ -32,6 +32,7 @@ import NewSavedReport from './pages/NewSavedReport'
 import ShareReport from './pages/ShareReport'
 import LineItems from './pages/LineItems'
 import VehicleList from './pages/VehicleList'
+import FaultList from './pages/FaultList'
 
 // components
 import componentsMoveableComponent from './components/moveable/index'
@@ -70,6 +71,9 @@ import componentsTooltipPopup from './components/TooltipPopup'
 import PercentField from './components/PercentField'
 import SearchRecommendation from './components/SearchRecommendation'
 import PurchaseOrder from './pages/PurchaseOrder'
+import SidePopup from './components/SidePopup'
+import UserManagement from './pages/UserManagement'
+import FuelHistory from './pages/FuelHistory'
 // import componentsDualListbox from './components/DualListbox'
 
 
@@ -244,6 +248,9 @@ class App extends Component {
                         { this.createSubMenu('Smart Table', '/table', 'fa fa-lg fa-table') }
                         { this.createSubMenu('Date Picker', '/date-picker', 'fa fa-lg fa-calendar-alt') }
                         { this.createSubMenu('Vehicle List', '/vehicle-list', 'fa fa-lg fa-truck') }
+                        { this.createSubMenu('Fault List', '/fault-list', 'fa fa-lg fa-truck') }
+                        { this.createSubMenu('User Management', '/user-management', 'fa fa-lg fa-user-cog') }
+                        { this.createSubMenu('Fuel History', '/fuel-history', 'fa fa-lg fa-battery-half') }
                       </div>
                     </div>
                   </div>
@@ -302,6 +309,7 @@ class App extends Component {
                         { this.createSubMenu('New Saved Report', '/new-saved-report', 'fa fa-lg fa-circle') }
                         { this.createSubMenu('Share Report', '/share-report', 'fa fa-lg fa-circle') }
                         { this.createSubMenu('Line Items', '/line-items', 'fa fa-lg fa-circle') }
+                        { this.createSubMenu('Side Popup', '/component-side-popup', 'far fa-lg fa-circle') }
                         { this.createSubMenu('Purchase Order', '/purchase-order', 'fa fa-lg fa-circle') }
                       </div>
                     </div>
@@ -359,6 +367,9 @@ class App extends Component {
                 <Route exact path="/line-items" component={ LineItems } />
                 <Route exact path="/purchase-order" component={ PurchaseOrder } />
                 <Route exact path="/vehicle-list" component={ VehicleList } />
+                <Route exact path="/fault-list" component={FaultList}></Route>
+                <Route exact path="/user-management" component={ UserManagement } />
+                <Route exact path="/fuel-history" component={ FuelHistory } />
 
                 {/* components */}
                 <Route exact path="/component-moveable-component" component={ componentsMoveableComponent }></Route>
@@ -396,6 +407,7 @@ class App extends Component {
                 <Route exact path="/component-cool-popup" component={ componentsCoolPopup }></Route>
                 <Route exact path="/component-tooltip-popup" component={ componentsTooltipPopup }></Route>
                 <Route exact path="/component-search" component={ SearchRecommendation }></Route>
+                <Route exact path="/component-side-popup" component={ SidePopup }></Route>
                 {/* <Route exact path="/component-dual-listbox" component={ componentsDualListbox }></Route> */}
 
       				</div>
