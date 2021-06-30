@@ -20973,16 +20973,34 @@
   height: 45px;
   margin: auto;
 }
+.navigator ul {
+  position: relative;
+  display: flex;
+}
 .navigator ul li {
+  position: relative;
   list-style: none;
-  float: left;
   text-align: center;
-  line-height: 45px;
   font-weight: 500;
   font-size: 11pt;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 .navigator ul li:hover {
   cursor: pointer;
+}
+.navigator ul li .nav-value {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  text-align: center;
+  background-color: #555;
+  color: #fff;
+  font-size: 10px;
+  line-height: 20px;
+  margin-left: 5px;
 }
 .navigator.no-height {
   height: auto;

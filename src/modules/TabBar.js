@@ -91,7 +91,14 @@ class TabBar extends Component {
                             onClick={this.props.onClick.bind(this)}
                             className={item.status}
                             data-id={i}>
-                            {item.title}
+                            <div className="nav-label">
+                                {item.title}
+                            </div>
+                            {item.value && (
+                                <div className="nav-value">
+                                    { item.value }
+                                </div>
+                            )}
                         </li>
                     ))}
                 </ul>
