@@ -69,6 +69,7 @@ import componentsCoolPopup from './components/CoolPopup'
 import componentsTooltipPopup from './components/TooltipPopup'
 import PercentField from './components/PercentField'
 import SearchRecommendation from './components/SearchRecommendation'
+import SidePopup from './components/SidePopup'
 // import componentsDualListbox from './components/DualListbox'
 
 
@@ -301,6 +302,7 @@ class App extends Component {
                         { this.createSubMenu('New Saved Report', '/new-saved-report', 'fa fa-lg fa-circle') }
                         { this.createSubMenu('Share Report', '/share-report', 'fa fa-lg fa-circle') }
                         { this.createSubMenu('Line Items', '/line-items', 'fa fa-lg fa-circle') }
+                        { this.createSubMenu('Side Popup', '/component-side-popup', 'far fa-lg fa-circle') }
                       </div>
                     </div>
                   </div>
@@ -393,6 +395,7 @@ class App extends Component {
                 <Route exact path="/component-cool-popup" component={ componentsCoolPopup }></Route>
                 <Route exact path="/component-tooltip-popup" component={ componentsTooltipPopup }></Route>
                 <Route exact path="/component-search" component={ SearchRecommendation }></Route>
+                <Route exact path="/component-side-popup" component={ SidePopup }></Route>
                 {/* <Route exact path="/component-dual-listbox" component={ componentsDualListbox }></Route> */}
 
       				</div>
