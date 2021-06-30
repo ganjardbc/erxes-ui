@@ -301,7 +301,7 @@ class Pages extends Component {
                         <button className="btn btn-sekunder" style={{marginRight: 10}}>
                             <i className="icn icn-left fa fa-lw fa-sliders-h" /> More
                         </button>
-                        <button className="btn btn-blue" style={{marginRight: 15}}>
+                        <button className="btn btn-main" style={{marginRight: 15}}>
                             <i className="icn icn-left fa fa-lw fa-search" /> Search 
                         </button>
                         <div>
@@ -318,7 +318,7 @@ class Pages extends Component {
                                 Updates <i className="icn icn-right fa fa-lw fa-chevron-down" />
                             </button>
                             <button className="btn btn-small btn-icn btn-sekunder" style={{marginRight: 5}}>
-                                <i className="icn fa fa-lw fa-archive" />
+                                <i className="icn fa fa-lw fa-trash-alt" />
                             </button>
                             <button className="btn btn-small btn-sekunder" style={{marginRight: 5}}>
                                 <i className="icn icn-left fa fa-lw fa-print" /> Print Labels

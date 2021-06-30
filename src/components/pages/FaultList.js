@@ -226,7 +226,7 @@ class Pages extends Component {
                         <button className="btn btn-sekunder" style={{marginRight: 10}}>
                             <i className="icn icn-left fa fa-lw fa-sliders-h" /> More
                         </button>
-                        <button className="btn btn-blue" style={{marginRight: 15}}>
+                        <button className="btn btn-main" style={{marginRight: 15}}>
                             <i className="icn icn-left fa fa-lw fa-search" /> Search 
                         </button>
                         <div>
