@@ -208,6 +208,18 @@ $hg-form: 40px;
 	&.btn-main {
 		background-color: $min-color;
 		color: $sek-color;
+		&:hover {
+			background-color: rgba($color: $min-color, $alpha: 0.8);
+			color: $sek-color;
+		}
+	}
+	&.btn-main-reverse {
+		background-color: rgba($color: $min-color, $alpha: 0);
+		color: $min-color;
+		&:hover {
+			background-color: $min-color;
+			color: $sek-color;
+		}
 	}
 	&.btn-micro-circle {
 		width: 26px;
@@ -336,6 +348,14 @@ $hg-form: 40px;
 	&.btn-blue {
 		background-color: $blue;
 		color: #fff;
+		&:hover {
+			background-color: rgba($color: $blue, $alpha: 0.9);
+			color: #fff;
+		}
+	}
+	&.btn-blue-reverse {
+		background-color: rgba($color: $blue, $alpha: 0);
+		color: $blue;
 		&:hover {
 			background-color: rgba($color: $blue, $alpha: 0.9);
 			color: #fff;

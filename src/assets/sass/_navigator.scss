@@ -108,6 +108,7 @@
         ul {
             li {
                 color: $txt-sek-color;
+				border-bottom: 2px #fff solid;
                 &:hover {
                     color: $txt-min-color;
                 }
