@@ -96,7 +96,7 @@ class LineItems extends Component {
                                             </label>
                                         </TableCell>
                                         <TableCell>
-                                            <ButtonGroup color="primary">
+                                            <ButtonGroup color="primary" style={{ height: '20px' }}>
                                                 <Button color="light" type="button" className="btn btn-small">
                                                     <i className="fa fa-info-circle"></i>
                                                 </Button>
@@ -222,7 +222,7 @@ class LineItems extends Component {
                 <div className="main-content">
                     <div className="padding-5px">
                         <form>
-                            <div className="grid grid-2x-colmin5 grid-mobile-none gap-15px">
+                            <div className="grid grid-mobile-none gap-15px">
                                 <div className="col-1">
                                     <div className="txt-site txt-title">
                                         <i className="fa fa-list padding-bottom-10px padding-left-5px padding-right-10px"></i> Line Items
