@@ -191,13 +191,226 @@ class CardCount extends Component {
     }
 }
 
+class CardIntegration extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {}
+    }
+
+    render () {
+        const {data} = this.props
+        return (
+            <div className="display-flex wrap">
+                {data && data.map((dt, i) => {
+                    return (
+                        <div key={i} style={{padding: '10px 0', width: 'calc(100% / 3)'}}>
+                            <div style={{margin: '0 10px'}}>
+                                <div className="card no-margin no-radius border-all">
+                                    <div className="display-flex space-between">
+                                        <div></div>
+                                        <div>
+                                            <button className="btn btn-small-circle btn-grey">
+                                                <i className="fa fa-lw fa-ellipsis-v" />
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div className="border-bottom">
+                                        <div style={{paddingLeft: 15, paddingRight: 15}}>
+                                            <div className="image image-middle">
+                                                <img className="img" src={dt.cover} alt="" />
+                                            </div>
+                                        </div>
+                                        <div className="display-flex space-between" style={{paddingTop: 15, paddingBottom: 15}}>
+                                            <div className="width width-50">
+                                                <div className="txt-site txt-center txt-14 txt-main txt-bold txt-green" style={{marginBottom: 5}}>{ dt.assigned }</div>
+                                                <div className="txt-site txt-center txt-10 txt-main txt-bold">Assigned Cards</div>
+                                            </div>
+                                            <div className="width width-50">
+                                                <div className="txt-site txt-center txt-14 txt-main txt-bold txt-orange" style={{marginBottom: 5}}>{ dt.unassigned }</div>
+                                                <div className="txt-site txt-center txt-10 txt-main txt-bold">Unssigned Cards</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {dt.data && dt.data.map((sb, j) => {
+                                        return (
+                                            <div key={j} className={(j !== (dt.data.length - 1)) ? 'border-bottom' : ''} style={{padding: 15, paddingRight: 0}}>
+                                                <div className={'display-flex wrap'} style={{marginBottom: 10}}>
+                                                    <div className="display-flex space-between" style={{width: 'calc(100% - 35px)'}}>
+                                                        <div>
+                                                            <div className="post-top txt-site txt-11 txt-main txt-bold">{ sb.value }</div>
+                                                        </div>
+                                                        <button className="btn btn-small btn-orange">
+                                                            Sign Data Release
+                                                        </button>
+                                                    </div>
+                                                    <div style={{width: 35}}>
+                                                        <button className="btn btn-small-circle btn-grey">
+                                                            <i className="fa fa-lw fa-ellipsis-v" />
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div className={'display-flex wrap'}>
+                                                    <div className="display-flex space-between" style={{width: 'calc(100% - 35px)'}}>
+                                                        <div className="display-flex">
+                                                            <div className="fa fa-1x fa-circle" style={{ fontSize: 11, color: 'orange', marginTop: 2, marginRight: 5}}></div>
+                                                            <div className="txt-site txt-10 txt-main txt-capital txt-bold">{ sb.status }</div>
+                                                        </div>
+                                                        <div className="txt-site txt-10 txt-primary">{ sb.owner }</div>
+                                                    </div>
+                                                    <div style={{width: 35}}></div>
+                                                </div>
+                                                <div className={'display-flex wrap'}>
+                                                    <div className="display-flex space-between" style={{width: 'calc(100% - 35px)'}}>
+                                                        <div className="txt-site txt-10 txt-main txt-bold">Signature</div>
+                                                        <div className="txt-site txt-10 txt-primary txt-underline">{ sb.signature }</div>
+                                                    </div>
+                                                    <div style={{width: 35}}></div>
+                                                </div>
+                                            </div>
+                                        )
+                                    })}
+                                </div>
+                            </div> 
+                        </div>
+                    )
+                })}
+            </div>
+        )
+    }
+}
+
+class CardFuelHistory extends Component {
+    render () {
+        return (
+            <div className="padding-15px">
+                <div className="display-flex border-bottom" style={{width: '100%', paddingTop: 0, paddingBottom: 15}}>
+                    <div style={{ width: 300, marginRight: 10 }}>
+                        <DatePicker />
+                    </div>
+                    <input 
+                        type="text" 
+                        className="txt txt-sekunder-color"
+                        placeholder="Filter vehicles"
+                        style={{width: 200, marginRight: 10}}
+                        // value={}
+                        // onChange={}
+                        required />
+                    <button className="btn btn-sekunder" style={{marginRight: 10}}>
+                        <i className="icn icn-left fa fa-lw fa-sliders-h" /> More
+                    </button>
+                    <button className="btn btn-main" style={{marginRight: 15}}>
+                        <i className="icn icn-left fa fa-lw fa-search" /> Search 
+                    </button>
+                    <div style={{marginRight: 15}}>
+                        <div className="post-top txt-site txt-10 txt-main">0 filters applied</div>
+                    </div>
+                    <button className="btn btn-main-reverse" style={{marginRight: 15}}>
+                        Clear All 
+                    </button>
+                </div>
+
+                <div style={{width: '100%', paddingTop: 15, paddingBottom: 0}}>
+                    <CardCount data={dataCount} />
+                </div>
+
+                <div className="display-flex space-between" style={{width: '100%', paddingTop: 15, paddingBottom: 15}}>
+                    <div className="width width-50 display-flex">
+                        <div style={{marginRight: 15}}>
+                            <div className="post-top txt-site txt-10 txt-main">0 selected:</div>
+                        </div>
+                        <button className="btn btn-small btn-icn btn-sekunder" style={{marginRight: 5}}>
+                            <i className="icn fa fa-lw fa-trash-alt" />
+                        </button>
+                    </div>
+                    <div className="width width-50 display-flex right">
+                        <button className="btn btn-small btn-sekunder">
+                            Sort: Name (alphabetic) <i className="icn icn-right fa fa-lw fa-chevron-down" />
+                        </button>
+                        <div style={{marginRight: 15, marginLeft: 15}}>
+                            <div className="post-top txt-site txt-10 txt-main">1 - 50 of 83</div>
+                        </div>
+                        <div className="display-flex">
+                            <button className="btn btn-small btn-icn btn-sekunder">
+                                <i className="icn fa fa-lw fa-chevron-left" />
+                            </button>
+                            <button className="btn btn-small btn-icn btn-sekunder">
+                                <i className="icn fa fa-lw fa-chevron-right" />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="card no-margin no-hover no-radius border-all">
+                    <div>
+                        <div className="border-bottom">
+                            <CardHeader />
+                        </div>
+                        <div className="border-bottom">
+                            <CardVehicle />
+                        </div>
+                        <div className="border-bottom">
+                            <CardVehicle />
+                        </div>
+                        <div className="border-bottom">
+                            <CardVehicle />
+                        </div>
+                        <div>
+                            <CardVehicle />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+}
+
+class CardIntegrationHistory extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {}
+    }
+
+    render () {
+        const data = [
+            {
+                cover: 'https://d33wubrfki0l68.cloudfront.net/c27a7801fb34152ba075916eca99f4ccceabdee8/7e558/assets/images/homepage/capterra.svg', assigned: 21, unassigned: 150, 
+                data: [
+                    {value: '6777667668', status: 'awaiting', owner: 'Added by Michael Harrison 9', signature: 'months ago'}
+                ]
+            },
+            {
+                cover: 'https://d33wubrfki0l68.cloudfront.net/1546e086cafc7bba387126cf4a727bb4949e555e/637c2/assets/images/homepage/software-advice.svg', assigned: 3, unassigned: 45, 
+                data: [
+                    {value: '6777667668', status: 'awaiting', owner: 'Added by Michael Harrison 9', signature: 'months ago'}
+                ]
+            },
+            {
+                cover: 'https://d33wubrfki0l68.cloudfront.net/4551cdca4938126a7fbcd56b7670997d64a9b36d/727fc/assets/images/homepage/getapp.svg', assigned: 54, unassigned: 4, 
+                data: [
+                    {value: '6777667668', status: 'awaiting', owner: 'Added by Michael Harrison 9', signature: 'months ago'},
+                    {value: '6777667668', status: 'awaiting', owner: 'Added by Michael Harrison 9', signature: 'months ago'}
+                ]
+            },
+            {
+                cover: 'https://d33wubrfki0l68.cloudfront.net/c27a7801fb34152ba075916eca99f4ccceabdee8/7e558/assets/images/homepage/capterra.svg', assigned: 21, unassigned: 150, 
+                data: []
+            },
+        ]
+        return (
+            <div className="padding-15px">
+                <CardIntegration data={data} />
+            </div>
+        )
+    }
+}
+
 class Pages extends Component {
     constructor(props) {
         super(props)
         this.state = {
             navigator: [
-                { status: '', title: 'Fuel History' },
-                { status: 'active', title: 'Fuel Integrations' }
+                { status: 'active', title: 'Fuel History' },
+                { status: '', title: 'Fuel Integrations' }
             ]
         }
     }
@@ -249,88 +462,11 @@ class Pages extends Component {
                 </div>
 
                 {navigator[0].status === 'active' && (
-                    <div className="padding-15px">
-                        <div className="display-flex border-bottom" style={{width: '100%', paddingTop: 0, paddingBottom: 15}}>
-                            <div style={{ width: 300, marginRight: 10 }}>
-                                <DatePicker />
-                            </div>
-                            <input 
-                                type="text" 
-                                className="txt txt-sekunder-color"
-                                placeholder="Filter vehicles"
-                                style={{width: 200, marginRight: 10}}
-                                // value={}
-                                // onChange={}
-                                required />
-                            <button className="btn btn-sekunder" style={{marginRight: 10}}>
-                                <i className="icn icn-left fa fa-lw fa-sliders-h" /> More
-                            </button>
-                            <button className="btn btn-main" style={{marginRight: 15}}>
-                                <i className="icn icn-left fa fa-lw fa-search" /> Search 
-                            </button>
-                            <div style={{marginRight: 15}}>
-                                <div className="post-top txt-site txt-10 txt-main">0 filters applied</div>
-                            </div>
-                            <button className="btn btn-main-reverse" style={{marginRight: 15}}>
-                                Clear All 
-                            </button>
-                        </div>
-
-                        <div style={{width: '100%', paddingTop: 15, paddingBottom: 0}}>
-                            <CardCount data={dataCount} />
-                        </div>
-
-                        <div className="display-flex space-between" style={{width: '100%', paddingTop: 15, paddingBottom: 15}}>
-                            <div className="width width-50 display-flex">
-                                <div style={{marginRight: 15}}>
-                                    <div className="post-top txt-site txt-10 txt-main">0 selected:</div>
-                                </div>
-                                <button className="btn btn-small btn-icn btn-sekunder" style={{marginRight: 5}}>
-                                    <i className="icn fa fa-lw fa-trash-alt" />
-                                </button>
-                            </div>
-                            <div className="width width-50 display-flex right">
-                                <button className="btn btn-small btn-sekunder">
-                                    Sort: Name (alphabetic) <i className="icn icn-right fa fa-lw fa-chevron-down" />
-                                </button>
-                                <div style={{marginRight: 15, marginLeft: 15}}>
-                                    <div className="post-top txt-site txt-10 txt-main">1 - 50 of 83</div>
-                                </div>
-                                <div className="display-flex">
-                                    <button className="btn btn-small btn-icn btn-sekunder">
-                                        <i className="icn fa fa-lw fa-chevron-left" />
-                                    </button>
-                                    <button className="btn btn-small btn-icn btn-sekunder">
-                                        <i className="icn fa fa-lw fa-chevron-right" />
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="card no-margin no-hover no-radius border-all">
-                            <div>
-                                <div className="border-bottom">
-                                    <CardHeader />
-                                </div>
-                                <div className="border-bottom">
-                                    <CardVehicle />
-                                </div>
-                                <div className="border-bottom">
-                                    <CardVehicle />
-                                </div>
-                                <div className="border-bottom">
-                                    <CardVehicle />
-                                </div>
-                                <div>
-                                    <CardVehicle />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <CardFuelHistory />
                 )}
 
                 {navigator[1].status === 'active' && (
-                    <div className="padding-15px"></div>
+                    <CardIntegrationHistory />
                 )}
 
             </div>
