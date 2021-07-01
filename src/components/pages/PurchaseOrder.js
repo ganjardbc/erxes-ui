@@ -13,9 +13,9 @@ class PurchaseOrder extends Component {
 
     getData() {
         let data = []
-        for (let index = 0; index < 3; index++) {
+        for (let index = 0; index < 4; index++) {
             data.push({
-                no: Number(index) * 12,
+                no: Number(index+1) * 12,
                 partLoc: 'Maintenance HQ',
                 vendor: 'Autozone',
                 details: '1 Part',
