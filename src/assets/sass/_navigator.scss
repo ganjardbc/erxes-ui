@@ -108,7 +108,7 @@
         ul {
             li {
                 color: $txt-sek-color;
-				border-bottom: 2px #fff solid;
+				border-bottom: 2px rgba($color: #fff, $alpha: 0) solid;
                 &:hover {
                     color: $txt-min-color;
                 }
@@ -654,6 +654,45 @@
 				display: inline-block;
 				vertical-align: middle;
 			}
+		}
+	}
+}
+
+.menu-side {
+	position: relative;
+	width: 100%;
+	li {
+		position: relative;
+		list-style: none;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding: 10px;
+		border-radius: 3px;
+		&:hover {
+			cursor: pointer;
+			background-color: rgba($color: #fff, $alpha: 0.6);
+		}
+		&.active {
+			background-color: rgba($color: #fff, $alpha: 0.6);
+		}
+		.ms-icn {
+			width: 25px;
+			font-size: 11px;
+			color: $txt-54-color;
+		}
+		.ms-label {
+			width: calc(100% - 60px);
+			font-size: 13px;
+			color: $pos-color;
+			font-weight: 600;
+		}
+		.ms-val {
+			width: 35px;
+			font-size: 11px;
+			color: $txt-54-color;
+			text-align: right;
 		}
 	}
 }
