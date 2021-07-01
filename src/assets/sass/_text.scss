@@ -112,6 +112,9 @@
 	&.txt-red {
 		color: $red;
 	}
+	&.txt-orange {
+		color: $orange;
+	}
 	&.txt-magenta {
 		color: $magenta;
 	}
@@ -150,9 +153,6 @@
 	}
 	&.txt-right {
 		text-align: right;
-	}
-	&.txt-capital {
-		text-transform: capitalize;
 	}
 	&.txt-capital {
 		text-transform: capitalize;

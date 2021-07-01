@@ -15776,6 +15776,9 @@
 .txt-site.txt-red {
   color: #e74c3c;
 }
+.txt-site.txt-orange {
+  color: #f39c12;
+}
 .txt-site.txt-magenta {
   color: #e84393;
 }
@@ -15814,9 +15817,6 @@
 }
 .txt-site.txt-right {
   text-align: right;
-}
-.txt-site.txt-capital {
-  text-transform: capitalize;
 }
 .txt-site.txt-capital {
   text-transform: capitalize;
