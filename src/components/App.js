@@ -75,6 +75,10 @@ import SidePopup from './components/SidePopup'
 import UserManagement from './pages/UserManagement'
 import FuelHistory from './pages/FuelHistory'
 import FuelEntry from './pages/FuelEntry'
+import PurchaseOrderInfo from './pages/PurchaseOrderInfo'
+import FilterCliclPopup from './components/FilterClickPopup'
+import AttachmentFile from './components/AttachmentFile'
+import WorkOrder from './pages/WorkOrder'
 // import componentsDualListbox from './components/DualListbox'
 
 
@@ -308,11 +312,15 @@ class App extends Component {
                         { this.createSubMenu('Multistep Non Linear', '/component-multistep-nonlinear', 'far fa-lg fa-circle') }
                         { this.createSubMenu('Timeline', '/component-timeline', 'far fa-lg fa-circle') }
                         { this.createSubMenu('Search', '/component-search', 'far fa-lg fa-circle') }
-                        { this.createSubMenu('New Saved Report', '/new-saved-report', 'fa fa-lg fa-circle') }
-                        { this.createSubMenu('Share Report', '/share-report', 'fa fa-lg fa-circle') }
-                        { this.createSubMenu('Line Items', '/line-items', 'fa fa-lg fa-circle') }
+                        { this.createSubMenu('New Saved Report', '/new-saved-report', 'far fa-lg fa-circle') }
+                        { this.createSubMenu('Share Report', '/share-report', 'far fa-lg fa-circle') }
+                        { this.createSubMenu('Line Items', '/line-items', 'far fa-lg fa-circle') }
                         { this.createSubMenu('Side Popup', '/component-side-popup', 'far fa-lg fa-circle') }
-                        { this.createSubMenu('Purchase Order', '/purchase-order', 'fa fa-lg fa-circle') }
+                        { this.createSubMenu('Purchase Order', '/purchase-order', 'far fa-lg fa-circle') }
+                        { this.createSubMenu('Purchase Order Info', '/purchase-order-info', 'far fa-lg fa-circle') }
+                        { this.createSubMenu('Work Order', '/work-order', 'far fa-lg fa-circle') }
+                        { this.createSubMenu('Filter Click Popup', '/component-filter-click-popup', 'far fa-lg fa-circle') }
+                        { this.createSubMenu('AttachmentFile', '/component-attachment-file', 'far fa-lg fa-circle') }
                       </div>
                     </div>
                   </div>
@@ -368,6 +376,8 @@ class App extends Component {
                 <Route exact path="/share-report" component={ ShareReport } />
                 <Route exact path="/line-items" component={ LineItems } />
                 <Route exact path="/purchase-order" component={ PurchaseOrder } />
+                <Route exact path="/purchase-order-info" component={ PurchaseOrderInfo } />
+                <Route exact path="/work-order" component={ WorkOrder } />
                 <Route exact path="/vehicle-list" component={ VehicleList } />
                 <Route exact path="/fault-list" component={FaultList}></Route>
                 <Route exact path="/user-management" component={ UserManagement } />
@@ -407,6 +417,8 @@ class App extends Component {
                 <Route exact path="/component-github-style" component={ componentsGithubStyle }></Route>
                 <Route exact path="/component-flipping-card" component={ componentsFlippingCard }></Route>
                 <Route exact path="/component-beautiful-card" component={ componentsBeautifulCard }></Route>
+                <Route exact path="/component-filter-click-popup" component={ FilterCliclPopup }></Route>
+                <Route exact path="/component-attachment-file" component={ AttachmentFile }></Route>
                 <Route exact path="/component-cool-popup" component={ componentsCoolPopup }></Route>
                 <Route exact path="/component-tooltip-popup" component={ componentsTooltipPopup }></Route>
                 <Route exact path="/component-search" component={ SearchRecommendation }></Route>
