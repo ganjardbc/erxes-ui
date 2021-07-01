@@ -223,8 +223,9 @@ class Pages extends Component {
     constructor(props) {
         super(props)
         this.state = {
+            selectedIndex: 0,
             navigator: [
-                { status: '', value: '', title: 'Home', icon: 'fa fa-lg fa-home' },
+                { status: '', value: '', title: 'Fuel Entries', icon: 'fa fa-lg fa-home' },
                 { status: '', value: '', title: 'Vehicle Overview', icon: 'fa fa-lg fa-th-large' },
                 { status: 'active', value: '123', title: 'Photos', icon: 'fa fa-lg fa-image' },
                 { status: '', value: '2', title: 'Documents', icon: 'fa fa-lg fa-file' },
@@ -239,17 +240,21 @@ class Pages extends Component {
         let nav = navigator.map((data, index) => {
             return { ...data, status: id === index ? 'active' : '' }
         })
-        this.setState({ navigator: nav })
+        this.setState({ navigator: nav, selectedIndex: id })
     }
 
     render () {
-        const { navigator } = this.state
+        const { navigator, selectedIndex } = this.state
         return (
             <div className="main-content no-padding">
                 <div className="padding-15px background-white border-bottom">
                     <div className="display-flex space-between" style={{paddingBottom: 15}}>
                         <div className="width width-30">
-                            <div className="post-top txt-site txt-16 txt-bold txt-main padding-top-5px">Fuel Entries</div>
+                            <div className="display-flex post-top txt-site txt-12 txt-primary">
+                                <div className="txt-site txt-12 txt-safe txt-main">Vehicles</div> <div style={{marginLeft: 5, marginRight: 5}}>/</div>
+                                <div className="txt-site txt-12 txt-safe txt-main">LE-5</div> <div style={{marginLeft: 5, marginRight: 5}}>/</div>
+                                <div className="txt-site txt-12 txt-bold txt-main">{ navigator[selectedIndex].title }</div>
+                            </div>
                         </div>
                         <div className="width width-70 display-flex right">
                             <button className="btn btn-orange" style={{marginLeft: 10}}>
