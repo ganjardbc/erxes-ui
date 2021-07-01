@@ -427,6 +427,9 @@ $hg-form: 40px;
 	&.btn-font-big {
 		font-size: 18px;
 	}
+	&.btn-full {
+		width: 100%;
+	}
 	.btn-notif {
 		position: absolute;
 		top: 0;

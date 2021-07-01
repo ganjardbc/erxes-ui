@@ -74,6 +74,7 @@ import PurchaseOrder from './pages/PurchaseOrder'
 import SidePopup from './components/SidePopup'
 import UserManagement from './pages/UserManagement'
 import FuelHistory from './pages/FuelHistory'
+import FuelEntry from './pages/FuelEntry'
 // import componentsDualListbox from './components/DualListbox'
 
 
@@ -251,6 +252,7 @@ class App extends Component {
                         { this.createSubMenu('Fault List', '/fault-list', 'fa fa-lg fa-truck') }
                         { this.createSubMenu('User Management', '/user-management', 'fa fa-lg fa-user-cog') }
                         { this.createSubMenu('Fuel History', '/fuel-history', 'fa fa-lg fa-battery-half') }
+                        { this.createSubMenu('Fuel Entry', '/fuel-entry', 'fa fa-lg fa-clipboard') }
                       </div>
                     </div>
                   </div>
@@ -370,6 +372,7 @@ class App extends Component {
                 <Route exact path="/fault-list" component={FaultList}></Route>
                 <Route exact path="/user-management" component={ UserManagement } />
                 <Route exact path="/fuel-history" component={ FuelHistory } />
+                <Route exact path="/fuel-entry" component={ FuelEntry } />
 
                 {/* components */}
                 <Route exact path="/component-moveable-component" component={ componentsMoveableComponent }></Route>

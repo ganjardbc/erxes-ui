@@ -19916,7 +19916,7 @@
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  height: 100%;
+  width: 100%;
 }
 .image .ttl {
   position: absolute;
@@ -20421,6 +20421,9 @@
 }
 .btn.btn-font-big {
   font-size: 18px;
+}
+.btn.btn-full {
+  width: 100%;
 }
 .btn .btn-notif {
   position: absolute;
@@ -21069,7 +21072,7 @@
 }
 .navigator.nav-theme-2 ul li {
   color: rgba(0, 0, 0, 0.54);
-  border-bottom: 2px #fff solid;
+  border-bottom: 2px rgba(255, 255, 255, 0) solid;
 }
 .navigator.nav-theme-2 ul li:hover {
   color: rgba(0, 0, 0, 0.84);
@@ -21680,6 +21683,45 @@
 .menu-val ul li .image {
   display: inline-block;
   vertical-align: middle;
+}
+
+.menu-side {
+  position: relative;
+  width: 100%;
+}
+.menu-side li {
+  position: relative;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 3px;
+}
+.menu-side li:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.menu-side li.active {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.menu-side li .ms-icn {
+  width: 25px;
+  font-size: 11px;
+  color: #888888;
+}
+.menu-side li .ms-label {
+  width: calc(100% - 60px);
+  font-size: 13px;
+  color: #529ecc;
+  font-weight: 600;
+}
+.menu-side li .ms-val {
+  width: 35px;
+  font-size: 11px;
+  color: #888888;
+  text-align: right;
 }
 
 .big-menu ul li {
