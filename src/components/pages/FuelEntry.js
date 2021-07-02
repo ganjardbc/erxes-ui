@@ -460,7 +460,15 @@ class Pages extends Component {
                 { status: '', value: '89', title: 'Service History' },
                 { status: '', value: '56', title: 'Fuel History' },
                 { status: '', value: '16', title: 'Expense History' },
-                { status: '', value: '41', title: 'Parts Usage' }
+                { status: '', value: '41', title: 'Parts Usage' },
+                { status: '', value: '4', title: 'Assignment History' },
+                { status: '', value: '320', title: 'Matery History' },
+                { status: '', value: '169', title: 'Location History' }
+            ],
+            navigator3: [
+                { status: '', value: '', title: 'Recall Notifications', icon: 'fa fa-lg fa-external-link-alt' },
+                { status: '', value: '', title: 'View Vehicle History', icon: 'fa fa-lg fa-external-link-alt' },
+                { status: '', value: '', title: 'Settings', icon: 'fa fa-lg fa-cog' }
             ]
         }
     }
@@ -475,7 +483,7 @@ class Pages extends Component {
     }
 
     render () {
-        const { navigator, navigator2, selectedIndex } = this.state
+        const { navigator, navigator2, navigator3, selectedIndex } = this.state
         return (
             <div className="main-content no-padding">
                 <div className="padding-15px background-white border-bottom">
@@ -546,12 +554,15 @@ class Pages extends Component {
                             <button className="btn btn-green btn-full">
                                 <i className="icn icn-left fa fa-lw fa-plus" /> Quick Add
                             </button>
-
                             <div className="border-bottom">
                                 <MenuBar data={navigator} onClick={(id) => this.opNavigator(id)} />
                             </div>
-
-                            <MenuBar data={navigator2} onClick={(id) => console.log('id', id)} />
+                            <div className="border-bottom">
+                                <MenuBar data={navigator2} onClick={(id) => console.log('id', id)} />
+                            </div>
+                            <div>
+                                <MenuBar data={navigator3} onClick={(id) => console.log('id', id)} />
+                            </div>
                         </div>
                         <div style={{width: 'calc(100% - 265px)'}}>
                             <div>
