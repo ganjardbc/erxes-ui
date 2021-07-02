@@ -749,3 +749,15 @@
         }
     }
 }
+
+.card-value {
+    position: relative;
+    padding: 3px 7px;
+    font-size: 11px;
+    text-align: center;
+    border-radius: 3px;
+    &.grey {
+        background-color: $grey;
+        color: #fff;
+    }
+}
