@@ -51,7 +51,7 @@ class ButtonActive extends Component {
                 <div 
                     id="button-actions"
                     className={visiblePopup ? "app-menu-popup" : "app-menu-popup app-menu-popup-hide"}
-                    style={{ top: "25px", width: "280px", left: 0 }}>
+                    style={{ top: "25px", width: "240px", left: 0 }}>
                     <div className="content">
                         <div style={{paddingTop: 10, paddingBottom: 10}}>
                             <div className="display-flex" style={{paddingLeft: 15, paddingTop: 5, paddingBottom: 5}}>
