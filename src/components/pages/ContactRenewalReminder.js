@@ -15,7 +15,7 @@ class CardHeader extends Component {
                     <div className="txt-site txt-10 txt-main txt-bold">Next due at</div>
                 </div>
                 <div className="width width-5">
-                    <div className="txt-site txt-10 txt-main fa fa-lw fa-user"></div>
+                    <div className="txt-site txt-10 txt-main fa fa-lw fa-user-friends"></div>
                 </div>
                 <div className="width width-5">
                     <div className="txt-site txt-10 txt-main txt-bold"></div>
