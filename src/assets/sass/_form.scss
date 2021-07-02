@@ -273,6 +273,14 @@ $hg-form: 40px;
 		background-color: $sek-color;
 		color: $min-color;
 	}
+	&.btn-post {
+		background-color: rgba(0,0,0,0);
+		color: $pos-color;
+		&:hover {
+			background-color: $pos-color;
+			color: #fff;
+		}
+	}
 	&.btn-black {
 		background-color: rgba(0,0,0,0.84);
 		color: #fff;

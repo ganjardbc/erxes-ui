@@ -46,7 +46,7 @@ class Pages extends Component {
 		return (
 			<div className="main-content">
 
-        <div className="card small-margin no-radius border-all">
+        <div>
 
           <div className="grid grid-2x margin-bottom-10px">
             <div className="col-1">

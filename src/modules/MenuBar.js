@@ -20,9 +20,11 @@ class MenuBar extends Component {
                     {data && data.map((dt, i) => {
                         return (
                             <li className={dt.status} data-id={i} onClick={this.props.onClick.bind(this)}>
-                                <div className="ms-icn">
-                                    <i className={dt.icon ? dt.icon : "fa fa-lw fa-th-large"} />
-                                </div>
+                                {dt.icon && (
+                                    <div className="ms-icn">
+                                        <i className={dt.icon ? dt.icon : "fa fa-lw fa-th-large"} />
+                                    </div>
+                                )}
                                 <div className="ms-label">
                                     { dt.title }
                                 </div>

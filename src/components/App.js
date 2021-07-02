@@ -33,6 +33,8 @@ import ShareReport from './pages/ShareReport'
 import LineItems from './pages/LineItems'
 import VehicleList from './pages/VehicleList'
 import FaultList from './pages/FaultList'
+import ContactRenewalReminder from './pages/ContactRenewalReminder'
+import GPSIntegration from './pages/GPSIntegration'
 
 // components
 import componentsMoveableComponent from './components/moveable/index'
@@ -80,6 +82,7 @@ import FilterCliclPopup from './components/FilterClickPopup'
 import AttachmentFile from './components/AttachmentFile'
 import WorkOrder from './pages/WorkOrder'
 import VehicleRenewalReminder from './pages/VehicleRenewalReminder'
+import WorkOrderDetail from './pages/WorkOrderDetail'
 // import componentsDualListbox from './components/DualListbox'
 
 
@@ -259,6 +262,8 @@ class App extends Component {
                         { this.createSubMenu('Fuel History', '/fuel-history', 'fa fa-lg fa-battery-half') }
                         { this.createSubMenu('Fuel Entry', '/fuel-entry', 'fa fa-lg fa-clipboard') }
                         { this.createSubMenu('Vehicle Renewal Reminder', '/vehicle-renewal-reminder', 'fa fa-lg fa-truck') }
+                        { this.createSubMenu('Contact Renewal Reminder', '/contact-renewal-reminder', 'fa fa-lg fa-id-card') }
+                        { this.createSubMenu('GPS Integration', '/gps-integration', 'fa fa-lg fa-crosshairs') }
                       </div>
                     </div>
                   </div>
@@ -321,6 +326,7 @@ class App extends Component {
                         { this.createSubMenu('Purchase Order', '/purchase-order', 'far fa-lg fa-circle') }
                         { this.createSubMenu('Purchase Order Info', '/purchase-order-info', 'far fa-lg fa-circle') }
                         { this.createSubMenu('Work Order', '/work-order', 'far fa-lg fa-circle') }
+                        { this.createSubMenu('Work Order Detail', '/work-order-detail', 'far fa-lg fa-circle') }
                         { this.createSubMenu('Filter Click Popup', '/component-filter-click-popup', 'far fa-lg fa-circle') }
                         { this.createSubMenu('AttachmentFile', '/component-attachment-file', 'far fa-lg fa-circle') }
                       </div>
@@ -380,12 +386,15 @@ class App extends Component {
                 <Route exact path="/purchase-order" component={ PurchaseOrder } />
                 <Route exact path="/purchase-order-info" component={ PurchaseOrderInfo } />
                 <Route exact path="/work-order" component={ WorkOrder } />
+                <Route exact path="/work-order-detail" component={ WorkOrderDetail } />
                 <Route exact path="/vehicle-list" component={ VehicleList } />
                 <Route exact path="/fault-list" component={FaultList}></Route>
                 <Route exact path="/user-management" component={ UserManagement } />
                 <Route exact path="/fuel-history" component={ FuelHistory } />
                 <Route exact path="/fuel-entry" component={ FuelEntry } />
                 <Route exact path="/vehicle-renewal-reminder" component={ VehicleRenewalReminder } />
+                <Route exact path="/contact-renewal-reminder" component={ ContactRenewalReminder } />
+                <Route exact path="/gps-integration" component={ GPSIntegration } />
 
                 {/* components */}
                 <Route exact path="/component-moveable-component" component={ componentsMoveableComponent }></Route>

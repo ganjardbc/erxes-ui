@@ -146,9 +146,9 @@ class CardVehicle extends Component {
                     <div className="txt-site txt-9 txt-primary">Issue # 45</div>
                 </div>
                 <div className="width width-5">
-                    <button className="btn btn-small-circle" style={{backgroundColor: '#999', color: '#fff', width: 30, height: 30}}>
-                        3
-                    </button>
+                    <div className="display-flex">
+                        <div className="card-value grey">3</div>
+                    </div>
                 </div>
                 <div className="width width-5">
                     <button className="btn btn-small btn-grey" style={{width: 30, height: 30}}>
