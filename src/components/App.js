@@ -34,6 +34,7 @@ import LineItems from './pages/LineItems'
 import VehicleList from './pages/VehicleList'
 import FaultList from './pages/FaultList'
 import ContactRenewalReminder from './pages/ContactRenewalReminder'
+import GPSIntegration from './pages/GPSIntegration'
 
 // components
 import componentsMoveableComponent from './components/moveable/index'
@@ -260,6 +261,7 @@ class App extends Component {
                         { this.createSubMenu('Fuel History', '/fuel-history', 'fa fa-lg fa-battery-half') }
                         { this.createSubMenu('Fuel Entry', '/fuel-entry', 'fa fa-lg fa-clipboard') }
                         { this.createSubMenu('Contact Renewal Reminder', '/contact-renewal-reminder', 'fa fa-lg fa-id-card') }
+                        { this.createSubMenu('GPS Integration', '/gps-integration', 'fa fa-lg fa-crosshairs') }
                       </div>
                     </div>
                   </div>
@@ -389,6 +391,7 @@ class App extends Component {
                 <Route exact path="/fuel-history" component={ FuelHistory } />
                 <Route exact path="/fuel-entry" component={ FuelEntry } />
                 <Route exact path="/contact-renewal-reminder" component={ ContactRenewalReminder } />
+                <Route exact path="/gps-integration" component={ GPSIntegration } />
 
                 {/* components */}
                 <Route exact path="/component-moveable-component" component={ componentsMoveableComponent }></Route>
