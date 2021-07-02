@@ -83,6 +83,7 @@ import AttachmentFile from './components/AttachmentFile'
 import WorkOrder from './pages/WorkOrder'
 import VehicleRenewalReminder from './pages/VehicleRenewalReminder'
 import WorkOrderDetail from './pages/WorkOrderDetail'
+import IssueList from './pages/IssueList'
 // import componentsDualListbox from './components/DualListbox'
 
 
@@ -264,6 +265,7 @@ class App extends Component {
                         { this.createSubMenu('Vehicle Renewal Reminder', '/vehicle-renewal-reminder', 'fa fa-lg fa-truck') }
                         { this.createSubMenu('Contact Renewal Reminder', '/contact-renewal-reminder', 'fa fa-lg fa-id-card') }
                         { this.createSubMenu('GPS Integration', '/gps-integration', 'fa fa-lg fa-crosshairs') }
+                        { this.createSubMenu('Issue List', '/issue-list', 'fa fa-lg fa-crosshairs') }
                       </div>
                     </div>
                   </div>
@@ -395,6 +397,7 @@ class App extends Component {
                 <Route exact path="/vehicle-renewal-reminder" component={ VehicleRenewalReminder } />
                 <Route exact path="/contact-renewal-reminder" component={ ContactRenewalReminder } />
                 <Route exact path="/gps-integration" component={ GPSIntegration } />
+                <Route exact path="/issue-list" component={ IssueList } />
 
                 {/* components */}
                 <Route exact path="/component-moveable-component" component={ componentsMoveableComponent }></Route>
