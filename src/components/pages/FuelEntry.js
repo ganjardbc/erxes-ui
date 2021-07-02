@@ -4,6 +4,7 @@ import TabBar from '../../modules/TabBar'
 import CardCount from '../../modules/CardCount'
 import CardVehicle from '../../modules/CardVehicle'
 import Dots from '../../modules/Dots'
+import AttechementFile from '../../modules/AttechmentFile'
 import CardLineChart from './FELineChart'
 import CardSimpleLineChart from './FESimpleLineChart'
 
@@ -29,6 +30,145 @@ class CardDashboard extends Component {
                 </div>
                 <div className="padding-20px">
                     <CardLineChart />
+                </div>
+            </div>
+        )
+    }
+}
+
+class CardComments extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {}
+    }
+
+    renderHeader () {
+        return (
+            <div className="padding-15px display-flex space-between">
+                <div className="width width-20">
+                    <div className="txt-site txt-10 txt-main txt-bold">Date</div>
+                </div>
+                <div className="width width-10">
+                    <div className="txt-site txt-10 txt-main txt-bold">Odemeter</div>
+                </div>
+                <div className="width width-10">
+                    <div className="txt-site txt-10 txt-main txt-bold">Miles</div>
+                </div>
+                <div className="width width-10">
+                    <div className="txt-site txt-10 txt-main txt-bold">Gallons</div>
+                </div>
+                <div className="width width-10">
+                    <div className="txt-site txt-10 txt-main txt-bold">Total</div>
+                </div>
+                <div className="width width-10">
+                    <div className="txt-site txt-10 txt-main txt-bold">MPG</div>
+                </div>
+                <div className="width width-10">
+                    <div className="txt-site txt-10 txt-main txt-bold">Cost/Mile</div>
+                </div>
+                <div className="width width-5">
+                    <div className="txt-site txt-main fa fa-lw fa-comment"></div>
+                </div>
+                <div className="width width-5">
+                    <div className="txt-site txt-10 txt-main txt-bold"></div>
+                </div>
+            </div>
+        )
+    }
+
+    renderBody () {
+        return (
+            <div className="padding-15px display-flex space-between">
+                <div className="width width-20">
+                    <div className="display-flex">
+                        <div className="txt-site txt-10 txt-main txt-bold" style={{marginBottom: 3}}>Oct 30, 2019</div>
+                        <div className="txt-site txt-9 txt-primary" style={{marginLeft: 2, marginBottom: 3}}>7.15 AM</div>
+                    </div>
+                </div>
+                <div className="width width-10">
+                    <div className="display-flex">
+                        <div className="txt-site txt-10 txt-main txt-bold" style={{marginBottom: 3}}>95.800</div>
+                        <div className="txt-site txt-9 txt-primary" style={{marginLeft: 2, marginBottom: 3}}>mi</div>
+                    </div>
+                </div>
+                <div className="width width-10">
+                    <div className="display-flex">
+                        <div className="txt-site txt-10 txt-main txt-bold" style={{marginBottom: 3}}>465.0</div>
+                        <div className="txt-site txt-9 txt-primary" style={{marginLeft: 2, marginBottom: 3}}>mi</div>
+                    </div>
+                </div>
+                <div className="width width-10">
+                    <div className="txt-site txt-10 txt-main txt-bold">24.75</div>
+                </div>
+                <div className="width width-10">
+                    <div className="txt-site txt-10 txt-main txt-bold" style={{marginBottom: 3}}>$65.15</div>
+                    <div className="txt-site txt-9 txt-primary" style={{marginBottom: 3}}>2.19/gallon</div>
+                </div>
+                <div className="width width-10">
+                    <div className="display-flex">
+                        <div className="txt-site txt-10 txt-main txt-bold" style={{marginBottom: 3}}>15.3</div>
+                        <div className="txt-site txt-13 txt-green fa fa-lg fa-caret-down" style={{marginLeft: 5, marginBottom: 3}}></div>
+                    </div>
+                </div>
+                <div className="width width-10">
+                    <div className="display-flex">
+                        <div className="txt-site txt-10 txt-main txt-bold" style={{marginBottom: 3}}>$0.14</div>
+                        <div className="txt-site txt-13 txt-red fa fa-lg fa-caret-up" style={{marginLeft: 5, marginBottom: 3}}></div>
+                    </div>
+                </div>
+                <div className="width width-5">
+                    <div className="display-flex">
+                        <div className="card-value grey">3</div>
+                    </div>
+                </div>
+                <div className="width width-5">
+                    <button className="btn btn-small btn-grey" style={{width: 25, height: 25}}>
+                        <i className="fa fa-lw fa-ellipsis-v" />
+                    </button>
+                </div>
+            </div>
+        )
+    }
+
+    render () {
+        const dataCount = [
+            {title: 'Avg. MPG (US)', value: '64.02'},
+            {title: 'Avg. Fuel Cost/Mile', value: '$0.04'},
+            {title: 'Total Gallons', value: '1356.3'},
+            {title: 'Total Fuel Cost', value: '$3,168.55'}
+        ]
+        return (
+            <div className="padding-0px">
+                <div className="card no-margin no-hover no-radius border-all">
+                    <div className="padding-20px">
+                        <CardCount data={dataCount} />
+                    </div>
+                </div>
+
+                <div className="display-flex space-between" style={{width: '100%', paddingTop: 15, paddingBottom: 15}}>
+                    <div className="width width-50 display-flex"></div>
+                    <div className="width width-50 display-flex right">
+                        <div style={{marginRight: 15, marginLeft: 15}}>
+                            <div className="post-top txt-site txt-10 txt-main">1 - 50 of 83</div>
+                        </div>
+                        <div className="display-flex">
+                            <button className="btn btn-small btn-icn btn-sekunder">
+                                <i className="icn fa fa-lw fa-chevron-left" />
+                            </button>
+                            <button className="btn btn-small btn-icn btn-sekunder">
+                                <i className="icn fa fa-lw fa-chevron-right" />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="card no-margin no-hover no-radius border-all">
+                    {this.renderHeader()}
+                    {this.renderBody()}
+                    {this.renderBody()}
+                    {this.renderBody()}
+                    {this.renderBody()}
+                    {this.renderBody()}
                 </div>
             </div>
         )
@@ -168,6 +308,85 @@ class CardOverView extends Component {
     }
 }
 
+class CardDocuments extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {}
+    }
+
+    render () {
+        const dataCount = [
+            {label: 'Date', title: 'Wed, Oct 30 2019 7:15 AM', value: '8 days ago'},
+            {label: 'Odemeter', title: '95,800', value: 'mi', isRow: true},
+            {label: 'Gallons (US)', title: '24.5', value: ''},
+            {label: 'Price/Gallon', title: '$2.52', value: '', isUp: true},
+            {label: 'Total', title: '$61.74', value: '', isDown: true},
+            {label: 'Fuel Type', title: 'Flex fuel', value: ''},
+            {label: 'Vendor', title: '', value: ''},
+            {label: 'Reference', title: '', value: ''},
+            {label: 'Miles', title: '465.0', value: 'since previous fuel entry', isRow: true},
+            {label: 'MPG (US)', title: '19.0', value: '', isUp: true},
+            {label: 'Cost/Mile', title: '$0.13', value: '', isDown: true}
+        ]
+        return (
+            <div>
+                <div className="display-flex">
+                    <div style={{position: 'relative', width: 'calc(100% - 8px)', marginRight: 8}}>
+                        <div className="card no-margin no-hover no-radius border-all">
+                            <div className="padding-15px display-flex space-between border-bottom">
+                                <div>
+                                    <div className="post-top txt-site txt-main txt-10 txt-bold">
+                                        Fuel Entry Details 
+                                    </div>
+                                </div>
+                                <div></div>
+                            </div>
+                            {dataCount && dataCount.map((dt, i) => {
+                                return (
+                                    <div key={i} className={"display-flex " + (i !== (dataCount.length - 1) ? 'border-bottom' : '')} style={{paddingTop: 10, paddingBottom: 10}}>
+                                        <div style={{ width: 'calc(40% - 7px)', marginRight: 7 }}>
+                                            <div className="content-right txt-site txt-10 txt-primary">
+                                                { dt.label }
+                                            </div>
+                                        </div>
+                                        <div style={{ width: 'calc(60% - 7px)', marginLeft: 7 }} className={dt.isRow ? 'display-flex' : ''}>
+                                            {dt.title && (
+                                                <div className="display-flex">
+                                                    <div className="txt-site txt-10 txt-main txt-bold">{ dt.title }</div>
+                                                    {dt.isUp && <div className="txt-site txt-13 txt-red fa fa-lg fa-caret-up" style={{marginLeft: 5, marginBottom: 3}}></div>}
+                                                    {dt.isDown && <div className="txt-site txt-13 txt-green fa fa-lg fa-caret-down" style={{marginLeft: 5, marginBottom: 3}}></div>}
+                                                </div>
+                                            )}
+                                            {dt.value && <div className="txt-site txt-9 txt-primary" style={{marginTop: dt.isRow ? 0 : 5, marginLeft: dt.isRow ? 5 : 0}}>{ dt.value }</div>}
+                                        </div>
+                                    </div>
+                                )
+                            })}
+                        </div>
+                    </div>
+                    <div style={{position: 'relative', width: 'calc(100% - 8px)', marginLeft: 8}}>
+                        <div className="card no-margin no-hover no-radius border-all" style={{marginBottom: 15}}>
+                            <div className="padding-15px display-flex space-between border-bottom">
+                                <div>
+                                    <div className="post-top txt-site txt-main txt-10 txt-bold">
+                                        Location
+                                    </div>
+                                </div>
+                                <div></div>
+                            </div>
+                            <div style={{position: 'relative', width: '100%', height: 200, backgroundColor: '#f5f5f5'}}></div>
+                        </div>
+
+                        <div>
+                            <AttechementFile />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+}
+
 class CardPhotos extends Component {
     constructor(props) {
         super(props)
@@ -225,11 +444,23 @@ class Pages extends Component {
         this.state = {
             selectedIndex: 0,
             navigator: [
-                { status: '', value: '', title: 'Fuel Entries', icon: 'fa fa-lg fa-home' },
+                { status: 'active', value: '', title: 'Fuel Entries', icon: 'fa fa-lg fa-home' },
                 { status: '', value: '', title: 'Vehicle Overview', icon: 'fa fa-lg fa-th-large' },
-                { status: 'active', value: '123', title: 'Photos', icon: 'fa fa-lg fa-image' },
+                { status: '', value: '123', title: 'Photos', icon: 'fa fa-lg fa-image' },
                 { status: '', value: '2', title: 'Documents', icon: 'fa fa-lg fa-file' },
                 { status: '', value: '3', title: 'Comments', icon: 'fa fa-lg fa-comment' }
+            ],
+            navigator2: [
+                { status: '', value: '35', title: 'Work Orders' },
+                { status: '', value: '4', title: 'Inspections' },
+                { status: '', value: '110', title: 'Issues' },
+                { status: '', value: '0', title: 'Faults' },
+                { status: '', value: '20', title: 'Recalls' },
+                { status: '', value: '4', title: 'Reminders' },
+                { status: '', value: '89', title: 'Service History' },
+                { status: '', value: '56', title: 'Fuel History' },
+                { status: '', value: '16', title: 'Expense History' },
+                { status: '', value: '41', title: 'Parts Usage' }
             ]
         }
     }
@@ -244,7 +475,7 @@ class Pages extends Component {
     }
 
     render () {
-        const { navigator, selectedIndex } = this.state
+        const { navigator, navigator2, selectedIndex } = this.state
         return (
             <div className="main-content no-padding">
                 <div className="padding-15px background-white border-bottom">
@@ -316,13 +547,19 @@ class Pages extends Component {
                                 <i className="icn icn-left fa fa-lw fa-plus" /> Quick Add
                             </button>
 
-                            <MenuBar data={navigator} onClick={(id) => this.opNavigator(id)} />
+                            <div className="border-bottom">
+                                <MenuBar data={navigator} onClick={(id) => this.opNavigator(id)} />
+                            </div>
+
+                            <MenuBar data={navigator2} onClick={(id) => console.log('id', id)} />
                         </div>
                         <div style={{width: 'calc(100% - 265px)'}}>
                             <div>
                                 {navigator[0].status === 'active' && <CardDashboard />}
                                 {navigator[1].status === 'active' && <CardOverView />}
                                 {navigator[2].status === 'active' && <CardPhotos />}
+                                {navigator[3].status === 'active' && <CardDocuments />}
+                                {navigator[4].status === 'active' && <CardComments />}
                             </div>
                         </div>
                     </div>
