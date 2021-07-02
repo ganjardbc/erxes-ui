@@ -16,7 +16,7 @@ class CardMenu extends Component {
                             <div className="txt-site txt-10 txt-bold txt-main">{ dt.title }</div>
                         </div>
                         <div style={{width: 30, height: 17, textAlign: 'center'}}>
-                            {dt.enableIcon && <i className={"txt-site txt-9 txt-primary " + (dt.icon ? dt.icon : 'fa fa-lw fa-external-link-alt')} style={{position: 'relative', top: -3}} />}
+                            {dt.enableIcon && <i className={"txt-site txt-9 txt-primary " + (dt.icon ? dt.icon : 'fa fa-lw fa-external-link-alt')} style={{position: 'relative', top: -3, color: dt.iconColor ? dt.iconColor : ''}} />}
                         </div>
                     </div>
                 )

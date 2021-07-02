@@ -3,10 +3,98 @@ import MenuBar from '../../modules/MenuBar'
 import TabBar from '../../modules/TabBar'
 import CardCount from '../../modules/CardCount'
 import CardVehicle from '../../modules/CardVehicle'
+import CardMenu from '../../modules/CardMenu'
 import Dots from '../../modules/Dots'
 import AttechementFile from '../../modules/AttechmentFile'
 import CardLineChart from './FELineChart'
 import CardSimpleLineChart from './FESimpleLineChart'
+
+class ButtonActive extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            visiblePopup: false
+        }
+    }
+
+    handleClickOutside(element) {
+        const outsideclickListener = event => {
+            if (!element.contains(event.target)) {
+                removeClickListener()
+            }
+        }
+    
+        const removeClickListener = () => {
+            this.setState({visiblePopup: false})
+            document.removeEventListener('click', outsideclickListener)
+        }
+    
+        document.addEventListener('click', outsideclickListener)
+    }
+    
+    opMenu = () => {
+        var element = document.getElementById('button-actions')
+        this.setState({visiblePopup: true})
+        this.handleClickOutside(element)
+    }
+
+    render () {
+        const {visiblePopup} = this.state
+        return (
+            <div style={{position: 'relative'}}>
+                <div className="display-flex align-center" style={{cursor: 'pointer'}} onClick={() => this.opMenu()}>
+                    <i className="fa fa-lw fa-circle" style={{ fontSize: 11, color: 'green', marginTop: 1, marginRight: 5}} />
+                    <div className="txt-site txt-11 txt-main txt-bold" style={{marginRight: 5}}>Active</div>
+                    <i className="txt-site txt-8 txt-primary fa fa-lw fa-chevron-down" />
+                </div>
+
+                <div 
+                    id="button-actions"
+                    className={visiblePopup ? "app-menu-popup" : "app-menu-popup app-menu-popup-hide"}
+                    style={{ top: "25px", width: "280px", left: 0 }}>
+                    <div className="content">
+                        <div style={{paddingTop: 10, paddingBottom: 10}}>
+                            <div className="display-flex" style={{paddingLeft: 15, paddingTop: 5, paddingBottom: 5}}>
+                                <div style={{width: 20}}>
+                                    <i className="txt-site txt-8 txt-primary fa fa-lw fa-flag" style={{position: 'relative', top: -2}} />
+                                </div>
+                                <div>
+                                    <div className="post-top txt-site txt-10 txt-primary">Update Status</div>
+                                </div>
+                            </div>
+                            <CardMenu reverseIcon={true} data={[
+                                {title: 'Active', enableIcon: true, icon: 'fa fa-lw fa-circle', iconColor: 'green', link: ''},
+                                {title: 'Inactive', enableIcon: true, icon: 'fa fa-lw fa-circle', iconColor: 'blue', link: ''},
+                                {title: 'In Shop', enableIcon: true, icon: 'fa fa-lw fa-circle', iconColor: 'orange', link: ''},
+                                {title: 'Out of Service', enableIcon: true, icon: 'fa fa-lw fa-circle', iconColor: 'red', link: ''},
+                                {title: 'Sold', enableIcon: true, icon: 'fa fa-lw fa-circle', iconColor: 'grey', link: ''},
+                                {title: 'Ready', enableIcon: true, icon: 'fa fa-lw fa-circle', iconColor: 'green', link: ''},
+                                {title: 'Sitting', enableIcon: true, icon: 'fa fa-lw fa-circle', iconColor: 'grey', link: ''},
+                                {title: 'Build / On Order', enableIcon: true, icon: 'fa fa-lw fa-circle', iconColor: 'purple', link: ''},
+                                {title: 'Available', enableIcon: true, icon: 'fa fa-lw fa-circle', iconColor: 'teal', link: ''},
+                                {title: 'Assigned', enableIcon: true, icon: 'fa fa-lw fa-circle', iconColor: 'black', link: ''}
+                            ]} />
+
+                            <div className="display-flex" style={{paddingLeft: 15, paddingTop: 5, paddingBottom: 5}}>
+                                <div style={{width: 20}}>
+                                    <i className="txt-site txt-8 txt-primary fa fa-lw fa-cog" style={{position: 'relative', top: -2}} />
+                                </div>
+                                <div>
+                                    <div className="post-top txt-site txt-10 txt-primary">In Service</div>
+                                </div>
+                            </div>
+                            <CardMenu reverseIcon={true} data={[
+                                {title: 'Ready for Rent', enableIcon: true, icon: 'fa fa-lw fa-circle', iconColor: 'purple', link: ''},
+                                {title: 'Rented', enableIcon: true, icon: 'fa fa-lw fa-circle', iconColor: 'magenta', link: ''}
+                            ]} />
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+}
 
 class CardDashboard extends Component {
     constructor(props) {
@@ -513,23 +601,21 @@ class Pages extends Component {
                         <div style={{width: 'calc(100% - 285px)'}}>
                             <div className="txt-site txt-18 txt-main txt-bold" style={{marginBottom: 5}}>LE-5</div>
                             <div className="txt-site txt-9 txt-primary">SUV <Dots /> 2015 Chevrolet Thoe <Dots /> 1GNLC2K2234023430234 <Dots /> BRT5564 <Dots /> <i className="fa fa-lw fa-id-card" /> 0</div>
-                            <div className="display-flex" style={{paddingTop: 10}}>
-                                <div className="display-flex align-center" style={{marginRight: 30}}>
+                            <div className="display-flex align-center" style={{paddingTop: 10}}>
+                                <div className="display-flex align-center" style={{cursor: 'pointer', marginRight: 30}}>
                                     <div className="txt-site txt-11 txt-main txt-bold" style={{marginRight: 5}}>96,250</div>
                                     <div className="txt-site txt-11 txt-primary" style={{marginRight: 5}}>mi</div>
                                     <i className="txt-site txt-8 txt-primary fa fa-lw fa-pencil-alt" />
                                 </div>
-                                <div className="display-flex align-center" style={{marginRight: 30}}>
-                                    <i className="fa fa-lw fa-circle" style={{ fontSize: 11, color: 'green', marginTop: 1, marginRight: 5}} />
-                                    <div className="txt-site txt-11 txt-main txt-bold" style={{marginRight: 5}}>Active</div>
-                                    <i className="txt-site txt-8 txt-primary fa fa-lw fa-chevron-down" />
+                                <div style={{ marginRight: 30 }}>
+                                    <ButtonActive />
                                 </div>
-                                <div className="display-flex align-center" style={{marginRight: 30}}>
+                                <div className="display-flex align-center" style={{cursor: 'pointer', marginRight: 30}}>
                                     <div className="txt-site txt-11 txt-main txt-bold" style={{marginRight: 5}}>Law Envorcement</div>
                                     <i className="txt-site txt-8 txt-primary fa fa-lw fa-pencil-alt" />
                                 </div>
                                 <div className="display-flex align-center">
-                                    <div className="txt-site txt-11 txt-safe txt-bold" style={{marginRight: 5}}>Caimen Dennis</div>
+                                    <div className="txt-site txt-11 txt-safe txt-bold" style={{cursor: 'pointer', marginRight: 5}}>Caimen Dennis</div>
                                     <i className="txt-site txt-8 txt-primary fa fa-lw fa-minus-circle" />
                                 </div>
                             </div>
