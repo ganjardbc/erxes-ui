@@ -1,74 +1,5 @@
 import React, { Component } from 'react'
-import TabBar from '../../modules/TabBar'
-import CardMenu from '../../modules/CardMenu'
 import DatePicker from '../../modules/popup/Date'
-
-class ButtonAction extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            visiblePopup: false
-        }
-    }
-
-    handleClickOutside(element) {
-        const outsideclickListener = event => {
-            if (!element.contains(event.target)) {
-                removeClickListener()
-            }
-        }
-
-        const removeClickListener = () => {
-            this.setState({ visiblePopup: false })
-            document.removeEventListener('click', outsideclickListener)
-        }
-
-        document.addEventListener('click', outsideclickListener)
-    }
-
-    opMenu = () => {
-        var element = document.getElementById('button-actions')
-        this.setState({ visiblePopup: true })
-        this.handleClickOutside(element)
-    }
-
-    render() {
-        const { visiblePopup } = this.state
-        return (
-            <div style={{ position: 'relative' }}>
-                <button className="btn btn-sekunder" onClick={() => this.opMenu()}>
-                    <i className="icn icn-left fa fa-lw fa-ellipsis-v" /> Actions
-                </button>
-
-                <div
-                    style={{ top: "45px", width: "280px" }}
-                    id="button-actions"
-                    className={visiblePopup ? "app-menu-popup" : "app-menu-popup app-menu-popup-hide"}>
-                    <div className="content">
-                        <div style={{ paddingTop: 10, paddingBottom: 10 }} className="border-bottom">
-                            <CardMenu data={[{ title: 'Add Multiple Users', enableIcon: false, link: '' },]} />
-                        </div>
-                        <div style={{ paddingTop: 10, paddingBottom: 10 }} className="border-bottom">
-                            <CardMenu data={[{ title: 'Import Contacts', enableIcon: false, link: '' },]} />
-                        </div>
-                        <div style={{ paddingTop: 10, paddingBottom: 10 }} className="border-bottom">
-                            <CardMenu data={[
-                                { title: 'Manage User Roles', enableIcon: false, link: '' },
-                                { title: 'Manage Password Requirements', enableIcon: false, link: '' }
-                            ]} />
-                        </div>
-                        <div style={{ paddingTop: 10, paddingBottom: 10 }}>
-                            <CardMenu reverseIcon={true} data={[
-                                { title: 'Find Duplicates', enableIcon: true, icon: 'fa fa-lw fa-user', link: '' },
-                                { title: 'Export CSV', enableIcon: true, icon: 'fa fa-lw fa-download', link: '' }
-                            ]} />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        )
-    }
-}
 
 class CardHeader extends Component {
     render() {
@@ -146,27 +77,10 @@ class CardVehicle extends Component {
 class ContactRenewalReminder extends Component {
     constructor(props) {
         super(props)
-        this.state = {
-            navigator: [
-                { status: 'active', title: 'All' },
-                { status: '', title: 'Unconfirmed' },
-                { status: '', title: 'Dormant' },
-                { status: '', title: 'Deactivated' },
-            ]
-        }
-    }
-
-    opNavigator = (e, isNumber = false) => {
-        const id = isNumber ? e : Number(e.currentTarget.dataset.id)
-        const { navigator } = this.state
-        let nav = navigator.map((data, index) => {
-            return { ...data, status: id === index ? 'active' : '' }
-        })
-        this.setState({ navigator: nav })
+        this.state = {}
     }
 
     render() {
-        const { navigator } = this.state
         return (
             <div className="main-content no-padding">
                 <div className="padding-15px display-flex space-between background-white border-bottom">
