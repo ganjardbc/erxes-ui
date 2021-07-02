@@ -80,6 +80,7 @@ import PurchaseOrderInfo from './pages/PurchaseOrderInfo'
 import FilterCliclPopup from './components/FilterClickPopup'
 import AttachmentFile from './components/AttachmentFile'
 import WorkOrder from './pages/WorkOrder'
+import WorkOrderDetail from './pages/WorkOrderDetail'
 // import componentsDualListbox from './components/DualListbox'
 
 
@@ -321,6 +322,7 @@ class App extends Component {
                         { this.createSubMenu('Purchase Order', '/purchase-order', 'far fa-lg fa-circle') }
                         { this.createSubMenu('Purchase Order Info', '/purchase-order-info', 'far fa-lg fa-circle') }
                         { this.createSubMenu('Work Order', '/work-order', 'far fa-lg fa-circle') }
+                        { this.createSubMenu('Work Order Detail', '/work-order-detail', 'far fa-lg fa-circle') }
                         { this.createSubMenu('Filter Click Popup', '/component-filter-click-popup', 'far fa-lg fa-circle') }
                         { this.createSubMenu('AttachmentFile', '/component-attachment-file', 'far fa-lg fa-circle') }
                       </div>
@@ -380,6 +382,7 @@ class App extends Component {
                 <Route exact path="/purchase-order" component={ PurchaseOrder } />
                 <Route exact path="/purchase-order-info" component={ PurchaseOrderInfo } />
                 <Route exact path="/work-order" component={ WorkOrder } />
+                <Route exact path="/work-order-detail" component={ WorkOrderDetail } />
                 <Route exact path="/vehicle-list" component={ VehicleList } />
                 <Route exact path="/fault-list" component={FaultList}></Route>
                 <Route exact path="/user-management" component={ UserManagement } />
