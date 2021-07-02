@@ -686,6 +686,9 @@
 .display-flex.space-between {
   justify-content: space-between;
 }
+.display-flex.space-around {
+  justify-content: space-around;
+}
 .display-flex.right {
   justify-content: flex-end;
 }
@@ -20251,6 +20254,14 @@
 .btn.btn-main4-color {
   background-color: #fff;
   color: #5629b6;
+}
+.btn.btn-post {
+  background-color: rgba(0, 0, 0, 0);
+  color: #529ecc;
+}
+.btn.btn-post:hover {
+  background-color: #529ecc;
+  color: #fff;
 }
 .btn.btn-black {
   background-color: rgba(0, 0, 0, 0.84);
@@ -74169,6 +74180,18 @@
   position: absolute;
   top: 100%;
   left: 100%;
+}
+
+.card-value {
+  position: relative;
+  padding: 3px 7px;
+  font-size: 11px;
+  text-align: center;
+  border-radius: 3px;
+}
+.card-value.grey {
+  background-color: #999;
+  color: #fff;
 }
 
 .chat {
