@@ -79,6 +79,7 @@ import PurchaseOrderInfo from './pages/PurchaseOrderInfo'
 import FilterCliclPopup from './components/FilterClickPopup'
 import AttachmentFile from './components/AttachmentFile'
 import WorkOrder from './pages/WorkOrder'
+import VehicleRenewalReminder from './pages/VehicleRenewalReminder'
 // import componentsDualListbox from './components/DualListbox'
 
 
@@ -257,6 +258,7 @@ class App extends Component {
                         { this.createSubMenu('User Management', '/user-management', 'fa fa-lg fa-user-cog') }
                         { this.createSubMenu('Fuel History', '/fuel-history', 'fa fa-lg fa-battery-half') }
                         { this.createSubMenu('Fuel Entry', '/fuel-entry', 'fa fa-lg fa-clipboard') }
+                        { this.createSubMenu('Vehicle Renewal Reminder', '/vehicle-renewal-reminder', 'fa fa-lg fa-truck') }
                       </div>
                     </div>
                   </div>
@@ -383,6 +385,7 @@ class App extends Component {
                 <Route exact path="/user-management" component={ UserManagement } />
                 <Route exact path="/fuel-history" component={ FuelHistory } />
                 <Route exact path="/fuel-entry" component={ FuelEntry } />
+                <Route exact path="/vehicle-renewal-reminder" component={ VehicleRenewalReminder } />
 
                 {/* components */}
                 <Route exact path="/component-moveable-component" component={ componentsMoveableComponent }></Route>
