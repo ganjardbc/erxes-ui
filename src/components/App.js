@@ -33,6 +33,7 @@ import ShareReport from './pages/ShareReport'
 import LineItems from './pages/LineItems'
 import VehicleList from './pages/VehicleList'
 import FaultList from './pages/FaultList'
+import ContactRenewalReminder from './pages/ContactRenewalReminder'
 
 // components
 import componentsMoveableComponent from './components/moveable/index'
@@ -257,6 +258,7 @@ class App extends Component {
                         { this.createSubMenu('User Management', '/user-management', 'fa fa-lg fa-user-cog') }
                         { this.createSubMenu('Fuel History', '/fuel-history', 'fa fa-lg fa-battery-half') }
                         { this.createSubMenu('Fuel Entry', '/fuel-entry', 'fa fa-lg fa-clipboard') }
+                        { this.createSubMenu('Contact Renewal Reminder', '/contact-renewal-reminder', 'fa fa-lg fa-id-card') }
                       </div>
                     </div>
                   </div>
@@ -383,6 +385,7 @@ class App extends Component {
                 <Route exact path="/user-management" component={ UserManagement } />
                 <Route exact path="/fuel-history" component={ FuelHistory } />
                 <Route exact path="/fuel-entry" component={ FuelEntry } />
+                <Route exact path="/contact-renewal-reminder" component={ ContactRenewalReminder } />
 
                 {/* components */}
                 <Route exact path="/component-moveable-component" component={ componentsMoveableComponent }></Route>

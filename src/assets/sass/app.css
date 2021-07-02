@@ -74193,6 +74193,10 @@
   background-color: #999;
   color: #fff;
 }
+.card-value.red {
+  background-color: #e74c3c;
+  color: #fff;
+}
 
 .chat {
   position: relative;
