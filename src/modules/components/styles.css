@@ -1,0 +1,221 @@
+body {
+  padding: 0;
+  margin: 0;
+}  
+
+.App {
+  height: 100vh;
+  width: 100%;
+}  
+
+/* marker */
+.circle {
+  position: relative;
+  top: -11.5px;
+  left: -11.5px;
+  background-color: #fff;
+  border-radius: 50%;
+  color: #555;
+  height: 38px;
+  width: 38px;
+  text-align: center;
+  border: 1px solid #999;
+}  
+.circle-text {
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+}
+.circle.hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+  border: 1px solid #555;
+}
+.circle.marker {
+  background-color: rgba(0, 0, 0, 0);
+  color: #d83b01;
+  font-size: 24px;
+}
+.circle.marker.hover {
+  color: #af3204;
+}
+
+/* tooltip */
+.tooltip {
+  position: absolute;
+  width: 650px;
+  padding: 0 0;
+  background-color: #fff;
+  bottom: 60px;
+  left: -316px;
+  z-index: 100000;
+}
+
+.tooltip .icn {
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  font-size: 30px;
+  color: #fff;
+  transform: translate(-50%, 0);
+}
+
+.tooltip.green {
+  background-color: #2B9133;
+  border: 1px #2B9133 solid;
+}
+
+.tooltip.red {
+  background-color: #d83b01;
+  border: 1px #d83b01 solid;
+}
+
+.tooltip.green .icn {
+  color: #2B9133;
+}
+
+.tooltip.red .icn {
+  color: #d83b01;
+}
+
+.tooltip-color {
+  padding: 7.5px;
+}
+
+.tooltip-color .icn {
+  position: absolute;
+  bottom: -10px;
+}  
+.tooltip-color.green {
+  background-color: #2B9133;
+  color: #fff;
+}
+
+.tooltip-color.red {
+  background-color: #d83b01;
+  color: #fff;
+}
+
+.tooltip-color.green .icn {
+  color: #2B9133;
+}
+
+.tooltip-color.red .icn {
+  color: #d83b01;
+}
+
+/* sonar */
+.sonar-wrapper {
+  position: relative;
+  top: -11.5px;
+  left: -11.5px;
+  z-index: 1000;
+  /* overflow: hidden; */
+  padding: 0 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+
+/* The circle */
+.sonar-text {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+
+  border-radius: 100%;
+
+  /* background-color: #fff;
+  color: #555; */
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  z-index: 100;
+  cursor: pointer;
+  background-color: HSL(20, 100%, 50%);
+}
+
+.sonar-text.hover {
+  cursor: pointer;
+  background-color: HSL(15, 100%, 50%);
+}
+
+.sonar-emitter {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 40px;
+  height: 40px;
+
+  /* opacity: 1;
+  z-index: -1;
+  border-radius: 100%;
+  background-color: HSL(20, 100%, 50%); */
+}
+
+/* the 'wave', same shape and size as its parent */
+.sonar-wave {
+  position: absolute;
+
+  left: 20%;
+  top: 20%;
+  transform: translate(-20%, -20%);
+
+  border-radius: 100%;
+  background-color: HSL(20, 100%, 50%);
+  opacity: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/*
+  Animate!
+  NOTE: add browser prefixes where needed.
+*/
+.sonar-wave {
+  animation: sonarWave 1.2s linear infinite;
+}
+
+.sonar-emitter {
+  animation: sonarEmitter 1.5s linear infinite;
+}
+
+@keyframes sonarWave {
+  from {
+    opacity: 0.4;
+    width: 40px;
+    height: 40px;
+  }
+  to {
+    transform: scale(4);
+    opacity: 0;
+    width: 70%;
+    height: 70%;
+  }
+}
+
+@keyframes sonarEmitter {
+  from {
+    opacity: 0.4;
+    width: 40px;
+    height: 40px;
+  }
+  to {
+    transform: scale(4);
+    opacity: 0;
+    width: 50%;
+    height: 50%;
+  }
+}

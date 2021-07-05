@@ -8,6 +8,45 @@ import Dots from '../../modules/Dots'
 import AttechementFile from '../../modules/AttechmentFile'
 import CardLineChart from './FELineChart'
 import CardSimpleLineChart from './FESimpleLineChart'
+import SimpleGoogleMap from '../../modules/googleMap'
+
+const marker = {
+    id: "",
+    title: "",
+    icon: "fa fa-lg fa-home",
+    tooltip: <div>Ahuy</div>,
+    isHover: false,
+    isSonar: true,
+    lat: "",
+    lng: ""
+}
+
+const defaultPayload = {
+    pointer: {
+        title: "12.5 km / 8 Hours",
+        sub: "Single Moda - Inland Truck"
+    },
+    destination: {
+        start: {
+            title: "LGN Nusantara",
+            sub: "22 March 2020 19.00 PM",
+            icon: "fa fa-lg fa-warehouse",
+        },
+        goal: {
+            title: "DSP Panjang",
+            sub: "23 March 2020 19.00 PM",
+            icon: "fa fa-lg fa-warehouse",
+        }
+    },
+    map: {
+        center: {
+            lat: -1.901935,
+            lng: 109.913175
+        },
+        markers: [marker, marker, marker],
+        zoom: 6
+    }
+}
 
 class ButtonActive extends Component {
     constructor(props) {
@@ -399,10 +438,13 @@ class CardOverView extends Component {
 class CardDocuments extends Component {
     constructor(props) {
         super(props)
-        this.state = {}
+        this.state = {
+            data: defaultPayload
+        }
     }
 
     render () {
+        const { data } = this.state
         const dataCount = [
             {label: 'Date', title: 'Wed, Oct 30 2019 7:15 AM', value: '8 days ago'},
             {label: 'Odemeter', title: '95,800', value: 'mi', isRow: true},
@@ -462,7 +504,14 @@ class CardDocuments extends Component {
                                 </div>
                                 <div></div>
                             </div>
-                            <div style={{position: 'relative', width: '100%', height: 200, backgroundColor: '#f5f5f5'}}></div>
+                            <div style={{position: 'relative', width: '100%', height: 200, backgroundColor: '#f5f5f5'}}>
+                                <SimpleGoogleMap 
+                                    zoom={data.map.zoom}
+                                    center={data.map.center}
+                                    markers={data.map.markers}
+                                    enableIconMarker={true}
+                                    onClickMarker={(e) => this.setState({visibleContent: true})} />
+                            </div>
                         </div>
 
                         <div>
