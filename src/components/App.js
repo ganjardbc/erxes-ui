@@ -35,6 +35,7 @@ import VehicleList from './pages/VehicleList'
 import FaultList from './pages/FaultList'
 import ContactRenewalReminder from './pages/ContactRenewalReminder'
 import GPSIntegration from './pages/GPSIntegration'
+import InspectionsForm from './pages/InspectionsForm'
 
 // components
 import componentsMoveableComponent from './components/moveable/index'
@@ -266,6 +267,7 @@ class App extends Component {
                         { this.createSubMenu('Contact Renewal Reminder', '/contact-renewal-reminder', 'fa fa-lg fa-id-card') }
                         { this.createSubMenu('GPS Integration', '/gps-integration', 'fa fa-lg fa-crosshairs') }
                         { this.createSubMenu('Issue List', '/issue-list', 'fa fa-lg fa-crosshairs') }
+                        { this.createSubMenu('Inspections Form', '/inspections-form', 'fa fa-lg fa-clipboard') }
                       </div>
                     </div>
                   </div>
@@ -397,6 +399,7 @@ class App extends Component {
                 <Route exact path="/vehicle-renewal-reminder" component={ VehicleRenewalReminder } />
                 <Route exact path="/contact-renewal-reminder" component={ ContactRenewalReminder } />
                 <Route exact path="/gps-integration" component={ GPSIntegration } />
+                <Route exact path="/inspections-form" component={InspectionsForm} />
                 <Route exact path="/issue-list" component={ IssueList } />
 
                 {/* components */}

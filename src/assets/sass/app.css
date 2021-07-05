@@ -74197,6 +74197,14 @@
   background-color: #e74c3c;
   color: #fff;
 }
+.card-value.orange {
+  background-color: #f39c12;
+  color: #fff;
+}
+.card-value.green {
+  background-color: #2ecc71;
+  color: #fff;
+}
 
 .chat {
   position: relative;
