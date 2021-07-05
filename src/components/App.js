@@ -87,6 +87,9 @@ import WorkOrder from './pages/WorkOrder'
 import VehicleRenewalReminder from './pages/VehicleRenewalReminder'
 import WorkOrderDetail from './pages/WorkOrderDetail'
 import IssueList from './pages/IssueList'
+import AddParts from './pages/AddParts'
+import Issues from './pages/Issues'
+import ReceiveItemPopup from './pages/ReceiveItemPopup'
 // import componentsDualListbox from './components/DualListbox'
 
 
@@ -330,8 +333,11 @@ class App extends Component {
                         { this.createSubMenu('Share Report', '/share-report', 'far fa-lg fa-circle') }
                         { this.createSubMenu('Line Items', '/line-items', 'far fa-lg fa-circle') }
                         { this.createSubMenu('Side Popup', '/component-side-popup', 'far fa-lg fa-circle') }
+                        { this.createSubMenu('Add Parts', '/component-add-parts', 'far fa-lg fa-circle') }
                         { this.createSubMenu('Purchase Order', '/purchase-order', 'far fa-lg fa-circle') }
                         { this.createSubMenu('Purchase Order Info', '/purchase-order-info', 'far fa-lg fa-circle') }
+                        { this.createSubMenu('Issues', '/issues', 'far fa-lg fa-circle') }
+                        { this.createSubMenu('Receive Item Popup', '/component-receive-item-popup', 'far fa-lg fa-circle') }
                         { this.createSubMenu('Work Order', '/work-order', 'far fa-lg fa-circle') }
                         { this.createSubMenu('Work Order Detail', '/work-order-detail', 'far fa-lg fa-circle') }
                         { this.createSubMenu('Filter Click Popup', '/component-filter-click-popup', 'far fa-lg fa-circle') }
@@ -397,6 +403,7 @@ class App extends Component {
                 <Route exact path="/purchase-order-info" component={ PurchaseOrderInfo } />
                 <Route exact path="/work-order" component={ WorkOrder } />
                 <Route exact path="/work-order-detail" component={ WorkOrderDetail } />
+                <Route exact path="/issues" component={ Issues } />
                 <Route exact path="/vehicle-list" component={ VehicleList } />
                 <Route exact path="/fault-list" component={FaultList}></Route>
                 <Route exact path="/user-management" component={ UserManagement } />
@@ -447,6 +454,8 @@ class App extends Component {
                 <Route exact path="/component-cool-popup" component={ componentsCoolPopup }></Route>
                 <Route exact path="/component-tooltip-popup" component={ componentsTooltipPopup }></Route>
                 <Route exact path="/component-search" component={ SearchRecommendation }></Route>
+                <Route exact path="/component-add-parts" component={ AddParts }></Route>
+                <Route exact path="/component-receive-item-popup" component={ ReceiveItemPopup } />
                 <Route exact path="/component-side-popup" component={ SidePopup }></Route>
                 {/* <Route exact path="/component-dual-listbox" component={ componentsDualListbox }></Route> */}
 
