@@ -20283,6 +20283,12 @@
 .btn.btn-sekunder.btn-no-border {
   border: 0 #fff solid;
 }
+.btn.btn-sekunder.btn-dashed {
+  border: 1px rgba(0, 0, 0, 0.1) dashed;
+}
+.btn.btn-sekunder.btn-dashed:hover {
+  border: 1px rgba(0, 0, 0, 0.2) dashed;
+}
 .btn.btn-primary {
   background-color: rgba(225, 225, 225, 0.34);
   color: rgba(0, 0, 0, 0.54);
@@ -22935,10 +22941,6 @@
 .card-form {
   position: relative;
   width: 100%;
-  border: 1px rgba(0, 0, 0, 0.1) solid;
-  border-radius: 5px;
-  background-color: #fff;
-  border: 1px rgba(0, 0, 0, 0.1) solid;
 }
 .card-form .cf-header {
   padding: 15px;

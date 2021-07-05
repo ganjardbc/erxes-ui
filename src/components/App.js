@@ -81,6 +81,7 @@ import FuelEntry from './pages/FuelEntry'
 import PurchaseOrderInfo from './pages/PurchaseOrderInfo'
 import FilterCliclPopup from './components/FilterClickPopup'
 import AttachmentFile from './components/AttachmentFile'
+import ImportFile from './components/ImportFile'
 import WorkOrder from './pages/WorkOrder'
 import VehicleRenewalReminder from './pages/VehicleRenewalReminder'
 import WorkOrderDetail from './pages/WorkOrderDetail'
@@ -333,6 +334,8 @@ class App extends Component {
                         { this.createSubMenu('Work Order Detail', '/work-order-detail', 'far fa-lg fa-circle') }
                         { this.createSubMenu('Filter Click Popup', '/component-filter-click-popup', 'far fa-lg fa-circle') }
                         { this.createSubMenu('AttachmentFile', '/component-attachment-file', 'far fa-lg fa-circle') }
+                        { this.createSubMenu('Import File', '/component-import-file', 'far fa-lg fa-circle') }
+
                       </div>
                     </div>
                   </div>
@@ -437,6 +440,7 @@ class App extends Component {
                 <Route exact path="/component-beautiful-card" component={ componentsBeautifulCard }></Route>
                 <Route exact path="/component-filter-click-popup" component={ FilterCliclPopup }></Route>
                 <Route exact path="/component-attachment-file" component={ AttachmentFile }></Route>
+                <Route exact path="/component-import-file" component={ ImportFile } />
                 <Route exact path="/component-cool-popup" component={ componentsCoolPopup }></Route>
                 <Route exact path="/component-tooltip-popup" component={ componentsTooltipPopup }></Route>
                 <Route exact path="/component-search" component={ SearchRecommendation }></Route>

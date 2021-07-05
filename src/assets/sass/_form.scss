@@ -300,6 +300,12 @@ $hg-form: 40px;
 		&.btn-no-border {
 			border: 0 #fff solid;
 		}
+		&.btn-dashed {
+			border: 1px rgba(0,0,0,0.1) dashed;
+			&:hover {
+				border: 1px rgba(0,0,0,0.2) dashed;
+			}
+		}
 	}
 	&.btn-primary {
 		background-color: rgba(225,225,225,0.34);
