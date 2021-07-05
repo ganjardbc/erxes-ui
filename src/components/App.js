@@ -17,6 +17,7 @@ import CoolLogin from './auth/CoolLogin'
 // home
 // import Home from './home/Index'
 import Dashboard from './dashboard/Index'
+import DashboardFms from './dashboardFMS/Index'
 
 // pages
 import KanbanLayout from './pages/KanbanLayout'
@@ -180,6 +181,7 @@ class App extends Component {
                 <div className="slide-list change-scrollbar">
                   <div className="app-menu">
                     { this.createSubMenu('Dashboard', '/home', 'fa fa-lg fa-home') }
+                    { this.createSubMenu('Dashboard FMS', '/dashboard-fms', 'fa fa-lg fa-home') }
                   </div>
 
                   <div className="app-space">
@@ -378,6 +380,7 @@ class App extends Component {
       				<div className="app-place">
       					
       					<Route exact path="/home" component={ Dashboard } />
+                <Route exact path="/dashboard-fms" component={ DashboardFms } />
                 <Route exact path="/kanban-layout" component={ KanbanLayout } />
                 <Route exact path="/slide-component" component={ SlideComponent } />
                 <Route exact path="/form-builder" component={ FormBuilder } />
