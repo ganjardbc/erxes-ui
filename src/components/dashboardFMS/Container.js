@@ -170,6 +170,20 @@ class CardComments extends React.Component {
                 issue: 'Vehicle: The Black Pearl',
                 comment: 'Comming in tomorrow for an oil change',
                 date: '21 days ago'
+            },
+            {
+                cover: 'https://i.pinimg.com/originals/c3/66/16/c36616a8d1f2eb3505c49dd55d07b6a9.jpg',
+                name: 'Allie Hudson',
+                issue: 'Vehicle: The Black Pearl',
+                comment: 'Comming in tomorrow for an oil change',
+                date: '21 days ago'
+            },
+            {
+                cover: 'https://i.pinimg.com/originals/c3/66/16/c36616a8d1f2eb3505c49dd55d07b6a9.jpg',
+                name: 'Allie Hudson',
+                issue: 'Vehicle: The Black Pearl',
+                comment: 'Comming in tomorrow for an oil change',
+                date: '21 days ago'
             }
         ]
         return (
@@ -182,7 +196,7 @@ class CardComments extends React.Component {
                     </div>
                     <div></div>
                 </div>
-                <div>
+                <div className="change-scrollbar" style={{height: 630, overflowY: 'auto'}}>
                     {data && data.map((dt, i) => {
                         return (
                             <div key={i} className={"padding-15px display-flex " + (i !== (data.length - 1) ? 'border-bottom' : '')}>
