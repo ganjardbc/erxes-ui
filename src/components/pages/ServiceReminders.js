@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import TabBar from '../../modules/TabBar'
 import DatePicker from '../../modules/popup/Date'
 import Dots from '../../modules/Dots'
-import CardCount from '../../modules/CardCount'
 
 class CardHeader extends Component {
     render() {
@@ -94,108 +93,6 @@ class CardVehicle extends Component {
     }
 }
 
-class CardServiceReminders extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {}
-    }
-
-    render() {
-        const dataCount = [
-            {title: 'Overdue', value: '14'},
-            {title: 'Due Soon', value: '5'}
-        ]
-
-        return (
-            <div className="padding-15px">
-                <div className="display-flex border-bottom" style={{ width: '100%', paddingTop: 0, paddingBottom: 15 }}>
-                    <button className="btn btn-sekunder" style={{ marginRight: 5 }}>
-                        All Reminders <i className="icn icn-right fa fa-lw fa-caret-down" />
-                    </button>
-                    <input
-                        type="text"
-                        className="txt txt-sekunder-color"
-                        placeholder="Filter vehicles"
-                        style={{ width: 200, marginRight: 10 }}
-                        // value={}
-                        // onChange={}
-                        required />
-                    <input
-                        type="text"
-                        className="txt txt-sekunder-color"
-                        placeholder="Filter service tasks"
-                        style={{ width: 200, marginRight: 10 }}
-                        // value={}
-                        // onChange={}
-                        required />
-                    <button className="btn btn-sekunder" style={{ marginRight: 10 }}>
-                        <i className="icn icn-left fa fa-lw fa-sliders-h" /> More
-                    </button>
-                    <button className="btn btn-main" style={{ marginRight: 15 }}>
-                        <i className="icn icn-left fa fa-lw fa-search" /> Search
-                    </button>
-                    <div>
-                        <div className="post-top txt-site txt-10 txt-main">0 filters applied</div>
-                    </div>
-                </div>
-
-                <div style={{ width: '100%', paddingTop: 15, paddingBottom: 0 }}>
-                    <CardCount data={dataCount} />
-                </div>
-
-                <div className="display-flex space-between" style={{ width: '100%', paddingTop: 15, paddingBottom: 15 }}>
-                    <div className="width width-50 display-flex">
-                        <div style={{ marginRight: 15 }}>
-                            <div className="post-top txt-site txt-10 txt-main">0 selected:</div>
-                        </div>
-                        <button className="btn btn-small btn-sekunder" style={{ marginRight: 5 }}>
-                            Manage Subscribers <i className="icn icn-right fa fa-lw fa-caret-down" />
-                        </button>
-                        <button className="btn btn-small btn-icn btn-sekunder" style={{ marginRight: 5 }}>
-                            <i className="icn fa fa-lw fa-trash-alt" />
-                        </button>
-                    </div>
-                    <div className="width width-50 display-flex right">
-                        <button className="btn btn-small btn-sekunder" style={{ marginRight: 5 }}>
-                            Group : Week <i className="icn icn-right fa fa-lw fa-caret-down" />
-                        </button>
-                        <div style={{ marginRight: 15, marginLeft: 15 }}>
-                            <div className="post-top txt-site txt-10 txt-main">1 - 50 of 54</div>
-                        </div>
-                        <div className="display-flex">
-                            <button className="btn btn-small btn-icn btn-sekunder">
-                                <i className="icn fa fa-lw fa-caret-left" />
-                            </button>
-                            <button className="btn btn-small btn-icn btn-sekunder">
-                                <i className="icn fa fa-lw fa-caret-right" />
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="card no-margin no-hover no-radius border-all">
-                    <div>
-                        <div className="border-bottom">
-                            <CardHeader />
-                        </div>
-                        <div className="border-bottom">
-                            <CardVehicle />
-                        </div>
-                        <div className="border-bottom">
-                            <CardVehicle />
-                        </div>
-                        <div className="border-bottom">
-                            <CardVehicle />
-                        </div>
-                        <div>
-                            <CardVehicle />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        )
-    }
-}
 
 class CardVehicleRenewals extends Component {
     constructor(props) {
@@ -206,9 +103,9 @@ class CardVehicleRenewals extends Component {
     render() {
         return (
             <div className="padding-15px">
-                <div className="display-flex border-bottom" style={{ width: '100%', paddingTop: 0, paddingBottom: 15 }}>
+                <div className="display-flex border-bottom" style={{ width: '100%', paddingTop: 15, paddingBottom: 15 }}>
                     <button className="btn btn-sekunder" style={{ marginRight: 5 }}>
-                        All Reminders <i className="icn icn-right fa fa-lw fa-caret-down" />
+                        All Reminders <i className="icn icn-right fa fa-lw fa-chevron-down" />
                     </button>
                     <div style={{ width: 300, marginRight: 10 }}>
                         <DatePicker />
@@ -241,7 +138,7 @@ class CardVehicleRenewals extends Component {
                             Edit / Reschedule
                         </button>
                         <button className="btn btn-small btn-sekunder" style={{ marginRight: 5 }}>
-                            Manage Subscribers <i className="icn icn-right fa fa-lw fa-caret-down" />
+                            Manage Subscribers <i className="icn icn-right fa fa-lw fa-chevron-down" />
                         </button>
                         <button className="btn btn-small btn-icn btn-sekunder" style={{ marginRight: 5 }}>
                             <i className="icn fa fa-lw fa-trash-alt" />
@@ -253,10 +150,10 @@ class CardVehicleRenewals extends Component {
                         </div>
                         <div className="display-flex">
                             <button className="btn btn-small btn-icn btn-sekunder">
-                                <i className="icn fa fa-lw fa-caret-left" />
+                                <i className="icn fa fa-lw fa-chevron-left" />
                             </button>
                             <button className="btn btn-small btn-icn btn-sekunder">
-                                <i className="icn fa fa-lw fa-caret-right" />
+                                <i className="icn fa fa-lw fa-chevron-right" />
                             </button>
                         </div>
                     </div>
@@ -321,10 +218,7 @@ class VehicleRenewalReminder extends Component {
                                 <div className="post-top txt-site txt-16 txt-bold txt-main padding-top-5px">Service Reminders</div>
                             </div>
                             <div className="width width-70 display-flex right">
-                                <button className="btn btn-sekunder" style={{marginRight: 10}}>
-                                    <i className="icn icn-left fa fa-lw fa-circle" style={{color: 'green'}} /> Reminder Forecasting is On <i className="icn icn-right fa fa-lw fa-caret-down" />
-                                </button>
-                                <button className="btn btn-sekunder">
+                                <button className="btn btn-sekunder" onClick={() => this.opMenu()}>
                                     <i className="icn icn-left fa fa-lw fa-ellipsis-v" /> Actions
                                 </button>
                             </div>
@@ -355,10 +249,6 @@ class VehicleRenewalReminder extends Component {
                         </div>
                     )}
                 </div>
-
-                {navigator[0].status === 'active' && (
-                    <CardServiceReminders />
-                )}
 
                 {navigator[1].status === 'active' && (
                     <CardVehicleRenewals />
