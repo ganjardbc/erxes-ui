@@ -91,6 +91,7 @@ import IssueList from './pages/IssueList'
 import AddParts from './pages/AddParts'
 import Issues from './pages/Issues'
 import ReceiveItemPopup from './pages/ReceiveItemPopup'
+import EventDate from './pages/EventDate'
 import PartList from './pages/PartList'
 import VehicleSchedule from './pages/VehicleSchedule'
 // import componentsDualListbox from './components/DualListbox'
@@ -340,6 +341,7 @@ class App extends Component {
                         { this.createSubMenu('Line Items', '/line-items', 'far fa-lg fa-circle') }
                         { this.createSubMenu('Side Popup', '/component-side-popup', 'far fa-lg fa-circle') }
                         { this.createSubMenu('Add Parts', '/component-add-parts', 'far fa-lg fa-circle') }
+                        { this.createSubMenu('Event Date', '/component-event-date', 'far fa-lg fa-circle') }
                         { this.createSubMenu('Purchase Order', '/purchase-order', 'far fa-lg fa-circle') }
                         { this.createSubMenu('Purchase Order Info', '/purchase-order-info', 'far fa-lg fa-circle') }
                         { this.createSubMenu('Issues', '/issues', 'far fa-lg fa-circle') }
@@ -464,6 +466,7 @@ class App extends Component {
                 <Route exact path="/component-tooltip-popup" component={ componentsTooltipPopup }></Route>
                 <Route exact path="/component-search" component={ SearchRecommendation }></Route>
                 <Route exact path="/component-add-parts" component={ AddParts }></Route>
+                <Route exact path="/component-event-date" component={ EventDate }></Route>
                 <Route exact path="/component-receive-item-popup" component={ ReceiveItemPopup } />
                 <Route exact path="/component-side-popup" component={ SidePopup }></Route>
                 {/* <Route exact path="/component-dual-listbox" component={ componentsDualListbox }></Route> */}

@@ -31,6 +31,7 @@
     "react-dom": "^16.8.6",
     "react-dropzone": "^11.3.4",
     "react-dual-listbox": "^2.0.0",
+    "react-google-charts": "^3.0.15",
     "react-google-maps": "^9.4.5",
     "react-grid-layout": "^0.16.6",
     "react-html-parser": "^2.0.2",
