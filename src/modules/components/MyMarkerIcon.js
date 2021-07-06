@@ -58,7 +58,7 @@ class MyMarkerIcon extends Component {
                 )}
 
                 {isHover && $hover && tooltip && (
-                    <div className={"tooltip " + tooltipColor} style={{width: '250px', margin: 'auto', left: '-117px'}}>
+                    <div className={"tooltip " + tooltipColor} style={{width: '350px', margin: 'auto', left: '-167px'}}>
                         { tooltip }
                         <i className="icn fa fa-lg fa-caret-down" />
                     </div>

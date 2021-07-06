@@ -20,6 +20,7 @@ body {
   width: 38px;
   text-align: center;
   border: 1px solid #999;
+  cursor: pointer;
 }  
 .circle-text {
   position: absolute;
@@ -30,7 +31,7 @@ body {
   font-size: 18px;
 }
 .circle.hover {
-  background-color: #f0f0f0;
+  background-color: #f0f0f0;  
   cursor: pointer;
   border: 1px solid #555;
 }
@@ -46,11 +47,11 @@ body {
 /* tooltip */
 .tooltip {
   position: absolute;
-  width: 650px;
+  width: 350px;
   padding: 0 0;
   background-color: #fff;
   bottom: 60px;
-  left: -316px;
+  left: -167px;
   z-index: 100000;
 }
 
