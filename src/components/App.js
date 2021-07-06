@@ -91,6 +91,7 @@ import IssueList from './pages/IssueList'
 import AddParts from './pages/AddParts'
 import Issues from './pages/Issues'
 import ReceiveItemPopup from './pages/ReceiveItemPopup'
+import PartList from './pages/PartList'
 // import componentsDualListbox from './components/DualListbox'
 
 
@@ -276,6 +277,7 @@ class App extends Component {
                         { this.createSubMenu('Issue List', '/issue-list', 'fa fa-lg fa-crosshairs') }
                         { this.createSubMenu('Inspections Form', '/inspections-form', 'fa fa-lg fa-clipboard') }
                         { this.createSubMenu('Shop Directory', '/shop-directory', 'fa fa-lg fa-map-marker-alt') }
+                        { this.createSubMenu('Parts List', '/parts-list', 'fa fa-lg fa-crosshairs') }
                       </div>
                     </div>
                   </div>
@@ -417,6 +419,7 @@ class App extends Component {
                 <Route exact path="/inspections-form" component={ InspectionsForm } />
                 <Route exact path="/shop-directory" component={ ShopDirectory } />
                 <Route exact path="/issue-list" component={ IssueList } />
+                <Route exact path="/parts-list" component={ PartList } />
 
                 {/* components */}
                 <Route exact path="/component-moveable-component" component={ componentsMoveableComponent }></Route>
