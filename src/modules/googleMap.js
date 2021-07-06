@@ -38,7 +38,7 @@ class Container extends Component {
     }
 
     render() {
-        const { markers, onClickMarker, enableIconMarker } = this.props
+        const { markers, onClickMarker, onCloseMarker, enableIconMarker } = this.props
         const { center, zoom } = this.state
         return (
             <GoogleMapReact
@@ -59,12 +59,14 @@ class Container extends Component {
                             lat={value.lat} 
                             lng={value.lng} 
                             text={value.title} 
+                            status={value.status}
                             isSonar={value.isSonar}
                             isHover={true} 
                             isActive={value.isActive}
                             icon={value.icon} 
                             tooltip={value.tooltip}
                             centerData={(e) => this.setState({center: e})}
+                            onClose={() => onCloseMarker(value)}
                             onClick={() => onClickMarker(value)}
                         />
                     ) : (
@@ -73,11 +75,14 @@ class Container extends Component {
                             lat={value.lat} 
                             lng={value.lng} 
                             text={value.title} 
+                            status={value.status}
                             isSonar={value.isSonar}
                             isHover={true} 
+                            isActive={value.isActive}
                             icon={value.icon} 
                             tooltip={value.tooltip}
                             centerData={(e) => this.setState({center: e})}
+                            onClose={() => onCloseMarker(value)}
                             onClick={() => onClickMarker()}
                         />
                     );

@@ -46,13 +46,13 @@ class Pages extends Component {
 						<InlineEditing 
 							text={'Custom Mega Popup'} 
 							api={'https://example.com/api'} />
-          </div>
-          <div className="padding-top-15px">
+					</div>
+					<div className="padding-top-15px">
 						<button 
 							className="btn btn-green" 
 							onClick={this.opMegaPopup}>
-	        		Open
-	        	</button>
+							Open
+						</button>
 					</div>
 				</div>
 

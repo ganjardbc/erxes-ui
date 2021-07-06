@@ -88,6 +88,7 @@ class TabBar extends Component {
                 <ul id="navigator">
                     {data.map((item, i) => (
                         <li
+                            key={i}
                             onClick={this.props.onClick.bind(this)}
                             className={item.status}
                             data-id={i}>
