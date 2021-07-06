@@ -112,6 +112,16 @@ class CardVehicleSchedule extends Component {
     render() {
         return (
             <div className="padding-0px">
+                <div className="display-flex space-between" style={{ width: '100%', paddingBottom: 15 }}>
+                    <div className="width width-50 display-flex">
+                        <button className="btn btn-main" style={{ marginRight: 15 }}>
+                            Manage Vehicles
+                        </button>
+                        <div>
+                            <div className="post-top txt-site txt-10 txt-main"> 58 vehicle(s) will see this form on Fleetio Go </div>
+                        </div>
+                    </div>
+                </div>
                 <div className="card no-margin no-hover no-radius border-all">
                     <div className="border-bottom">
                         {this.renderHeaderInfo()}
