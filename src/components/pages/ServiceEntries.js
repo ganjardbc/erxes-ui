@@ -5,27 +5,10 @@ class ServiceEntries extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            navigator: [
-                { status: 'active', title: 'All', value: '0' },
-                { status: '', title: 'Open', value: '53' },
-                { status: '', title: 'Pending', value: '9' },
-                { status: '', title: 'Waiting for parts', value: '9' },
-                { status: '', title: 'Completed', value: '0' }
-            ]
         }
     }
 
-    opNavigator = (e, isNumber = false) => {
-        const id = isNumber ? e : Number(e.currentTarget.dataset.id)
-        const { navigator } = this.state
-        let nav = navigator.map((data, index) => {
-            return { ...data, status: id === index ? 'active' : '' }
-        })
-        this.setState({ navigator: nav })
-    }
-
     render() {
-        const { navigator } = this.state
         return (
             <div className="main-content no-padding">
                 <div className="padding-15px display-flex space-between background-white">
