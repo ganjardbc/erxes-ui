@@ -191,13 +191,118 @@ class CardVehicle extends Component {
     }
 }
 
+class CardServicePopup extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            visiblePopup: true,
+            data: [
+                {title: 'Car Wash', description: 'Every 1 month(s)', due: '9 days ago', mile: '', isAdded: true, type: 'danger'},
+                {title: 'Oil Change and Filter Replacement', description: 'Every 2 month(s) or 6,000 miles', due: '6 days from now', mile: '1,050 mi from now', isAdded: false, type: 'warning'},
+                {title: '100K Mile Tune Up & Service', description: 'Every 24 month(s) or 100,000 miles', due: 'over 1 year from now', mile: '69,066 mi from now', isAdded: false, type: 'safe'}
+            ]
+        }
+    }
+
+    onAdd = (idx) => {
+        const {data} = this.state
+        const newPayload = data && data.map((dt, i) => {
+            const stt = idx === i ? dt.isAdded ? true : true : dt.isAdded
+            return {...dt, isAdded: stt}
+        }) 
+        this.setState({data: newPayload})
+    }
+
+    onRemove = (idx) => {
+        const {data} = this.state
+        const newPayload = data && data.map((dt, i) => {
+            const stt = idx === i ? false : dt.isAdded
+            return {...dt, isAdded: stt}
+        }) 
+        this.setState({data: newPayload})
+    }
+
+    render () {
+        const {onClose} = this.props 
+        const {data} = this.state
+        return (
+            <div className="app-popup app-popup-show">
+                <div className="popup-content-small background-white border-radius shadow post-top">
+                    <div className="display-flex space-between align-center border-bottom" style={{padding: '10px 15px'}}>
+                        <div className="txt-site txt-11 txt-main txt-bold">Service Reminders</div>
+                        <button className="btn btn-icon btn-grey" onClick={() => onClose()}>
+                            <i className="fa fa-lg fa-times" />
+                        </button>
+                    </div>
+                    <div>
+                        {data && data.map((dt, i) => {
+                            let colorText = 'txt-main'
+                            switch (dt.type) {
+                                case 'danger':
+                                    colorText = 'txt-red'
+                                    break;
+                                case 'warning':
+                                    colorText = 'txt-orange'
+                                    break;
+                                default:
+                                    colorText = 'txt-main'
+                                    break;
+                            }
+                            return (
+                                <div key={i} className={"display-flex " + (i !== (data.length - 1) ? 'border-bottom' : '')} style={{padding: '15px'}}>
+                                    <div style={{width: 'calc(100% - 150px)'}}>
+                                        <div className={"txt-site txt-11 txt-bold " + colorText} style={{marginBottom: 5}}>{ dt.title }</div>
+                                        <div className="txt-site txt-10 txt-primary" style={{marginBottom: 5}}>{ dt.description }</div>
+                                        <div className="display-flexs">
+                                            <span className="txt-site txt-10 txt-main txt-bold" style={{marginRight: 5}}>Due:</span>
+                                            <span className={"txt-site txt-10 txt-bold txt-underline " + colorText}>{ dt.due }</span>
+                                            {dt.mile && <span style={{marginLeft: 5, marginRight: 5}}><Dots /></span>}
+                                            {dt.mile && <span className={"txt-site txt-10 txt-bold txt-underline " + colorText}>{ dt.mile }</span>}
+                                        </div>
+                                    </div>
+                                    <div style={{width: 150}} className="content-right">
+                                        {dt.isAdded ? (
+                                            <button className="btn btn-small btn-red" onClick={() => this.onRemove(i)}>
+                                                <i className="icn icn-left fa fa-lw fa-minus-circle" /> Remove
+                                            </button>
+                                        ) : (
+                                            <button className="btn btn-small btn-sekunder" onClick={() => this.onAdd(i)}>
+                                                <i className="icn icn-left fa fa-lw fa-plus-circle" /> Add
+                                            </button>
+                                        )}
+
+                                        {dt.isAdded && (
+                                            <div className="content-right" style={{marginTop: 10}}>
+                                                <i className="txt-site txt-green txt-9 fa fa-lw fa-check" style={{marginRight: 5}} />
+                                                <span className="txt-site txt-primary txt-10">Added to line items</span>
+                                            </div>
+                                        )}
+                                    </div>
+                                </div>
+                            )
+                        })}
+                    </div>
+                    <div className="border-top" style={{padding: '10px 15px'}}>
+                        <button className="btn btn-small btn-primary" onClick={() => onClose()}>
+                            Close 
+                        </button>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+}
+
 class CardServiceReminders extends Component {
     constructor(props) {
         super(props)
-        this.state = {}
+        this.state = {
+            visiblePopup: false
+        }
     }
 
     render() {
+        const {visiblePopup} = this.state
         const dataCount = [
             {title: 'Overdue', value: '14'},
             {title: 'Due Soon', value: '5'}
@@ -258,6 +363,10 @@ class CardServiceReminders extends Component {
                         </button>
                     </div>
                     <div className="width width-50 display-flex right">
+                        <div className="display-flex align-center" style={{marginRight: 15, cursor: 'pointer'}} onClick={() => this.setState({visiblePopup: true})}>
+                            <div className="txt-site txt-10 txt-safe txt-bold">View Service Reminders</div>
+                            <div className="card-value red" style={{marginLeft: 5}}>3</div>
+                        </div>
                         <button className="btn btn-small btn-sekunder" style={{ marginRight: 5 }}>
                             Group : Week <i className="icn icn-right fa fa-lw fa-caret-down" />
                         </button>
@@ -294,6 +403,10 @@ class CardServiceReminders extends Component {
                         </div>
                     </div>
                 </div>
+
+                {visiblePopup && (
+                    <CardServicePopup onClose={() => this.setState({visiblePopup: false})} />
+                )}
             </div>
         )
     }
