@@ -95,6 +95,7 @@ import EventDate from './pages/EventDate'
 import PartList from './pages/PartList'
 import VehicleSchedule from './pages/VehicleSchedule'
 import UserRolePage from './pages/UserRolePage'
+import LineItemDetails from './pages/LineItemDetails'
 // import componentsDualListbox from './components/DualListbox'
 
 
@@ -341,6 +342,7 @@ class App extends Component {
                         { this.createSubMenu('New Saved Report', '/new-saved-report', 'far fa-lg fa-circle') }
                         { this.createSubMenu('Share Report', '/share-report', 'far fa-lg fa-circle') }
                         { this.createSubMenu('Line Items', '/line-items', 'far fa-lg fa-circle') }
+                        { this.createSubMenu('Line Item Details', '/line-item-details', 'far fa-lg fa-circle') }
                         { this.createSubMenu('Side Popup', '/component-side-popup', 'far fa-lg fa-circle') }
                         { this.createSubMenu('Add Parts', '/component-add-parts', 'far fa-lg fa-circle') }
                         { this.createSubMenu('Event Date', '/component-event-date', 'far fa-lg fa-circle') }
@@ -409,6 +411,7 @@ class App extends Component {
                 <Route exact path="/new-saved-report" component={ NewSavedReport } />
                 <Route exact path="/share-report" component={ ShareReport } />
                 <Route exact path="/line-items" component={ LineItems } />
+                <Route exact path="/line-item-details" component={ LineItemDetails } />
                 <Route exact path="/purchase-order" component={ PurchaseOrder } />
                 <Route exact path="/purchase-order-info" component={ PurchaseOrderInfo } />
                 <Route exact path="/work-order" component={ WorkOrder } />
