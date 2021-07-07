@@ -97,6 +97,7 @@ import VehicleSchedule from './pages/VehicleSchedule'
 import UserRolePage from './pages/UserRolePage'
 import LineItemDetails from './pages/LineItemDetails'
 import ServiceEntries from './pages/ServiceEntries'
+import OperatingCostSummary from './pages/OperatingCostSummary'
 // import componentsDualListbox from './components/DualListbox'
 
 
@@ -284,6 +285,7 @@ class App extends Component {
                         { this.createSubMenu('Shop Directory', '/shop-directory', 'fa fa-lg fa-map-marker-alt') }
                         { this.createSubMenu('Parts List', '/parts-list', 'fa fa-lg fa-crosshairs') }
                         { this.createSubMenu('Service Entire', '/service-entries', 'fa fa-lg fa-wrench') }
+                        { this.createSubMenu('Operating Cost Summary', '/operating-cost-summary', 'fa fa-lg fa-chart-line') }
                         { this.createSubMenu('Vehicle & Schedules', '/vehicle-schedules', 'fa fa-lg fa-crosshairs') }
                         { this.createSubMenu('User Role', '/user-role', 'fa fa-lg fa-crosshairs') }
                       </div>
@@ -432,6 +434,7 @@ class App extends Component {
                 <Route exact path="/issue-list" component={ IssueList } />
                 <Route exact path="/parts-list" component={ PartList } />
                 <Route exact path="/service-entries" component={ ServiceEntries } />
+                <Route exact path="/operating-cost-summary" component={ OperatingCostSummary } />
                 <Route exact path="/vehicle-schedules" component={ VehicleSchedule } />
                 <Route exact path="/user-role" component={ UserRolePage } />
 
