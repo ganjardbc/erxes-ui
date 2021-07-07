@@ -98,6 +98,7 @@ import UserRolePage from './pages/UserRolePage'
 import LineItemDetails from './pages/LineItemDetails'
 import ServiceEntries from './pages/ServiceEntries'
 import OperatingCostSummary from './pages/OperatingCostSummary'
+import MaintenanceShopIntegration from './pages/MaintenanceShopIntegration'
 // import componentsDualListbox from './components/DualListbox'
 
 
@@ -288,6 +289,7 @@ class App extends Component {
                         { this.createSubMenu('Operating Cost Summary', '/operating-cost-summary', 'fa fa-lg fa-chart-line') }
                         { this.createSubMenu('Vehicle & Schedules', '/vehicle-schedules', 'fa fa-lg fa-crosshairs') }
                         { this.createSubMenu('User Role', '/user-role', 'fa fa-lg fa-crosshairs') }
+                        { this.createSubMenu('Maintenance Shop Integration', '/maintenance-shop-integration', 'fa fa-lg fa-crosshairs') }
                       </div>
                     </div>
                   </div>
@@ -437,6 +439,7 @@ class App extends Component {
                 <Route exact path="/operating-cost-summary" component={ OperatingCostSummary } />
                 <Route exact path="/vehicle-schedules" component={ VehicleSchedule } />
                 <Route exact path="/user-role" component={ UserRolePage } />
+                <Route exact path="/maintenance-shop-integration" component={ MaintenanceShopIntegration } />
 
                 {/* components */}
                 <Route exact path="/component-moveable-component" component={ componentsMoveableComponent }></Route>
