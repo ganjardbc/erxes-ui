@@ -1,14 +1,51 @@
 import React, { Component } from 'react'
 import Dots from '../../modules/Dots'
+import MenuBar from '../../modules/MenuBar'
 
 class ServiceEntries extends Component {
     constructor(props) {
         super(props)
         this.state = {
+            navigator: [
+                { status: 'active', value: '', title: 'Vehicle Overview', icon: 'fa fa-lg fa-th-large' },
+                { status: '', value: '123', title: 'Photos', icon: 'fa fa-lg fa-image' },
+                { status: '', value: '2', title: 'Documents', icon: 'fa fa-lg fa-file' },
+                { status: '', value: '3', title: 'Comments', icon: 'fa fa-lg fa-comment' }
+            ],
+            navigator2: [
+                { status: '', value: '35', title: 'Work Orders' },
+                { status: '', value: '4', title: 'Inspections' },
+                { status: '', value: '110', title: 'Issues' },
+                { status: '', value: '0', title: 'Faults' },
+                { status: '', value: '20', title: 'Recalls' },
+                { status: '', value: '4', title: 'Reminders' },
+                { status: '', value: '89', title: 'Service History' },
+                { status: '', value: '56', title: 'Fuel History' },
+                { status: '', value: '16', title: 'Expense History' },
+                { status: '', value: '41', title: 'Parts Usage' },
+                { status: '', value: '4', title: 'Assignment History' },
+                { status: '', value: '320', title: 'Matery History' },
+                { status: '', value: '169', title: 'Location History' }
+            ],
+            navigator3: [
+                { status: '', value: '', title: 'Recall Notifications', icon: 'fa fa-lg fa-external-link-alt' },
+                { status: '', value: '', title: 'View Vehicle History', icon: 'fa fa-lg fa-external-link-alt' },
+                { status: '', value: '', title: 'Settings', icon: 'fa fa-lg fa-cog' }
+            ]
         }
     }
 
+    opNavigator = (e, isNumber = false) => {
+        const id = isNumber ? e : Number(e.currentTarget.dataset.id)
+        const { navigator } = this.state
+        let nav = navigator.map((data, index) => {
+            return { ...data, status: id === index ? 'active' : '' }
+        })
+        this.setState({ navigator: nav, selectedIndex: id })
+    }
+
     render() {
+        const { navigator, navigator2, navigator3, selectedIndex } = this.state
         return (
             <div className="main-content no-padding">
                 <div className="padding-15px display-flex space-between background-white">
@@ -68,68 +105,17 @@ class ServiceEntries extends Component {
                 <div className="grid grid-2x-col7 grid-mobile-none gap-15px">
                     <div className="column-1">
                         <div className="padding-15px">
-                            <button style={{ width: '100%' }} type="button" className="btn btn-green">
-                                <i style={{ fontWeight: "bold" }} className="icn icn-left fa fa-lw fa-plus"></i>
-                                Quick Add
+                            <button className="btn btn-green btn-full">
+                                <i className="icn icn-left fa fa-lw fa-plus" /> Quick Add
                             </button>
-                        </div>
-                        <div className="padding-15px">
-                            <div className="display-flex space-between">
-                                <div className="width width-70">
-                                    <div className="txt-site txt-primary txt-extra-bold txt-12 padding-bottom-10px">
-                                        <i className="icn fa fa-square padding-right-10px" />
-                                        <span className="txt-site txt-blue">Vehicle Overview</span>
-                                    </div>
-                                </div>
-                                <div className="width width-30">
-                                </div>
+                            <div className="border-bottom">
+                                <MenuBar data={navigator} onClick={(id) => this.opNavigator(id)} />
                             </div>
-                            <div className="display-flex space-between border-bottom margin-bottom-15px">
-                                <div className="width width-70">
-                                    <div className="txt-site txt-primary txt-extra-bold txt-12 padding-bottom-10px">
-                                        <i className="icn fa fa-image padding-right-10px" />
-                                        <span className="txt-site txt-blue">Photos</span>
-                                    </div>
-                                    <div className="txt-site txt-primary txt-extra-bold txt-12 padding-bottom-10px">
-                                        <i className="icn fa fa-window-maximize padding-right-10px" />
-                                        <span className="txt-site txt-blue">Documents</span>
-                                    </div>
-                                    <div className="txt-site txt-primary txt-extra-bold txt-12 padding-bottom-10px">
-                                        <i className="icn fa fa-window-maximize padding-right-10px" />
-                                        <span className="txt-site txt-blue">Comments</span>
-                                    </div>
-                                </div>
-                                <div className="width width-30">
-                                    <div className="txt-site txt-primary txt-bold txt-12 txt-right padding-bottom-10px">123 </div>
-                                    <div className="txt-site txt-primary txt-bold txt-12 txt-right padding-bottom-10px">3 </div>
-                                    <div className="txt-site txt-primary txt-bold txt-12 txt-right padding-bottom-10px">2 </div>
-                                </div>
+                            <div className="border-bottom">
+                                <MenuBar data={navigator2} onClick={(id) => console.log('id', id)} />
                             </div>
-                            <div className="display-flex space-between border-bottom">
-                                <div className="width width-70">
-                                    <div className="txt-site txt-primary txt-extra-bold txt-12 padding-bottom-10px">
-                                        <span className="txt-site txt-blue">Work Orders</span>
-                                    </div>
-                                    <div className="txt-site txt-primary txt-extra-bold txt-12 padding-bottom-10px">
-                                        <span className="txt-site txt-blue">Inspection</span>
-                                    </div>
-                                    <div className="txt-site txt-primary txt-extra-bold txt-12 padding-bottom-10px">
-                                        <span className="txt-site txt-blue">Issues</span>
-                                    </div>
-                                    <div className="txt-site txt-primary txt-extra-bold txt-12 padding-bottom-10px">
-                                        <span className="txt-site txt-blue">Faults</span>
-                                    </div>
-                                    <div className="txt-site txt-primary txt-extra-bold txt-12 padding-bottom-10px">
-                                        <span className="txt-site txt-blue">Recalls</span>
-                                    </div>
-                                </div>
-                                <div className="width width-30">
-                                    <div className="txt-site txt-primary txt-bold txt-12 txt-right padding-bottom-10px">35 </div>
-                                    <div className="txt-site txt-primary txt-bold txt-12 txt-right padding-bottom-10px">4 </div>
-                                    <div className="txt-site txt-primary txt-bold txt-12 txt-right padding-bottom-10px">110 </div>
-                                    <div className="txt-site txt-primary txt-bold txt-12 txt-right padding-bottom-10px">0 </div>
-                                    <div className="txt-site txt-primary txt-bold txt-12 txt-right padding-bottom-10px">20 </div>
-                                </div>
+                            <div>
+                                <MenuBar data={navigator3} onClick={(id) => console.log('id', id)} />
                             </div>
                         </div>
                     </div>
