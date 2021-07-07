@@ -95,6 +95,7 @@ import EventDate from './pages/EventDate'
 import PartList from './pages/PartList'
 import VehicleSchedule from './pages/VehicleSchedule'
 import UserRolePage from './pages/UserRolePage'
+import MaintenanceShopIntegration from './pages/MaintenanceShopIntegration'
 // import componentsDualListbox from './components/DualListbox'
 
 
@@ -283,6 +284,7 @@ class App extends Component {
                         { this.createSubMenu('Parts List', '/parts-list', 'fa fa-lg fa-crosshairs') }
                         { this.createSubMenu('Vehicle & Schedules', '/vehicle-schedules', 'fa fa-lg fa-crosshairs') }
                         { this.createSubMenu('User Role', '/user-role', 'fa fa-lg fa-crosshairs') }
+                        { this.createSubMenu('Maintenance Shop Integration', '/maintenance-shop-integration', 'fa fa-lg fa-crosshairs') }
                       </div>
                     </div>
                   </div>
@@ -428,6 +430,7 @@ class App extends Component {
                 <Route exact path="/parts-list" component={ PartList } />
                 <Route exact path="/vehicle-schedules" component={ VehicleSchedule } />
                 <Route exact path="/user-role" component={ UserRolePage } />
+                <Route exact path="/maintenance-shop-integration" component={ MaintenanceShopIntegration } />
 
                 {/* components */}
                 <Route exact path="/component-moveable-component" component={ componentsMoveableComponent }></Route>
