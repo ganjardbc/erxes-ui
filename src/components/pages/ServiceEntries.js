@@ -45,7 +45,7 @@ class ServiceEntries extends Component {
     }
 
     render() {
-        const { navigator, navigator2, navigator3, selectedIndex } = this.state
+        const { navigator, navigator2, navigator3 } = this.state
         return (
             <div className="main-content no-padding">
                 <div className="padding-15px display-flex space-between background-white">
