@@ -95,6 +95,7 @@ import EventDate from './pages/EventDate'
 import PartList from './pages/PartList'
 import VehicleSchedule from './pages/VehicleSchedule'
 import UserRolePage from './pages/UserRolePage'
+import PrintLabels from './components/PrintLabels'
 // import componentsDualListbox from './components/DualListbox'
 
 
@@ -353,6 +354,7 @@ class App extends Component {
                         { this.createSubMenu('Filter Click Popup', '/component-filter-click-popup', 'far fa-lg fa-circle') }
                         { this.createSubMenu('AttachmentFile', '/component-attachment-file', 'far fa-lg fa-circle') }
                         { this.createSubMenu('Import File', '/component-import-file', 'far fa-lg fa-circle') }
+                        { this.createSubMenu('Print Labels', '/component-print-labels', 'far fa-lg fa-circle') }
 
                       </div>
                     </div>
@@ -472,6 +474,7 @@ class App extends Component {
                 <Route exact path="/component-event-date" component={ EventDate }></Route>
                 <Route exact path="/component-receive-item-popup" component={ ReceiveItemPopup } />
                 <Route exact path="/component-side-popup" component={ SidePopup }></Route>
+                <Route exact path="/component-print-labels" component={ PrintLabels } />
                 {/* <Route exact path="/component-dual-listbox" component={ componentsDualListbox }></Route> */}
 
       				</div>
