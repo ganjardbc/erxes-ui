@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
-import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, } from 'recharts';
+import { BarChart, Bar, XAxis, Tooltip, } from 'recharts';
 
 const data = [
     {
@@ -131,34 +131,13 @@ class OperatingCostSummary extends Component {
                                             <ResponsiveContainer
                                                 width='80%'
                                                 aspect={4.0 / 2.8}>
-                                                <AreaChart
+                                                <BarChart
                                                     data={data}
-                                                    margin={{
-                                                        top: 0, right: 0, left: 0, bottom: 0,
-                                                    }}>
-                                                    <CartesianGrid strokeDasharray="3 3" />
+                                                    margin={{ top: 0, right: 0, left: 0, bottom: 0, }}>
                                                     <XAxis dataKey="name" />
-                                                    <YAxis />
                                                     <Tooltip />
-                                                    <Area
-                                                        type="monotone"
-                                                        dataKey="uv"
-                                                        stackId="1"
-                                                        stroke="#8884d8"
-                                                        fill="#8884d8" />
-                                                    <Area
-                                                        type="monotone"
-                                                        dataKey="pv"
-                                                        stackId="1"
-                                                        stroke="#82ca9d"
-                                                        fill="#82ca9d" />
-                                                    <Area
-                                                        type="monotone"
-                                                        dataKey="amt"
-                                                        stackId="1"
-                                                        stroke="#ffc658"
-                                                        fill="#ffc658" />
-                                                </AreaChart>
+                                                    <Bar dataKey="pv" stackId="a" fill="#8884d8" />
+                                                </BarChart>
                                             </ResponsiveContainer>
                                         </div>
                                     </div>
