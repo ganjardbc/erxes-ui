@@ -12,7 +12,7 @@
     "google-map-react": "^2.1.10",
     "google-maps-react": "^2.0.6",
     "input-moment": "^0.4.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "moment-timezone": "^0.5.26",
     "mui-datatables": "^2.6.1",
     "mui-datatables-bitozen": "^4.0.16",
